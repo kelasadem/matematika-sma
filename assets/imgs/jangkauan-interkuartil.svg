@@ -1,0 +1,90 @@
+<svg
+   width="350"
+   height="220"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <rect
+     x="0.60000002"
+     y="24.53125"
+     width="87.199997"
+     height="69.199997"
+     style="color:#000000;overflow:visible;fill:none;stroke:#1c71d8;stroke-width:1.2"
+     id="rect4" />
+  <rect
+     x="87.800003"
+     y="24.53125"
+     width="87.199997"
+     height="69.199997"
+     style="color:#000000;overflow:visible;fill:#ffff3e;stroke:#1c71d8;stroke-width:1.2"
+     id="rect6" />
+  <rect
+     x="175"
+     y="24.53125"
+     width="87.199997"
+     height="69.199997"
+     style="color:#000000;overflow:visible;fill:#ffff3e;stroke:#1c71d8;stroke-width:1.2"
+     id="rect8" />
+  <rect
+     x="262.20001"
+     y="24.53125"
+     width="87.199997"
+     height="69.199997"
+     style="color:#000000;overflow:visible;fill:none;stroke:#1c71d8;stroke-width:1.2"
+     id="rect10" />
+  <text
+     x="89.900002"
+     y="16.03125"
+     style="font-size:19px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#1c71d8;stroke-width:0.6"
+     id="text12">Q₁</text>
+  <text
+     x="176.3"
+     y="16.03125"
+     style="font-size:19px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#1c71d8;stroke-width:0.6"
+     id="text14">Q₂</text>
+  <text
+     x="263.79999"
+     y="16.03125"
+     style="font-size:19px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#1c71d8;stroke-width:0.6"
+     id="text16">Q₃</text>
+  <text
+     x="16.799999"
+     y="68.131226"
+     style="font-size:24px;font-family:Verdana;fill:#1c71d8;stroke-width:0.6"
+     id="text20">25%</text>
+  <text
+     x="105.3"
+     y="68.131226"
+     style="font-size:24px;font-family:Verdana;fill:#1c71d8;stroke-width:0.6"
+     id="text22">25%</text>
+  <text
+     x="193.8"
+     y="68.131226"
+     style="font-size:24px;font-family:Verdana;fill:#1c71d8;stroke-width:0.6"
+     id="text24">25%</text>
+  <text
+     x="282.39999"
+     y="68.131226"
+     style="font-size:24px;font-family:Verdana;fill:#1c71d8;stroke-width:0.6"
+     id="text26">25%</text>
+   <path
+     d="m 90,105 L 100,115 165,115 175,125 185,115 252,115 262,105 "
+     stroke-width="1.1"
+     fill="none"
+     stroke="#009100" />
+  <text
+     x="172"
+     y="151"
+     style="font-size:17px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#f60;stroke-width:0.6"
+     id="text32">Jangkauan Interkuartil</text>
+  <text
+     x="172"
+     y="180"
+     style="font-size:17px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#f60;stroke-width:0.6"
+     id="text32">(Interquartile Range (IQR))</text>
+  <text
+     x="172"
+     y="210"
+     style="font-size:19px;font-family:Verdana;text-align:center;text-anchor:middle;fill:#f60;stroke-width:0.6"
+     id="text34">= Q₃ - Q₁</text>
+</svg>

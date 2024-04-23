@@ -1,0 +1,59 @@
+<svg width="400" height="65" viewBox="-5 -5 400 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<rect x="1" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<path
+d="M 15,10 V 60"
+style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<text x="15" y="50" style="font-size:16px;font-weight:bold;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">1</text>
+<rect x="-5" y="-2.5" width="40" height="25" fill="#f60" />
+<text x="15" y="15" style="font-size:19px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">xₘᵢₙ</text>
+
+<rect x="41" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="55" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">4</text>
+
+<rect x="81" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<path
+d="M 95,10 V 60"
+style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<text x="95" y="50" style="font-size:18px;font-weight:bold;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">5</text>
+<ellipse cx="95" cy="10" rx="15" ry="15" fill="#f60" />
+<text x="95" y="15" style="font-size:14px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₁</text>
+
+<rect x="121" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="135" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">5</text>
+
+<rect x="161" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="175" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">5</text>
+
+<path
+d="M 195,10 V 60"
+style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<ellipse cx="195" cy="10" rx="30" ry="15" fill="#f60" />
+<text x="195" y="15" style="font-size:14px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₂=Me</text>
+
+<rect x="201" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="215" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">6</text>
+
+<rect x="241" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="255" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">6</text>
+
+<rect x="281" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<path
+d="M 295,10 V 60"
+style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<text x="295" y="50" style="font-size:18px;font-weight:bold; font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">7</text>
+<ellipse cx="295" cy="10" rx="15" ry="15" fill="#f60" />
+<text x="295" y="15" style="font-size:14px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₃</text>
+
+<rect x="321" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<text x="335" y="48" style="font-size:14px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">9</text>
+
+<rect x="361" y="30" width="29" height="28" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+<path
+d="M 375,10 V 60"
+style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<text x="375" y="50" style="font-size:16px;font-weight:bold;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">10</text>
+<rect x="355" y="-2.5" width="40" height="25" fill="#f60" />
+<text x="375" y="15" style="font-size:19px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">xₘₐₖₛ</text>
+
+</svg>

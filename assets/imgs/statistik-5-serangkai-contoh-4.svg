@@ -1,0 +1,42 @@
+<svg
+   width="200.1"
+   height="120"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <rect
+     x="0"
+     y="30"
+     width="100"
+     height="80"
+     style="color:#000000;overflow:visible;fill:none;stroke:#1c71d8;stroke-width:1.2" />
+  <rect
+     x="100"
+     y="30"
+     width="100"
+     height="80"
+     style="color:#000000;overflow:visible;fill:none;stroke:#1c71d8;stroke-width:1.2" />
+  <path
+     d="m 0,70 200,0"
+     style="overflow:visible;fill:none;stroke:#1c71d8;stroke-width:1.2" />
+  <text
+     x="50"
+     y="95"
+     style="font-family:Verdana; font-size:19px; color:#000000; overflow:visible; fill:#b88100; stroke-width:0.52; text-anchor:middle;">1</text>
+  <text
+     x="50"
+     y="55"
+     style="font-family:Verdana; font-size:19px; color:#000000; overflow:visible; fill:#b88100; stroke-width:0.52; text-anchor:middle;">5</text>
+  <text
+     x="100"
+     y="15"
+     style="font-family:Verdana; font-size:19px; color:#000000; overflow:visible; fill:#b88100; stroke-width:0.52; text-anchor:middle;">5½</text>
+  <text
+     x="150"
+     y="55"
+     style="font-family:Verdana; font-size:19px; color:#000000; overflow:visible; fill:#b88100; stroke-width:0.52; text-anchor:middle;">7</text>
+  <text
+     x="150"
+     y="95"
+     style="font-family:Verdana; font-size:19px; color:#000000; overflow:visible; fill:#b88100; stroke-width:0.52; text-anchor:middle;">10</text>
+</svg>
