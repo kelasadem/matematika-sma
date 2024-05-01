@@ -1,0 +1,224 @@
+<svg
+   width="400"
+   height="365"
+   xmlns="http://www.w3.org/2000/svg">
+
+<!-- grid-y -->
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,15 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,45 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,75 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,105 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,135 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,165 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,195 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,225 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,255 H 390" />
+  <path
+     style="fill:none;fill-opacity:0.5;stroke:#145c94;stroke-width:.5"
+     d="M 55,285 H 390" />
+<!-- Batang histogram -->
+  <rect
+     id="rect831"
+     style="overflow:visible;opacity:0.9;fill:#6797cb;fill-opacity:0.75;stroke:#145c94;stroke-width:0.3"
+     height="60"
+     width="50"
+     y="255"
+     x="100" />
+  <rect
+     id="rect859"
+     style="color:#000;overflow:visible;opacity:0.9;fill:#6797cb;fill-opacity:0.75;stroke:#145c94;stroke-width:0.3"
+     height="240"
+     width="50"
+     y="75"
+     x="150" />
+  <rect
+     id="rect857"
+     style="color:#000;overflow:visible;opacity:0.9;fill:#6797cb;fill-opacity:0.75;stroke:#145c94;stroke-width:0.3"
+     height="300"
+     width="50"
+     y="15"
+     x="200" />
+  <rect
+     id="rect861"
+     style="color:#000;overflow:visible;opacity:0.9;fill:#6797cb;fill-opacity:0.75;stroke:#145c94;stroke-width:0.3"
+     height="210"
+     width="50"
+     y="105"
+     x="250" />
+  <rect
+     id="rect863"
+     style="color:#000;overflow:visible;opacity:0.9;fill:#6797cb;fill-opacity:0.75;stroke:#145c94;stroke-width:0.3"
+     height="90"
+     width="50"
+     y="225"
+     x="300" />
+<!-- Pro Grid X -->
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 50,315 V 320" />
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 150,315 V 320" />
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 200,315 V 320" />
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 250,315 V 320" />
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 300,315 V 320" />
+  <path
+     style="fill-opacity:0.75;stroke:#145c94;stroke-width:1.05"
+     d="M 350,315 V 320" />
+<!-- Nilai tengah di sumbu X -->
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="100">50,5</text>
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="150">60,5</text>
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="200">70,5</text>
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="250">80,5</text>
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="300">90,5</text>
+  <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="335"
+     x="350">100,5</text>
+  <!-- <text
+     id="text833"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#6797cb;stroke-width:0.15px"
+     y="330"
+     x="125">55</text>
+  <text
+     id="text835"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#6797cb;stroke-width:0.15px"
+     y="330"
+     x="150">65</text>
+  <text
+     id="text837"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#6797cb;stroke-width:0.15px"
+     y="330"
+     x="200">75</text>
+  <text
+     id="text839"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#6797cb;stroke-width:0.15px"
+     y="330"
+     x="250">85</text>
+  <text
+     id="text841"
+     style="text-anchor:middle;color:#000;font-size:14px;font-family:Verdana;overflow:visible;fill:#6797cb;stroke-width:0.15px"
+     y="330"
+     x="300">95</text> -->
+  <text
+     id="text867"
+     style="color:#000;font-size:19px;font-family:Verdana;overflow:visible;fill:#3465a4;stroke-width:0.15px"
+     y="360"
+     x="205">Nilai</text>
+
+  <text
+     id="text869"
+     style="color:#000;font-size:19px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     transform="rotate(-90)"
+     y="20"
+     x="-210">Frekuensi</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="320"
+     x="50">0</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="290"
+     x="50">1</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="260"
+     x="50">2</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="230"
+     x="50">3</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="200"
+     x="50">4</text>
+  <text
+     id="text853"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="170"
+     x="50">5</text>
+  <text
+     id="text851"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="140"
+     x="50">6</text>
+  <text
+     id="text849"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="110"
+     x="50">7</text>
+  <text
+     id="text843"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="80"
+     x="50">8</text>
+  <text
+     id="text847"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="50"
+     x="50">9</text>
+  <text
+     id="text845"
+     style="text-anchor:end;color:#000;font-size:19.5px;font-family:Verdana;overflow:visible;fill:#73d216;stroke-width:0.15px"
+     y="20"
+     x="50">10</text>
+
+<!-- Sumbu X -->
+  <path
+     style="fill:none;fill-opacity:1;stroke:#145c94;stroke-width:2;"
+     d="M 55,315 H 390" />
+<!-- Sumbu Y -->
+  <path
+     style="fill:none;fill-opacity:1;stroke:#145c94;stroke-width:2"
+     d="M 65,5 V 325" />
+</svg>

@@ -115,5 +115,376 @@
       "Statitika",
       "Kuartil dan Box Plot"
     ]
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#kuartil",
+    "href": "kuartil-box-plot-slide.html#kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "Kuartil",
+    "text": "Kuartil\n\nKuartil adalah tiga nilai yang posisinya yang membagi data yang nilai data itu sudah terurut menjadi empat bagian yang sama banyak.\n\n\n\n\n\n\n\nSalah satu prosedur menentukan kuartil:\n\n\n\nUrutkan data dari nilai terkecil ke nilai yang terbesar.\nBagi dua data menjadi dua bagian yang sama banyak. Data di posisi yang membagi dua data itu adalah Median atau Kuartil 2 dengan simbol \\(\\text{Q}_2\\).\nBagi dua data yang di sebelah kiri \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 1 dengan simbol \\(\\text{Q}_1\\).\nBagi dua data yang di sebelah kanan \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 3 dengan simbol \\(\\text{Q}_3\\)."
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#statistik-lima-serangkai",
+    "href": "kuartil-box-plot-slide.html#statistik-lima-serangkai",
+    "title": "Kuartil dan Box Plot",
+    "section": "Statistik Lima Serangkai",
+    "text": "Statistik Lima Serangkai\nStatistik lima serangkai terdiri dari nilai data terkecil (\\(\\text{x}_\\text{min}\\)), Q₁, Q₂, Q₃, dan data terbesar (\\(\\text{x}_\\text{maks}\\))."
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#jangkauan-antar-kuartil",
+    "href": "kuartil-box-plot-slide.html#jangkauan-antar-kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "Jangkauan Antar Kuartil",
+    "text": "Jangkauan Antar Kuartil\nJangkauan antar kuartil dalam bahasa Inggris Interquartil Range (IQR) biasa disebut juga Hamparan (H).\n\n\\[\\textbf{IQR} = \\textbf{H} = \\text{Q}_3 - \\text{Q}_1\\]"
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#pagar-dan-pencilan",
+    "href": "kuartil-box-plot-slide.html#pagar-dan-pencilan",
+    "title": "Kuartil dan Box Plot",
+    "section": "Pagar dan Pencilan",
+    "text": "Pagar dan Pencilan\nPagar Dalam (PD) = \\(\\text{Q}_1 - \\frac{3}{2}\\,\\text{H}\\)\nPagar Luar (PL) = \\(\\text{Q}_3 + \\frac{3}{2}\\,\\text{H}\\)\nDari data pada Contoh 2.\n\nDiperoleh:\nPD = \\(5 - \\frac{3}{2}\\times(7 - 5) = 2\\)\nPL = \\(7 + \\frac{3}{2}\\times(7 - 5) = 10\\)\n\n\n\n\n\n\nNote\n\n\nLangkah:\n\\(\\textbf{L} = \\frac{3}{2}\\textbf{H} = \\frac{3}{2}(\\text{Q}_3 - \\text{Q}_1)\\)"
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#diagran-kotak-garis",
+    "href": "kuartil-box-plot-slide.html#diagran-kotak-garis",
+    "title": "Kuartil dan Box Plot",
+    "section": "Diagran Kotak Garis",
+    "text": "Diagran Kotak Garis\nDiagram Kotak Garis (Box and Whisker Plot) menyajikan statistik lima serangkai.\nBerikut contoh Diagram Kotak Garis untuk statistik lima serangkai: \\(\\text{x}_\\text{min}=2\\), \\(\\text{Q}_1=4\\), \\(\\text{Q}_2=5\\), \\(\\text{Q}_3=7\\), dan \\(\\text{x}_\\text{maks}=8\\)."
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#uji-kompetensi",
+    "href": "kuartil-box-plot-slide.html#uji-kompetensi",
+    "title": "Kuartil dan Box Plot",
+    "section": "Uji Kompetensi",
+    "text": "Uji Kompetensi\nKuis Statistik Lima Serangkai dan Box Plot"
+  },
+  {
+    "objectID": "kuartil-box-plot-slide.html#latihan-soal",
+    "href": "kuartil-box-plot-slide.html#latihan-soal",
+    "title": "Kuartil dan Box Plot",
+    "section": "Latihan Soal",
+    "text": "Latihan Soal\n1. Temukan Kuartil untuk data berikut:\n\n\n\nNo\nData\n\\(\\text{Q}_{1,2,3}\\)\n\n\n\n\na.\n2, 10, 28, 35, 50\n…\n\n\nb.\n31, 32, 34, 42, 49, 50\n…\n\n\nc.\n8, 11, 12, 15, 17, 19, 22\n…\n\n\nd.\n5, 7, 12, 14, 15, 22, 24, 30\n…\n\n\ne.\n41, 42, 43, 44, 49, 50, 51, 53, 58\n…\n\n\nf.\n21, 23, 26, 31, 34, 38, 42, 47, 48, 49\n…"
+  },
+  {
+    "objectID": "statistika/kuartil/index.html",
+    "href": "statistika/kuartil/index.html",
+    "title": "Kuartil dan Box Plot",
+    "section": "",
+    "text": "Kuartil adalah tiga nilai yang posisinya membagi data yang sudah terurut menjadi empat bagian yang sama banyak.\n\n\n\n\n\n\n\nSalah satu prosedur menentukan kuartil:\n\n\n\n\n\n\nUrutkan data dari nilai terkecil ke nilai yang terbesar.\nBagi dua data menjadi dua bagian yang sama banyak. Data di posisi yang membagi dua data itu adalah Median atau Kuartil 2 dengan simbol \\(\\text{Q}_2\\).\nBagi dua data yang di sebelah kiri \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 1 dengan simbol \\(\\text{Q}_1\\).\nBagi dua data yang di sebelah kanan \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 3 dengan simbol \\(\\text{Q}_3\\).\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 6, 5, 8, 7, 9, 8, 7\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut, yaitu:\n\n\n\n\n\n\n\nMenentukan \\(\\text{Q}_2\\) atau \\(\\text{Me}\\), cari data ke berapa yang membagi data menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_2\\) adalah data ke-4. Nilai \\(\\text{Q}_2 = \\text{Me} = x_4 = 7\\).\n\n\nMenentukan \\(\\text{Q}_1\\) dengan meninjau data sebelah kiri \\(\\text{Q}_2\\), kemudian cari data ke berapa yang membagi data itu menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_1\\) adalah data ke-2, sehingga nilai \\(\\text{Q}_1 = x_2 = 6\\).\n\n\nMenentukan \\(\\text{Q}_3\\) dengan meninjau data sebelah kanan \\(\\text{Q}_2\\), kemudian cari data ke berapa yang membagi data itu menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_3\\) adalah data ke-6. Nilai \\(\\text{Q}_3 = \\text{Me} = x_6 = 8\\).\n\n\nJadi, sudah ditemukan bahwa: \\[\\text{Q}_1 = 6\\] \\[\\text{Q}_2 = 7\\] \\[\\text{Q}_3 = 8\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 3, 4, 7, 11, 12, 14, 19\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nLangka 1: Data sudah terurut.\n\n\n\n\n\n\n\nLangka 2: Mencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = \\dfrac{x_4 + x_5}{2}=\\dfrac{7+11}{2}=9\\).\n\n\n\n\n\n\n\nLangka 3: Mencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = \\dfrac{x_2 + x_3}{2} = \\dfrac{3+4}{2}=3\\frac{1}{2}\\).\n\n\n\n\n\n\n\nLangka 4: Mencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = \\dfrac{x_6 + x_7}{2} = \\dfrac{12+14}{2}=13\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 3\\frac{1}{2}\\] \\[\\text{Q}_2 = \\text{Me} = 9\\] \\[\\text{Q}_3 = \\frac{12+14}{2}=13\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 2, 3, 4, 5, 6, 7, 8, 9\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = x_5 = 5\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = \\dfrac{x_2 + x_3}{2}= \\dfrac{2+3}{2}=2\\frac{1}{2}\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = \\dfrac{x_7 + x_8}{2} = \\dfrac{7+8}{2}=7\\frac{1}{2}\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 2\\frac{1}{2}\\] \\[\\text{Q}_2 = \\text{Me} = 5\\] \\[\\text{Q}_3 = 7\\frac{1}{2}\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 4, 5, 5, 6, 6, 6, 7, 9, 10\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut.\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = \\dfrac{x_5 + x_6}{2} = \\dfrac{5+6}{2}=5\\frac{1}{2}\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = x_3 = 5\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = x_8 = 7\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 5\\] \\[\\text{Q}_2 = \\text{Me} = 5\\frac{1}{2}\\] \\[\\text{Q}_3 = 7\\]"
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#kuartil",
+    "href": "statistika/kuartil/index.html#kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "",
+    "text": "Kuartil adalah tiga nilai yang posisinya membagi data yang sudah terurut menjadi empat bagian yang sama banyak.\n\n\n\n\n\n\n\nSalah satu prosedur menentukan kuartil:\n\n\n\n\n\n\nUrutkan data dari nilai terkecil ke nilai yang terbesar.\nBagi dua data menjadi dua bagian yang sama banyak. Data di posisi yang membagi dua data itu adalah Median atau Kuartil 2 dengan simbol \\(\\text{Q}_2\\).\nBagi dua data yang di sebelah kiri \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 1 dengan simbol \\(\\text{Q}_1\\).\nBagi dua data yang di sebelah kanan \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 3 dengan simbol \\(\\text{Q}_3\\).\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 6, 5, 8, 7, 9, 8, 7\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut, yaitu:\n\n\n\n\n\n\n\nMenentukan \\(\\text{Q}_2\\) atau \\(\\text{Me}\\), cari data ke berapa yang membagi data menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_2\\) adalah data ke-4. Nilai \\(\\text{Q}_2 = \\text{Me} = x_4 = 7\\).\n\n\nMenentukan \\(\\text{Q}_1\\) dengan meninjau data sebelah kiri \\(\\text{Q}_2\\), kemudian cari data ke berapa yang membagi data itu menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_1\\) adalah data ke-2, sehingga nilai \\(\\text{Q}_1 = x_2 = 6\\).\n\n\nMenentukan \\(\\text{Q}_3\\) dengan meninjau data sebelah kanan \\(\\text{Q}_2\\), kemudian cari data ke berapa yang membagi data itu menjadi 2 (dua) bagian yang sama banyak.\n\n\n\n\n\nDiperoleh \\(\\text{Q}_3\\) adalah data ke-6. Nilai \\(\\text{Q}_3 = \\text{Me} = x_6 = 8\\).\n\n\nJadi, sudah ditemukan bahwa: \\[\\text{Q}_1 = 6\\] \\[\\text{Q}_2 = 7\\] \\[\\text{Q}_3 = 8\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 3, 4, 7, 11, 12, 14, 19\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nLangka 1: Data sudah terurut.\n\n\n\n\n\n\n\nLangka 2: Mencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = \\dfrac{x_4 + x_5}{2}=\\dfrac{7+11}{2}=9\\).\n\n\n\n\n\n\n\nLangka 3: Mencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = \\dfrac{x_2 + x_3}{2} = \\dfrac{3+4}{2}=3\\frac{1}{2}\\).\n\n\n\n\n\n\n\nLangka 4: Mencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = \\dfrac{x_6 + x_7}{2} = \\dfrac{12+14}{2}=13\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 3\\frac{1}{2}\\] \\[\\text{Q}_2 = \\text{Me} = 9\\] \\[\\text{Q}_3 = \\frac{12+14}{2}=13\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 2, 3, 4, 5, 6, 7, 8, 9\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = x_5 = 5\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = \\dfrac{x_2 + x_3}{2}= \\dfrac{2+3}{2}=2\\frac{1}{2}\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = \\dfrac{x_7 + x_8}{2} = \\dfrac{7+8}{2}=7\\frac{1}{2}\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 2\\frac{1}{2}\\] \\[\\text{Q}_2 = \\text{Me} = 5\\] \\[\\text{Q}_3 = 7\\frac{1}{2}\\]\n\n\n\n\n\n\nCarilah \\(\\text{Q}_1\\), \\(\\text{Q}_2\\), dan \\(\\text{Q}_3\\) dari: 1, 4, 5, 5, 6, 6, 6, 7, 9, 10\n\n\nUrutkanCari \\(\\text{Q}_2\\)Cari \\(\\text{Q}_1\\)Cari \\(\\text{Q}_3\\)\\(\\therefore\\)\n\n\nData sudah terurut.\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_2\\) dan diperoleh \\(\\text{Q}_2 = \\text{Me} = \\dfrac{x_5 + x_6}{2} = \\dfrac{5+6}{2}=5\\frac{1}{2}\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_1\\) dan diperoleh \\(\\text{Q}_1 = x_3 = 5\\).\n\n\n\n\n\n\n\nMencari \\(\\text{Q}_3\\) dan diperoleh \\(\\text{Q}_3 = x_8 = 7\\).\n\n\n\n\n\n\n\nJadi sudah ditemukan bahwa: \\[\\text{Q}_1 = 5\\] \\[\\text{Q}_2 = \\text{Me} = 5\\frac{1}{2}\\] \\[\\text{Q}_3 = 7\\]"
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#statistik-lima-serangkai",
+    "href": "statistika/kuartil/index.html#statistik-lima-serangkai",
+    "title": "Kuartil dan Box Plot",
+    "section": "Statistik Lima Serangkai",
+    "text": "Statistik Lima Serangkai\n\n\nStatistik lima serangkai terdiri dari nilai data terkecil (\\(\\text{x}_\\text{min}\\)), Q₁, Q₂, Q₃, dan data terbesar (\\(\\text{x}_\\text{maks}\\)).\n\n\n\n\n\n\n\n\nStatistik lima serangkai data pada contoh 4:"
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#jangkauan-antar-kuartil",
+    "href": "statistika/kuartil/index.html#jangkauan-antar-kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "Jangkauan Antar Kuartil",
+    "text": "Jangkauan Antar Kuartil\n\n\nJangkauan antar kuartil dalam bahasa Inggris Interquartil Range (IQR) biasa disebut juga Hamparan (H).\n\n\n\n\n\n\\[\\textbf{IQR} = \\textbf{H} = \\text{Q}_3 - \\text{Q}_1\\]\n\n\n\nDari data pada contoh 1:\n\n\n\n\n\nJangkauan Antar Kuartil-nya adalah:\n\\[\\textbf{IQR} = \\textbf{H} = \\text{Q}_3 - \\text{Q}_1 = 8 − 6 = 2\\]"
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#pagar-dan-pencilan",
+    "href": "statistika/kuartil/index.html#pagar-dan-pencilan",
+    "title": "Kuartil dan Box Plot",
+    "section": "Pagar dan Pencilan",
+    "text": "Pagar dan Pencilan\n\n\nPagar Dalam (PD) = \\(\\text{Q}_1 - \\frac{3}{2}\\,\\text{H}\\)\nPagar Luar (PL) = \\(\\text{Q}_3 + \\frac{3}{2}\\,\\text{H}\\)\nDari data pada Contoh 2.\n\n\n\n\n\nDiperoleh:\nPD = \\(5 - \\frac{3}{2}\\times(7 - 5) = 2\\)\nPL = \\(7 + \\frac{3}{2}\\times(7 - 5) = 10\\)\n\n\n\n\n\n\nNote\n\n\n\nLangkah:\n\\(\\textbf{L} = \\frac{3}{2}\\textbf{H} = \\frac{3}{2}(\\text{Q}_3 - \\text{Q}_1)\\)\n\n\n\n\n\nPencilan adalah data yang berada di luar pagar, yaitu data yang nilainya lebih kecil dari nilai Pagar Dalam atau nilainya lebih besar dari Pagar Luar.\nDari data pada Contoh 2.\n\n\n\n\n\nPencilannya adalah data yang tidak berada di antara nilai 2 dan 10.\nPencilan pada data itu adalah \\(1\\)."
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#diagran-kotak-garis",
+    "href": "statistika/kuartil/index.html#diagran-kotak-garis",
+    "title": "Kuartil dan Box Plot",
+    "section": "Diagran Kotak Garis",
+    "text": "Diagran Kotak Garis\nDiagram Kotak Garis (Box and Whisker Plot) menyajikan statistik lima serangkai.\nBerikut contoh Diagram Kotak Garis untuk statistik lima serangkai: \\(\\text{x}_\\text{min}=2\\), \\(\\text{Q}_1=4\\), \\(\\text{Q}_2=5\\), \\(\\text{Q}_3=7\\), dan \\(\\text{x}_\\text{maks}=8\\).\n\n\n\n\n\nDari data pada Contoh 4\n\n\n\n\n\nBerikut ini Diagram Kotak Garis dari data pada Contoh 4.\n\n\n\n\n\nPada Diagram Kotak Garis di atas tidak diperlihatkan keberadaan Pencilan.\nJika Pencilan hendak ditampilkan, maka Diagram Kotak Garis dari data itu sebagai berikut."
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#uji-kompetensi",
+    "href": "statistika/kuartil/index.html#uji-kompetensi",
+    "title": "Kuartil dan Box Plot",
+    "section": "Uji Kompetensi",
+    "text": "Uji Kompetensi\n\nKuis Statistik Lima Serangkai dan Box Plot\n\n\n\n\n\n\nLatihan Soal\n\n1. Temukan Kuartil untuk setiap data nilai berikut:\n\n\n\n\n\n\n\n\n\n\nNo\nData\n\\(\\text{Q}_1\\)\n\\(\\text{Q}_2\\)\n\\(\\text{Q}_3\\)\n\n\n\n\na.\n2, 10, 28, 35, 50\n…\n…\n…\n\n\nb.\n31, 32, 34, 42, 49, 50\n…\n…\n…\n\n\nc.\n8, 11, 12, 15, 17, 19, 22\n…\n…\n…\n\n\nd.\n5, 7, 12, 14, 15, 22, 24, 30\n…\n…\n…\n\n\ne.\n41, 42, 43, 44, 49, 50, 51, 53, 58\n…\n…\n…\n\n\nf.\n21, 23, 26, 31, 34, 38, 42, 47, 48, 49\n…\n…\n…\n\n\n\n\n\n2. Temukan Kuartil dan Jangkauan Antar Kuartil untuk setiap data nilai berikut:\n\n\n\n\n\n\n\n\n\n\n\nNo\nData\n\\(\\text{Q}_1\\)\n\\(\\text{Q}_2\\)\n\\(\\text{Q}_3\\)\nIQR = H\n\n\n\n\na.\n102, 115, 110, 113, 100\n…\n…\n…\n…\n\n\nb.\n-4, -6, -1, 7, 9, 7, 9\n…\n…\n…\n…\n\n\nc.\n19, 29, 55, 22, 15, 46, 35, 9, 27, 40\n…\n…\n…\n…\n\n\n\n\n\n3. Temukan Kuartil dan Jangkauan Antar Kuartil dari data yang disajikan dalam Diagram Batang Daun berikut.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeterangan tentang Diagram Batang Daun.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. Temukan Statistik Lima Serangkai dari data yang disajikan dalam tabel distribusi frekuensi berikut.\n\n\n\n\n\n\nSkor\nFrekuensi\n\n\n\n\n5\n3\n\n\n13\n3\n\n\n16\n2\n\n\n28\n2\n\n\n31\n3\n\n\n38\n4\n\n\n48\n2\n\n\n\n\n\n\n\n\n\n\n\nSkor\nFrekuensi\n\n\n\n\n5\n1\n\n\n14\n1\n\n\n18\n3\n\n\n24\n2\n\n\n32\n1\n\n\n38\n2\n\n\n50\n5\n\n\n\n\n\n\n\n\n5. Temukan Statistik Lima Serangkai dari data yang disajikan dalam Dot Plot berikut, kemudian buatlah Diagram Kotak Garis-nya."
+  },
+  {
+    "objectID": "statistika/index.html",
+    "href": "statistika/index.html",
+    "title": "Statistika",
+    "section": "",
+    "text": "Istilah statistika (statistics) pertama kali diperkenalkan oleh Sir John Sinclair.\nStatistika merupakan ilmu yang mempelajari bagaimana mengumpulkan data, meringkasnya jika diperlukan, menyajikannya, menganalisisnya, dan mengambil keputusan berdasarkan hasil analisisnya tersebut.\nStatistika merupakan ilmu yang berhubungan dengan data.\nStatistika yang mempelajari bagaimana pengumpulan, peringkasan, penyajian, dan analisis data lebih dikenal dengan istilah statistika deskriptif (descriptive statistics). Sedangkan pengambilan keputusan dalam statistika dikenal dengan statistika inferensi (inferential statistics).\nIstilah statistik digunakan untuk nilai atau ukuran untuk mendeskripsikan data. Statistika adalah ilmu yang mempelajari tentang statistik.\nKita, di Indonesia mengenal Hari Statistik Nasional (HSN) dan diperingati setiap tanggal 26 September. HSN diperingati untuk memaknai pentingnya peran statistik bagi pembangunan bangsa, salah satunya sebagai acuan bagi pengambil kebijakan untuk mencapai kesejahteraan bangsa Indonesia."
+  },
+  {
+    "objectID": "statistika/index.html#statistika-dan-statistik",
+    "href": "statistika/index.html#statistika-dan-statistik",
+    "title": "Statistika",
+    "section": "",
+    "text": "Istilah statistika (statistics) pertama kali diperkenalkan oleh Sir John Sinclair.\nStatistika merupakan ilmu yang mempelajari bagaimana mengumpulkan data, meringkasnya jika diperlukan, menyajikannya, menganalisisnya, dan mengambil keputusan berdasarkan hasil analisisnya tersebut.\nStatistika merupakan ilmu yang berhubungan dengan data.\nStatistika yang mempelajari bagaimana pengumpulan, peringkasan, penyajian, dan analisis data lebih dikenal dengan istilah statistika deskriptif (descriptive statistics). Sedangkan pengambilan keputusan dalam statistika dikenal dengan statistika inferensi (inferential statistics).\nIstilah statistik digunakan untuk nilai atau ukuran untuk mendeskripsikan data. Statistika adalah ilmu yang mempelajari tentang statistik.\nKita, di Indonesia mengenal Hari Statistik Nasional (HSN) dan diperingati setiap tanggal 26 September. HSN diperingati untuk memaknai pentingnya peran statistik bagi pembangunan bangsa, salah satunya sebagai acuan bagi pengambil kebijakan untuk mencapai kesejahteraan bangsa Indonesia."
+  },
+  {
+    "objectID": "statistika/index.html#data",
+    "href": "statistika/index.html#data",
+    "title": "Statistika",
+    "section": "Data",
+    "text": "Data\nData merupakan kata jamak dari datum.\nData adalah kumpulan fakta tentang suatu hal yang dinyatakan dalam bentuk angka, kata-kata, atau gambar yang diperoleh melalui hasil pengamatan, pencacahan, atau pengukuran.\nData yang diolah sehingga mengandung arti (diinterpretasi) dapat menjadi informasi.\n\nJenis Data Menurut Sifatnya\nData dapat bersifat kualitatif atau kuantitatif.\n\nData Kualitatif\nData kualitatif merupakan informasi deskriptif (menggambarkan sesuatu) dapat berupa kata, frase, kalimat, atau gambar.\nData Kuantitatif\nData kuantitatif merupakan informasi numerik atau angka.\nData kuantitatif dapat berupa data diskrit atau data kontinu.\nData diskrit diperoleh dari hasil mencacah, sedangkan data kontinu merupakan hasil pengukuran.\n\n\n\n\nJenis Data Menurut Cara Memperolehnya\nDikenal data primer dan data sekunder terkait dengan cara peneliti memperoleh data. 1. Data Primer\nData primer adalah data yang diperoleh/dikumpulkan langsung dari objeknya dengan cara observasi di lapangan dengan survey atau di laboratorium melalui percobaan yang dilakukan sendiri oleh peneliti. 2. Data Sekunder\nDisebut data sekunder, jika data yang digunakan berasal dari sumber lain atau data yang diperoleh sudah berupa publikasi oleh pihak lain.\n\n\nJenis Data Menurut Waktu Pengumpulan\n\nData Cross-Section\nData yang dikumpulkan pada waktu tertentu\nData Time-Series\nData yang dikumpulkan secara kronologis berdasarkan waktu\n\n\n\nJenis Data Menurut Skala Pengukuran\n\n\n\n\n\n\n\n\n\n\nSkala Pengukuran\nFrekuensi\nMengurutkan Nilai\nUkuran Pemusatan\nUkuran Penyebaran\n\n\n\n\nNominal\nv\n\nModus\n\n\n\nOrdinal\nV\nv\nModus, Median\nRange\n\n\nInterval\nV\nV\nModus, Median, Rata-rata Hitung\nRange, Standar Deviasi, Varian\n\n\nRasio\nv\nV\nModus, Rata-rata Hitung, Rata-rata Geometrik, Rata-rata Harmonis\nRange, Standar Deviasi, Varian, Koefisien Varian\n\n\n\n\nNominal\nData berupa angka-angka dalam rentangan skala pengukuran yang berfungsi sebagai pengganti label, atribut, atau kategori. Angka-angka itu tidak menunjukkan suatu kuantitas.\nContoh: Data jenis kelamin, 1 untuk menyatakan laki-laki dan 2 untuk menyatakan perempuan.\nOrdinal\nData berupa angka-angka dalam rentangan skala pengukuran tidak hanya menunjukkan kategori, tetapi juga menunjukkan hubungan kuantitas tertentu, yakni gradasi atau urutan.\nContoh: Data tingkat intensitas kunjungan ke perpustakaan, (1) jarang sekali, (2) jarang, (3) sedang, (4) sering, (5) sering sekali.\nDalam skala ordinal:\n\nKategori yang diukur disusun terurut dari yang paling besar ke yang paling kecil atau sebaliknya.\nTidak dapat dipastikan rentang perbedaan antara angka-angka yang berurutan pada skala pengukurannya.\nAngka-angka tidak menunjukkan kuantitas dalam arti absolut.\nContoh hasil lomba lari: A juara 1, B juara 2, dan C juara 3. Angka 1 lebih unggul dari angka 2 dan 3, tetapi skala ini tidak bisa menunjukkan tingkatan kemampuan/keunggulan mereka. Tidak berarti A lebih unggul dua kali lipat dari B dan tiga kali lipat dari C.\n\nInterval\nData berupa angka-angka angka-angka dalam skala pengukuran tidak hanya menunjukkan hubungan kuantitatif dalam gradasi (ranking) tetapi juga menunjukkan bahwa jarak atau perbedaan kuantitas antar dua angka yang berurutan selalu sama.\nDalam skala interval:\n\nAngka-angka tidak menunjukkan kuantitas dalam arti absolut.\nJarak atau perbedaan kuantitas antar angka-angka yang berurutan pada skala pengukuran selalu sama.\nAngka nol tidak menunjukkan nol absolut, nihil, atau tidak ada.\n\nContoh: Ukuran temperatur air. Ukuran 0°C bukan berarti tidak memiliki temperatur. Angka 0°C memiliki sifat relatif, diantaranya 0°C = 32°Fahrenheit.\nRasio\nJika pada skala pengukuran, angka atau nilai nol absolut diketahui dengan pasti, maka disebut skala rasio.\nDalam skala rasio:\n\nAngka-angka menunjukkan kuantitas dalam arti absolut.\n\nInterval (jarak) antar angka-angka yang berurutan pada skala menunjukkan jarak yang sama.\nMempunyai nilai nol absolut, artinya jarak tiap angka dalam skala dengan titik nol absolut dapat diketahui, secara eksplisit atau secara rasional.\n\nContoh:\nJumlah buku tentang Data Sains, Permakultur, dan The Sustainable Development di perpustakaan.\nJika Buku tentang Permakultur sebanyak 2 dan The Sustainable Development sebanyak 6, jumlah buku The Sustainable Development tiga kali lebih banyak dari jumlah buku Permakultur.\nJika di perpustakaan sekolah itu tidak terdapat buku tentang Data Sains, angka yang digunakan tentu saja 0. Angka 0 menunjukkan kuantitas dalam arti absolut, yaitu nihil, atau tidak ada."
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html",
+    "href": "statistika/diagram-pencar/index.html",
+    "title": "Diagram Pencar",
+    "section": "",
+    "text": "Data univariat adalah sebutan untuk data yang hanya terdiri dari satu variabel numerik. Kumpulan data jarak dari rumah peserta didik kelas X ke sekolah.\nData bivariat adalah sebutan untuk data numerik yang terdiri dari pasangan nilai. Pasangan dalam kumpulan data bivariat disebut variabel bebas dan variabel terikat . Dalam konteks di atas, variabel bebasnya adalah umur seseorang dan variabel terikatnya adalah kepadatan tulangnya. Variabel terikat adalah variabel yang harus berubah berdasarkan variabel bebasnya. Kami kemudian dapat memeriksa apakah usia merupakan prediktor yang baik untuk kepadatan tulang. Dengan kata lain, kita bisa menentukan apakah kepadatan tulang bergantung pada usia seseorang.\nSatu titik data dalam kumpulan data bivariat ditulis dinyatakan dalam sistem koordinat kartesius dengan koordinat \\((x\\,,\\,y)\\). Nilai \\(x\\) sebagai variabel bebas dan nilai \\(y\\) sebagai variabel terikat. Data bivariat ditampilkan secara grafis dengan memplot titik-titik data sesuai kordinatnya, dengan nilai variabel bebas pada sumbu horizontal dan nilai variabel terikat pada sumbu vertikal. Ini dikenal sebagai Diagram Pencar."
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#diagram-pencar",
+    "href": "statistika/diagram-pencar/index.html#diagram-pencar",
+    "title": "Diagram Pencar",
+    "section": "Diagram Pencar",
+    "text": "Diagram Pencar\n\nDiagram Pencar (Scatter Diagram) adalah diagram yang digunakan untuk mencari korelasi antara perubahan suatu variabel dengan perubahan variabel yang lain. Diagram pencar biasa disebut grafik \\(X-Y\\) adalah diagram yang menunjukkan keragaman gabungan antara dua variabel \\(x\\) dan \\(y\\). Masing-masing unsur digambarkan sebagai satu titik dalam sistem koordiniat Kartesius. Setelah memahaminya, tugas kita selanjutnya menganalisa dan menemukan hubungan antara \\(x\\) dan \\(y\\) dari segugus \\(n\\) buah titik pada diagram.\n\n\nContoh\nPara ilmuwan mencari hubungan antara jumlah jam tidur seseorang dan pengaruhnya terhadap keterampilan motoriknya. Beberapa subjek diminta untuk tidur dalam jangka waktu yang berbeda, dan semuanya diminta untuk menjalani tantangan mengemudi yang sama dimana waktu reaksi mereka diukur. Tabel tersebut menunjukkan hasil yang disajikan sebagai diagram pencar.\n\n\n\nLama Tidur (jam)\nWaktu Reaksi (detik)\n\n\n\n\n9\n3\n\n\n6\n3,3\n\n\n4\n3,5\n\n\n10\n3\n\n\n3\n3,7\n\n\n7\n3,2\n\n\n2\n3,85\n\n\n5\n3.55\n\n\n\n\n\n\n\n\nWaktu reaksi bergantung pada seberapa lama orang tersebut tidur. Jadi nilai pada sumbu horizontal mewakili jumlah jam tidur dan nilai pada sumbu vertikal mewakili waktu reaksi.\nBerdasarkan data dan grafik di atas, jika jam tidur bertambah, maka waktu reaksi berkurang (turun).\nJadi seiring bertambahnya jam tidur, waktu reaksi semakin berkurang.\n\nRingkasan\n\n\n\n\n\n\n\nData univariat\nData dengan hanya satu variabel\n\n\nData bivariat\nData terdiri dari pasangan terurut dua variabel\n\n\nVariabel bebas\nVariabel yang tidak ditentukan oleh variabel lain.\n\n\nVariabel tak bebas\nVariabel yang ditentukan oleh variabel lain.\n\n\nTitik data\nPasangan terurut yang diambil dari kumpulan data, sebut pasangan terurut itu \\((x,y)\\) dengan \\(x\\) sebagai variabel bebas dan \\(y\\) sebagai variabel terikat.\n\n\nDiagram Pencar\nVisualisasi data bivariat sebagai pasangan terurut titik data\n\n\n\n\n\n\nKuis"
+  },
+  {
+    "objectID": "slides/kuartil/index.html#kuartil",
+    "href": "slides/kuartil/index.html#kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "Kuartil",
+    "text": "Kuartil\n\nKuartil adalah tiga nilai yang posisinya membagi data yang sudah terurut menjadi empat bagian yang sama banyak.\n\n\n\n\n\n\n\nSalah satu prosedur menentukan kuartil:\n\n\n\nUrutkan data dari nilai terkecil ke nilai yang terbesar.\nBagi dua data menjadi dua bagian yang sama banyak. Data di posisi yang membagi dua data itu adalah Median atau Kuartil 2 dengan simbol \\(\\text{Q}_2\\).\nBagi dua data yang di sebelah kiri \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 1 dengan simbol \\(\\text{Q}_1\\).\nBagi dua data yang di sebelah kanan \\(\\text{Q}_2\\). Data di posisi yang membagi dua data itu adalah Kuartil 3 dengan simbol \\(\\text{Q}_3\\)."
+  },
+  {
+    "objectID": "slides/kuartil/index.html#statistik-lima-serangkai",
+    "href": "slides/kuartil/index.html#statistik-lima-serangkai",
+    "title": "Kuartil dan Box Plot",
+    "section": "Statistik Lima Serangkai",
+    "text": "Statistik Lima Serangkai\nStatistik lima serangkai terdiri dari nilai data terkecil (\\(\\text{x}_\\text{min}\\)), Q₁, Q₂, Q₃, dan data terbesar (\\(\\text{x}_\\text{maks}\\))."
+  },
+  {
+    "objectID": "slides/kuartil/index.html#jangkauan-antar-kuartil",
+    "href": "slides/kuartil/index.html#jangkauan-antar-kuartil",
+    "title": "Kuartil dan Box Plot",
+    "section": "Jangkauan Antar Kuartil",
+    "text": "Jangkauan Antar Kuartil\nJangkauan antar kuartil dalam bahasa Inggris Interquartil Range (IQR) biasa disebut juga Hamparan (H).\n\n\\[\\textbf{IQR} = \\textbf{H} = \\text{Q}_3 - \\text{Q}_1\\]"
+  },
+  {
+    "objectID": "slides/kuartil/index.html#pagar-dan-pencilan",
+    "href": "slides/kuartil/index.html#pagar-dan-pencilan",
+    "title": "Kuartil dan Box Plot",
+    "section": "Pagar dan Pencilan",
+    "text": "Pagar dan Pencilan\nPagar Dalam (PD) = \\(\\text{Q}_1 - \\frac{3}{2}\\,\\text{H}\\)\nPagar Luar (PL) = \\(\\text{Q}_3 + \\frac{3}{2}\\,\\text{H}\\)\nDari data pada Contoh 2.\n\nDiperoleh:\nPD = \\(5 - \\frac{3}{2}\\times(7 - 5) = 2\\)\nPL = \\(7 + \\frac{3}{2}\\times(7 - 5) = 10\\)\n\n\n\n\n\n\nNote\n\n\nLangkah:\n\\(\\textbf{L} = \\frac{3}{2}\\textbf{H} = \\frac{3}{2}(\\text{Q}_3 - \\text{Q}_1)\\)"
+  },
+  {
+    "objectID": "slides/kuartil/index.html#diagran-kotak-garis",
+    "href": "slides/kuartil/index.html#diagran-kotak-garis",
+    "title": "Kuartil dan Box Plot",
+    "section": "Diagran Kotak Garis",
+    "text": "Diagran Kotak Garis\nDiagram Kotak Garis (Box and Whisker Plot) menyajikan statistik lima serangkai.\nBerikut contoh Diagram Kotak Garis untuk statistik lima serangkai: \\(\\text{x}_\\text{min}=2\\), \\(\\text{Q}_1=4\\), \\(\\text{Q}_2=5\\), \\(\\text{Q}_3=7\\), dan \\(\\text{x}_\\text{maks}=8\\)."
+  },
+  {
+    "objectID": "slides/kuartil/index.html#uji-kompetensi",
+    "href": "slides/kuartil/index.html#uji-kompetensi",
+    "title": "Kuartil dan Box Plot",
+    "section": "Uji Kompetensi",
+    "text": "Uji Kompetensi\nKuis Statistik Lima Serangkai dan Box Plot"
+  },
+  {
+    "objectID": "slides/kuartil/index.html#latihan-soal",
+    "href": "slides/kuartil/index.html#latihan-soal",
+    "title": "Kuartil dan Box Plot",
+    "section": "Latihan Soal",
+    "text": "Latihan Soal\n1. Temukan Kuartil untuk data berikut:\n\n\n\nNo\nData\n\\(\\text{Q}_{1,2,3}\\)\n\n\n\n\na.\n2, 10, 28, 35, 50\n…\n\n\nb.\n31, 32, 34, 42, 49, 50\n…\n\n\nc.\n8, 11, 12, 15, 17, 19, 22\n…\n\n\nd.\n5, 7, 12, 14, 15, 22, 24, 30\n…\n\n\ne.\n41, 42, 43, 44, 49, 50, 51, 53, 58\n…\n\n\nf.\n21, 23, 26, 31, 34, 38, 42, 47, 48, 49\n…"
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#data-univariat-vs-data-bivariat",
+    "href": "statistika/diagram-pencar/index.html#data-univariat-vs-data-bivariat",
+    "title": "Diagram Pencar",
+    "section": "",
+    "text": "Data univariat adalah sebutan untuk data yang hanya terdiri dari satu variabel numerik. Kumpulan data jarak dari rumah peserta didik kelas X ke sekolah.\nData bivariat adalah sebutan untuk data numerik yang terdiri dari pasangan nilai. Pasangan dalam kumpulan data bivariat disebut variabel bebas dan variabel terikat . Dalam konteks di atas, variabel bebasnya adalah umur seseorang dan variabel terikatnya adalah kepadatan tulangnya. Variabel terikat adalah variabel yang harus berubah berdasarkan variabel bebasnya. Kami kemudian dapat memeriksa apakah usia merupakan prediktor yang baik untuk kepadatan tulang. Dengan kata lain, kita bisa menentukan apakah kepadatan tulang bergantung pada usia seseorang.\nSatu titik data dalam kumpulan data bivariat ditulis dinyatakan dalam sistem koordinat kartesius dengan koordinat \\((x\\,,\\,y)\\). Nilai \\(x\\) sebagai variabel bebas dan nilai \\(y\\) sebagai variabel terikat. Data bivariat ditampilkan secara grafis dengan memplot titik-titik data sesuai kordinatnya, dengan nilai variabel bebas pada sumbu horizontal dan nilai variabel terikat pada sumbu vertikal. Ini dikenal sebagai Diagram Pencar."
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#kuis",
+    "href": "statistika/diagram-pencar/index.html#kuis",
+    "title": "Diagram Pencar",
+    "section": "Kuis",
+    "text": "Kuis"
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#korelasi",
+    "href": "statistika/diagram-pencar/index.html#korelasi",
+    "title": "Diagram Pencar",
+    "section": "Korelasi",
+    "text": "Korelasi\nKetika dua kumpulan data (dua variabel) saling terkait erat, kita mengatakan keduanya memiliki Korelasi Tinggi.\n\nKorelasinya Positif ketika nilai kedua variabel meningkat bersama-sama, dan\nKorelasi bernilai Negatif jika salah satu nilai variabel meningkat seiring dengan penurunan nilai variabel lainnya.\n\n\n\nKuis"
+  },
+  {
+    "objectID": "statistika/statistik-di-media/index.html",
+    "href": "statistika/statistik-di-media/index.html",
+    "title": "Statistik di Media",
+    "section": "",
+    "text": "Penulis artikel atau naskah yang dipublikasikan sering menggunakan data untuk menjelaskan apa yang ingin disampaikan melalui tulisan. Nilai statistik dari data itu digunakan untuk mendukung argumen pada suatu tulisan. Tampilan visual dalam bentuk diagram digunakan untuk lebih mendeskripsikan informasi."
+  },
+  {
+    "objectID": "statistika/statistik-di-media/index.html#statistik-di-media",
+    "href": "statistika/statistik-di-media/index.html#statistik-di-media",
+    "title": "Statistik di Media",
+    "section": "",
+    "text": "Penulis artikel atau naskah yang dipublikasikan sering menggunakan data untuk menjelaskan apa yang ingin disampaikan melalui tulisan. Nilai statistik dari data itu digunakan untuk mendukung argumen pada suatu tulisan. Tampilan visual dalam bentuk diagram digunakan untuk lebih mendeskripsikan informasi."
+  },
+  {
+    "objectID": "statistika/statistik-di-media/index.html#penyalahgunaan-statistik",
+    "href": "statistika/statistik-di-media/index.html#penyalahgunaan-statistik",
+    "title": "Statistik di Media",
+    "section": "Penyalahgunaan Statistik",
+    "text": "Penyalahgunaan Statistik\nSaat seseorang berargumentasi atau mencoba menyampaikan pendapatnya, mereka mungkin sengaja membuat pilihan agar data terlihat dengan cara tertentu guna membuktikan pendapatnya. Terkadang hal ini dilakukan secara tidak sengaja dan terkadang dilakukan dengan sengaja untuk menyesatkan.\n  Ada banyak cara seseorang memutarbalikkan data, diantaranya:\n\nCherry-picking atau Petik ceri - memilih data yang menguntungkan, penggunaan data secara selektif untuk mendukung posisi seseorang, dan mengabaikan data lain yang cenderung bertentangan dengan pendapat seseorang. Praktik bias dalam memilih data atau kumpulan data secara selektif yang mendukung kesimpulan atau sudut pandang tertentu dan mengabaikan informasi yang bertentangan. Hal ini dapat menyebabkan hasil yang menyesatkan dalam analisis data.\nPada halaman web https://en.wikipedia.org/wiki/Cherry_picking diperlihatkan contohnya, seperti berikut ini.\n\n\n\nGlobal Warming Hiatus\n\n\n\nCherry-picking sering digunakan dalam penolakan sains seperti penolakan perubahan iklim . Misalnya, dengan sengaja memilih periode waktu yang mendukung kepentingannya, seperti rentang tahun 1998–2012, walaupun pada rentang itu tren pemanasan sedang berlangsung tetapi cenderung melemah.\n\nSurvei dan pengambilan sampel yang bias  - penyusunan pertanyaan survei dan pewawancara memengaruhi tanggapan yang diberikan atau cara memilih responden tidak acak.\nGeneralisasi yang berlebihan - menyatakan kesimpulan tentang suatu populasi dari kelompok data yang tidak mewakili populasi.\nKorelasi dan sebab-akibat - jika diamati hubungan antara dua variabel A dan B, kita tergoda untuk mengambil kesimpulan bahwa A menyebabkan B. Namun, mungkin saja B menyebabkan A, keduanya mungkin saling menyebabkan satu sama lain, mungkin ada faktor ketiga yang menyebabkan keduanya atau hubungan tersebut mungkin tidak ada sama sekali.\nPerbandingan yang buruk - terkadang dua kumpulan data tidak dapat dibandingkan satu sama lain secara bermakna. Misalnya, jika penutur asli bahasa Inggris dibandingkan dengan penutur bukan penutur asli dalam tugas pemahaman bacaan bahasa Inggris, kita tidak dapat menyimpulkan bahwa penutur asli tersebut “lebih cerdas” padahal mereka pasti memiliki kemampuan yang lebih baik."
+  },
+  {
+    "objectID": "peluang/index.html",
+    "href": "peluang/index.html",
+    "title": "Peluang",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/frekuensi-harapan/index.html",
+    "href": "peluang/frekuensi-harapan/index.html",
+    "title": "Frekuensi Harapan",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/kejadian-majemuk/index.html",
+    "href": "peluang/kejadian-majemuk/index.html",
+    "title": "Kejadian Majemuk",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/peluang-kejadian-bebas/index.html",
+    "href": "peluang/peluang-kejadian-bebas/index.html",
+    "title": "Peluang Kejadian Bebas",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/peluang-kejadian-bersyarat/index.html",
+    "href": "peluang/peluang-kejadian-bersyarat/index.html",
+    "title": "Peluang Kejadian Bersyarat",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/peluang-kejadian-saling-lepas/index.html",
+    "href": "peluang/peluang-kejadian-saling-lepas/index.html",
+    "title": "Peluang Kejadian Saling Lepas",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/peluang-kejadian-tidak-saling-lepas/index.html",
+    "href": "peluang/peluang-kejadian-tidak-saling-lepas/index.html",
+    "title": "Peluang Kejadian Tidak Saling Lepas",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "peluang/peluang-suatu-kejadian/index.html",
+    "href": "peluang/peluang-suatu-kejadian/index.html",
+    "title": "Peluang Suatu Kejadian",
+    "section": "",
+    "text": "Halaman ini masih akan dikembangkan. Untuk sementara, halaman ini berisi link materi peluang matematika Umum kelas XII Kurikulum 2013. Link materi dapat diakses menggunakan akun belajar.id.\nKaidah Pencacahan\nPermutasi\nKombinasi\nPeluang Suatu Kejadian\nPeluang Kejadian Majemuk\nSoal Latihan Kaidah Pencacahan\nSoal Latihan Peluang\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "peluang/ruang-sampel/index.html",
+    "href": "peluang/ruang-sampel/index.html",
+    "title": "Ruang Sampel",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#pengertian-diagram-pencar",
+    "href": "statistika/diagram-pencar/index.html#pengertian-diagram-pencar",
+    "title": "Diagram Pencar",
+    "section": "Pengertian Diagram Pencar",
+    "text": "Pengertian Diagram Pencar\n\nDiagram Pencar (Scatter Diagram/Scatter Plot) adalah diagram yang menunjukkan keragaman hubungan antara dua variabel \\(x\\) dan \\(y\\). Masing-masing unsur yang berhubungan digambarkan sebagai satu titik dalam sistem koordiniat Kartesius."
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#deskripsi-diagram-pencar",
+    "href": "statistika/diagram-pencar/index.html#deskripsi-diagram-pencar",
+    "title": "Diagram Pencar",
+    "section": "Deskripsi Diagram Pencar",
+    "text": "Deskripsi Diagram Pencar\nDiagram Pencar dapat mendeskripsikan hubungan antar variabel yang mencakup: - Bentuk. Apakah asosiasinya linier atau nonlinier? - Arah. Apakah hubungannya positif atau negatif? - Kuat atau tidaknya keterkaitan. Apakah keterkaitannya tampak kuat, cukup kuat, atau lemah? - Pencilan. Apakah ada titik data yang sangat jauh dari pola umum?\nKetika dua kumpulan data (dua variabel) saling terkait erat, kita mengatakan keduanya memiliki Korelasi Tinggi.\n\nKorelasinya Positif ketika nilai kedua variabel meningkat bersama-sama, dan\nKorelasi bernilai Negatif jika salah satu nilai variabel meningkat seiring dengan penurunan nilai variabel lainnya.\n\n\n\nContoh\nPara ilmuwan mencari hubungan antara jumlah jam tidur seseorang dan pengaruhnya terhadap keterampilan motoriknya. Beberapa subjek diminta untuk tidur dalam jangka waktu yang berbeda, dan semuanya diminta untuk menjalani tantangan mengemudi yang sama dimana waktu reaksi mereka diukur. Tabel tersebut menunjukkan hasil yang disajikan sebagai diagram pencar.\n\n\n\nLama Tidur (jam)\nWaktu Reaksi (detik)\n\n\n\n\n9\n3\n\n\n6\n3,3\n\n\n4\n3,5\n\n\n10\n3\n\n\n3\n3,7\n\n\n7\n3,2\n\n\n2\n3,85\n\n\n5\n3.55\n\n\n\n\n\n\n\n\nWaktu reaksi bergantung pada seberapa lama orang tersebut tidur. Jadi nilai pada sumbu horizontal mewakili jumlah jam tidur dan nilai pada sumbu vertikal mewakili waktu reaksi.\nBerdasarkan data dan grafik di atas, jika jam tidur bertambah, maka waktu reaksi berkurang (turun). Jadi seiring bertambahnya jam tidur, waktu reaksi semakin berkurang.\nContoh diagram pencar ini menunjukkan bahwa hubungan antara waktu rekasi pengemudi dan seberapa lama yang bersangkutan tidur adalah: - Linear (bentuknya) - Kuat (hubungannya) - Negatif (arahnya), dan - Tidak ada pencilan, tidak tampak ada data yang jauh dari pola.\nPerhatikan bahwa uraian tersebut menyebutkan bentuk (linier), arah (negatif), kekuatan (kuat), dan tidak adanya outlier . Disebutkan pula konteks kedua variabel yang dimaksud (usia pengemudi dan jumlah kecelakaan)."
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#latihan-soal",
+    "href": "statistika/diagram-pencar/index.html#latihan-soal",
+    "title": "Diagram Pencar",
+    "section": "Latihan Soal",
+    "text": "Latihan Soal\n\nPilih diagram pencar yang paling sesuai dengan deskripsi berikut.\n\n\n“Terdapat hubungan yang kuat, positif, dan linier antara kedua variabel tersebut.”\n\n\nA. \nB \nC  \n\n\nPilih diagram sebar yang paling sesuai dengan deskripsi berikut.\n\n\n“Terdapat hubungan linier yang cukup kuat dan negatif antara kedua variabel dengan beberapa potensi pencilan.”\n\n\nA  \nB  \nC  \n\n\nPilih diagram sebar yang paling sesuai dengan deskripsi berikut.\n\n\nAda hubungan yang kuat, negatif, dan nonlinier antara kedua variabel tersebut.\n\n\nA  \nB  \nC  \n\n\nRingkasan\n\n\n\n\n\n\n\nData univariat\nData dengan hanya satu variabel\n\n\nData bivariat\nData terdiri dari pasangan terurut dua variabel\n\n\nVariabel bebas\nVariabel yang tidak ditentukan oleh variabel lain.\n\n\nVariabel tak bebas\nVariabel yang ditentukan oleh variabel lain.\n\n\nTitik data\nPasangan terurut yang diambil dari kumpulan data, sebut pasangan terurut itu \\((x,y)\\) dengan \\(x\\) sebagai variabel bebas dan \\(y\\) sebagai variabel terikat.\n\n\nDiagram Pencar\nVisualisasi data bivariat sebagai pasangan terurut titik data\n\n\n\n\n\nKuis\n\n\n\n\nKuis"
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html",
+    "href": "statistika/boxplot-dotplot-histogram/index.html",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "",
+    "text": "Suatu data dapat disajikan dengan berbagai cara. Satu cara dapat lebih efektif dan efisien dibanding cara lain, atau setara keefektifannya. Pada kesempatan ini, kita akan meninjau suatu data disajikan menggunakan box plot (diagram pencar), dot plot, dan histogram.\nBox plot sudah dipelajari pada sesi sebelumnya. Demikian juga dot plot sudah dikenal dan diungkap ulang saat latihan soal tentang kuartil dan statistik lima serangkai. Mungkin histogram masih asing. Histogram mirip seperti diagram batang. Yang berbeda, pada histogram data dikelompokkan setiap kelas (interval) dengan panjang kelas sama untuk setiap kelas."
+  },
+  {
+    "objectID": "statistika/kuartil/index.html#halaman-sebelum-dan-sesudahnya",
+    "href": "statistika/kuartil/index.html#halaman-sebelum-dan-sesudahnya",
+    "title": "Kuartil dan Box Plot",
+    "section": "Halaman sebelum dan sesudahnya",
+    "text": "Halaman sebelum dan sesudahnya\n\n\nStatistika\n\n\n\nMenggunakan Box Plot, Dot Plor, dan Histogram"
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html#contoh",
+    "href": "statistika/boxplot-dotplot-histogram/index.html#contoh",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "Contoh",
+    "text": "Contoh\nKita gunakan satu kumpulan data. Kemudian data itu disajikan dengan tiga cara tadi. Silakan disimak, ditelaah, dan dinilai kesesuaian cara penyajiannya. Data berikut sebagai contohnya yang sudah disajikan secara terurut dan disajikan pula menggunakan tabel distribusi data tunggal.\n\n\n[55, 60, 65,\n65, 65, 70,\n70, 70, 70,\n70, 75, 75,\n75, 75, 75,\n80, 80, 80,\n80, 80, 85,\n85, 85, 85,\n90, 90, 90,\n95, 95, 100.]{}\n\n\n\n\n\n\ndata\nFrekuensi\n\n\n\n\n55\n1\n\n\n60\n1\n\n\n65\n3\n\n\n70\n5\n\n\n75\n5\n\n\n80\n5\n\n\n85\n4\n\n\n90\n3\n\n\n95\n2\n\n\n100\n1"
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-dot-plot.",
+    "href": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-dot-plot.",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "Disajikan Menggunakan Dot Plot.",
+    "text": "Disajikan Menggunakan Dot Plot."
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-box-plot",
+    "href": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-box-plot",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "Disajikan Menggunakan Box Plot",
+    "text": "Disajikan Menggunakan Box Plot\nDari data itu ditemukan nilai-nilai statistiknya:\n\n\\(x_\\text{min} = x_1 = 55\\)\n\\(x_\\text{max} = x_{30} = 100\\)\n\\(\\text{Q}_2 = \\frac{x_{15} + x_{16}}{2}=\\frac{75+80}{2}=77,5\\)\n\\(\\text{Q}_1=x_{\\frac{15+1}{2}}=x_8=70\\)\n\\(\\text{Q}_3=x_{15+8}=x_{23}=85\\)\n\\(\\text{IQR} = H = \\text{Q}_3 - \\text{Q}_1 = 85 - 70 = 15\\)\n\\(\\text{Langkah}=\\text{L}=\\frac{3}{2}\\times{\\text{H}}=\\frac{3}{2}\\times{15}=22,5\\)\n\\(\\text{PD} = \\text{Q}1 - \\text{L} = 70 - 22,5 = 47,5\\)\n\\(\\text{PL} = \\text{Q}3 + \\text{L} = 85 + 22,5 = 107,5\\)\n\nBerikut ini, jika data disajikan menggunakan box plot atau diagram Kotak garis."
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-histogram",
+    "href": "statistika/boxplot-dotplot-histogram/index.html#disajikan-menggunakan-histogram",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "Disajikan Menggunakan Histogram",
+    "text": "Disajikan Menggunakan Histogram\nUntuk menyajikan data menggunakan histogram data terlebih dahulu dikelompokkan. Kita coba data dikelompokkan menjadi 5 (lima) kelas dengan kelas pertama \\(50,5-60,5\\) dan kelas terakhir \\(90,5-100,5\\). Berikut tabel distribusi frekuensinya.\n\n\n\ndata\nFrekuensi\n\n\n\n\n50,5 - 60,5\n2\n\n\n60,5 - 70,5\n8\n\n\n70,5 - 80,5\n10\n\n\n80,5 - 90,5\n7\n\n\n90,5 - 100,5\n3\n\n\n\nHistogramnya:"
+  },
+  {
+    "objectID": "statistika/boxplot-dotplot-histogram/index.html#halaman-sebelum-dan-sesudahnya",
+    "href": "statistika/boxplot-dotplot-histogram/index.html#halaman-sebelum-dan-sesudahnya",
+    "title": "Menggunakan Box Plot, Dot Plot, dan Histogram",
+    "section": "Halaman sebelum dan sesudahnya",
+    "text": "Halaman sebelum dan sesudahnya\n\n\nKuartil dan Box Plot\n\n\n\nDiagram Pencar"
+  },
+  {
+    "objectID": "statistika/diagram-pencar/index.html#halaman-sebelum-dan-sesudahnya",
+    "href": "statistika/diagram-pencar/index.html#halaman-sebelum-dan-sesudahnya",
+    "title": "Diagram Pencar",
+    "section": "Halaman sebelum dan sesudahnya",
+    "text": "Halaman sebelum dan sesudahnya\n\n\nMenggunakan Box Plot, Dot Plor, dan Histogram\n\n\n\nStatistik di Media"
+  },
+  {
+    "objectID": "statistika/statistik-di-media/index.html#halaman-sebelum-dan-sesudahnya",
+    "href": "statistika/statistik-di-media/index.html#halaman-sebelum-dan-sesudahnya",
+    "title": "Statistik di Media",
+    "section": "Halaman sebelum dan sesudahnya",
+    "text": "Halaman sebelum dan sesudahnya\n\n\nDiagram Pencar"
   }
 ]

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2017 mathsisfun.com -->
+
+<svg
+   width="311.3"
+   height="250.3"
+   xmlns="http://www.w3.org/2000/svg">
+
+  <!-- untuk grid -->
+  <path d="M 50,20 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,40 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,60 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,80 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,100 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,120 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,140 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,160 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 50,180 H 310" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 75,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 100,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 125,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 150,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 175,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 200,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 225,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 250,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 275,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+  <path d="M 300,10 V 200" style="stroke:#3465a4;stroke-width:.25"/>
+
+   <!-- sumbu x-y -->
+  <path
+     d="M 50,10 V 200 H 310"
+     style="fill:none;stroke:#3465a4;stroke-width:1.03"
+     id="path4" />
+
+  <!-- untuk sumbu x -->
+  <path
+     d="m 75,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 100,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 125,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 150,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 175,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 200,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 225,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 250,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 275,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+  <path
+     d="m 300,200 v 5"
+     style="overflow:visible;fill:#729fcf;fill-opacity:0.75;stroke:#729fcf;stroke-width:1.03"/>
+
+  <!-- untuk sumbu y -->
+  <path
+     d="m 45,180 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,160 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,140 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,120 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,100 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,80 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,60 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,40 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+  <path
+     d="m 45,20 h 5"
+     style="overflow:visible;fill:none;stroke:#c4a000;stroke-width:1.03"/>
+
+  <!-- nilai x dan y pada sumbu -->
+  <text x="75" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">1</text> <!-- 1 untuk sumbu x-->
+  <text x="100" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">2</text> <!-- 2 untuk sumbu x-->
+  <text x="125" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">3</text> <!-- 3 untuk sumbu x-->
+  <text x="150" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">4</text> <!-- 4 untuk sumbu x-->
+  <text x="175" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">5</text> <!-- 5 untuk sumbu x-->
+  <text x="200" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">6</text> <!-- 6 untuk sumbu x-->
+  <text x="225" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">7</text> <!-- 7 untuk sumbu x-->
+  <text x="250" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">8</text> <!-- 8 untuk sumbu x-->
+  <text x="275" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">9</text> <!-- 9 untuk sumbu x-->
+  <text x="300" y="215" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#729fcf; stroke-width:0.25; text-anchor:middle;">10</text> <!-- 10 untuk sumbu x-->
+
+  <text x="38" y="24" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.9</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="44" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.8</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="64" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.7</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="84" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.6</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="104" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.5</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="124" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.4</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="144" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.3</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="164" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.2</text> <!-- 3.1 untuk sumbu y-->
+  <text x="38" y="184" style="font-family:Arial Narrow; font-size:10px; color:#000; overflow:visible; fill:#c4a000; stroke-width:0.25; text-anchor:middle;">3.1</text> <!-- 3.1 untuk sumbu y-->
+
+  <!-- posisi titik-titik -->
+  <circle cx="100" cy="30" r="4" fill="red" /> <!-- (2, 3.85 )-->
+  <circle cx="125" cy="60" r="4" fill="red" /> <!-- (3, 3.7 )-->
+  <circle cx="150" cy="100" r="4" fill="red" /> <!-- (4, 3.5 )-->
+  <circle cx="175" cy="90" r="4" fill="red" /> <!-- (5, 3.55 )-->
+  <circle cx="200" cy="140" r="4" fill="red" /> <!-- (6, 3.3 )-->
+  <circle cx="225" cy="160" r="4" fill="red" /> <!-- (7, 3.2 )-->
+  <circle cx="250" cy="200" r="4" fill="red" /> <!-- (9, 3 )-->
+  <circle cx="275" cy="200" r="4" fill="red" /> <!-- (10, 3 )-->
+  
+  <!-- judul sumbu -->
+  <text
+     x="110"
+     y="240"
+     style="fill:#729fcf;font-family:Verdana; font-size:16px;overflow:visible;stroke-width:0.55px;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+     id="text56">Lama Tidur (jam)</text>
+  <text
+     x="-180"
+     y="20"
+     transform="rotate(-90)"
+     style="color:#000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Verdana; overflow:visible;fill:#c4a000;stroke-width:0.55px"
+     id="text58">Waktu Reaksi (detik)</text>
+</svg>

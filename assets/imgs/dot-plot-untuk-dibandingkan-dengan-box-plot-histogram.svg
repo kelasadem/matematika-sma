@@ -1,0 +1,101 @@
+<svg width="400" height="155" viewBox="0 -30 400 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs
+    id="defs8">
+<marker
+    style="overflow:visible"
+    orient="auto"
+    id="id01">
+    <path
+        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+        transform="matrix(-0.8,0,0,-0.8,-10,0)"
+        style="stroke:#000000;stroke-width:1pt"
+        id="path2" />
+</marker>
+<marker
+    style="overflow:visible"
+    orient="auto"
+    id="id02">
+    <path
+        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+        transform="matrix(-0.4,0,0,-0.4,-4,0)"
+        style="fill:#ff6600;stroke:#ff6600;stroke-width:1pt"
+        id="path5" />
+</marker>
+<marker
+    style="overflow:visible"
+    orient="auto"
+    id="id03">
+    <path
+        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+        transform="matrix(-0.8,0,0,-0.8,-10,0)"
+        style="fill:#00f;fill-opacity:1;stroke:#00f;stroke-width:1pt;stroke-opacity:1"
+        id="path116809" />
+</marker>
+</defs>
+<path d="M87.5 69 H 50" stroke="#00f" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" fill="#00f" fill-opacity="0.75" marker-end="url(#id03)"/>
+<path d="M87.5 69 H 400" stroke="#00f" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" fill="#00f" fill-opacity="0.75" marker-end="url(#id03)"/>
+<path d="M100 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M125 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M150 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M175 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M200 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M225 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M250 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M275 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M300 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M325 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<path d="M350 70V75"  stroke="#62a0ea" stroke-width=".5" stroke-linecap="round" fill="none" stroke-dasharray="none"/>
+<text x="100" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">50</text>
+<text x="125" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">55</text>
+<text x="150" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">60</text>
+<text x="175" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">65</text>
+<text x="200" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">70</text>
+<text x="225" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">75</text>
+<text x="250" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">80</text>
+<text x="275" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">85</text>
+<text x="300" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">90</text>
+<text x="325" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">95</text>
+<text x="350" y="90"
+style="font-family:Verdana; font-size:14.4px; fill:#00f; stroke-width:0.52; text-anchor:middle;">100</text>
+<circle cx="125" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="150" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="175" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="175" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="175" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="200" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="200" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="200" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="200" cy="-10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="200" cy="-30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="225" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="225" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="225" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="225" cy="-10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="225" cy="-30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="250" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="250" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="250" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="250" cy="-10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="250" cy="-30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="275" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="275" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="275" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="275" cy="-10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="275" cy="-30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="300" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="300" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="300" cy="10" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="325" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="325" cy="30" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+<circle cx="350" cy="50" r="7" fill="#f60" stroke="#f60" stroke-linecap="round" />
+</svg>

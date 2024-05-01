@@ -1,0 +1,202 @@
+<svg
+   width="350"
+   height="270"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11">
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id01">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="stroke:black;stroke-width:1pt"
+         id="path2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id02">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#ffc022;stroke:#ffc022;stroke-width:1pt"
+         id="path5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id03">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ffc022;stroke:#ffc022;stroke-width:1pt"
+         id="path8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id012038">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="stroke:#005c94;stroke-width:1pt;stroke-opacity:1;fill-opacity:1;fill:#005c94"
+         id="path962" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id012171">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="stroke:#005c94;stroke-width:1pt;stroke-opacity:1;fill-opacity:1;fill:#005c94"
+         id="path965" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id018336">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="stroke:#005c94;stroke-width:1pt;stroke-opacity:1;fill-opacity:1;fill:#005c94"
+         id="path968" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="id018883">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="stroke:#005c94;stroke-width:1pt;stroke-opacity:1;fill-opacity:1;fill:#005c94"
+         id="path971" />
+    </marker>
+  </defs>
+  <text
+     x="115"
+     y="22"
+     style="font-size:28px;font-family:Verdana;fill:#005c94;stroke-width:0.5"
+     id="text13">Data</text>
+  <text
+     x="30"
+     y="105"
+     style="font-size:17.3px;font-family:Verdana;fill:#005c94;stroke-width:0.5"
+     id="text15">Kualitatif</text>
+  <text
+     x="185"
+     y="105"
+     style="font-size:17.3px;font-family:Verdana;fill:#005c94;stroke-width:0.5"
+     id="text17">Kuantitatif</text>
+  <text
+     x="130"
+     y="185"
+     style="font-size:17.3px;font-family:Verdana;fill:#005c94;stroke-width:0.5"
+     id="text19">Diskrit</text>
+  <text
+     x="255"
+     y="185"
+     style="font-size:17.3px;font-family:Verdana;fill:#005c94;stroke-width:0.5"
+     id="text21">Kontinu</text>
+  <path
+     d="m 143.83,31.071 -56,50.4"
+     style="fill:none;stroke:#005c94;stroke-width:2.67;marker-end:url(#id018883)"
+     id="path23" />
+  <text
+     x="0"
+     y="125"
+     style="font-style:italic;font-size:12px;font-family:Verdana;fill:#19aeff;stroke-width:0.5"
+     id="text25a">&quot;deskriptif berupa kata,</text>
+  <text
+     x="0"
+     y="140"
+     style="font-style:italic;font-size:12px;font-family:Verdana;fill:#19aeff;stroke-width:0.5"
+     id="text25b">kalimat, atau gambar&quot;</text>
+  <text
+     x="105"
+     y="205"
+     style="font-style:italic;font-size:12px;font-family:Verdana;fill:#19aeff;stroke-width:0.5"
+     id="text27a">&quot;hasil mencacah&quot;</text>
+  <text
+     x="175"
+     y="240"
+     style="font-size:33.3px;font-family:Verdana;fill:#ba00ff;stroke-width:0.5"
+     id="text27b">7</text>
+  <text
+     x="230"
+     y="205"
+     style="font-style:italic;font-size:12px;font-family:Verdana;fill:#19aeff;stroke-width:0.5"
+     id="text29a">&quot;hasil pengukuran&quot;</text>
+  <text
+     x="245"
+     y="230"
+     style="font-size:19px;font-family:Verdana;fill:#ffc022;stroke-width:0.5"
+     id="text29b">8.8543...</text>
+  <path
+     d="m 245,245 h 88.543"
+     style="fill:#ff4141;stroke:#ffc022;stroke-width:1.56;marker-start:url(#id02);marker-end:url(#id03)"
+     id="path31" />
+  <circle
+     cx="150"
+     cy="220"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle33a" />
+  <circle
+     cx="150"
+     cy="240"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle33b" />
+  <circle
+     cx="160"
+     cy="240"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle35a" />
+  <circle
+     cx="160"
+     cy="220"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle35b" />
+  <circle
+     cx="145"
+     cy="230"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle37" />
+  <circle
+     cx="155"
+     cy="230"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle39" />
+  <circle
+     cx="165"
+     cy="230"
+     r="3.5"
+     style="fill:#ba00ff;stroke:#ba00ff;stroke-width:1.56"
+     id="circle41" />
+  <rect
+     x="245"
+     y="255"
+     width="88.543"
+     height="15"
+     style="fill:brown;stroke:brown;stroke-width:1.56"
+     id="rect43" />
+  <path
+     d="m 153.43,31.071 56,50.4"
+     style="fill:none;stroke:#005c94;stroke-width:2.67;marker-end:url(#id018336)"
+     id="path45" />
+  <path
+     d="m 226.73,114.571 -56,50.4"
+     style="fill:none;stroke:#005c94;stroke-width:2.67;marker-end:url(#id012171)"
+     id="path47" />
+  <path
+     d="m 236.43,114.571 56,50.4"
+     style="fill:none;stroke:#005c94;stroke-width:2.67;marker-end:url(#id012038)"
+     id="path49" />
+</svg>
