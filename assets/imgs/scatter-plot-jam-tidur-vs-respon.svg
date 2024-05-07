@@ -123,8 +123,8 @@
   <circle cx="175" cy="90" r="4" fill="red" /> <!-- (5, 3.55 )-->
   <circle cx="200" cy="140" r="4" fill="red" /> <!-- (6, 3.3 )-->
   <circle cx="225" cy="160" r="4" fill="red" /> <!-- (7, 3.2 )-->
-  <circle cx="250" cy="200" r="4" fill="red" /> <!-- (9, 3 )-->
-  <circle cx="275" cy="200" r="4" fill="red" /> <!-- (10, 3 )-->
+  <circle cx="275" cy="200" r="4" fill="red" /> <!-- (9, 3 )-->
+  <circle cx="300" cy="200" r="4" fill="red" /> <!-- (10, 3 )-->
   
   <!-- judul sumbu -->
   <text
