@@ -1,0 +1,19 @@
+
+* { font-size: 1.5rem; }
+p { font-size: 1.5em; }
+
+.border {
+  border: 1px solid #dee2e6;
+}
+
+.border-thick {
+  border-width: 3px;
+}
+
+button {border-radius: 50%; width: 2.5rem; height: 2.5rem; border-color:transparent; background-color: aquamarine;}
+button:hover {background-color:chartreuse; border: 4px solid green;}
+.kuis {padding-left: 1.5em; text-indent: -1.5em;}
+input {border-radius: 50%; width: 2.5em; height: 2.5em; border-color:transparent; background-color: aquamarine;}
+.poin {padding-left: 1.7em; text-indent: -1.7em;}
+.poin button{ border-radius: 50%; width: .6em; height: .6em; background-color: cadetblue; border: transparent; }
+

@@ -1,0 +1,32 @@
+<svg 
+width="600" height="400"
+viewBox="600 400" 
+xmlns="http://www.w3.org/2000/svg">
+
+<rect x="10" y="10" width="580" height="380" stroke="#25374B" stroke-width="1" fill="none" />
+
+<text x="30" y="30" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">S</text>
+
+<circle cx="170" cy="230" r="125" fill="none" stroke="#f00" stroke-width="2"/>
+<text x="170" y="370" style="font-family:Verdana; font-size:19px; fill:#f00; text-anchor:middle;dominant-baseline:middle">A</text>
+
+<circle cx="430" cy="230" r="125" fill="none" stroke="#0a0" stroke-width="2"/>
+<text x="430" y="370" style="font-family:Verdana; font-size:19px; fill:#0a0; text-anchor:middle;dominant-baseline:middle">B</text>
+
+<circle cx="300" cy="200" r="125" fill="none" stroke="#00f" stroke-width="2"/>
+<text x="300" y="60" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">C</text>
+
+
+<text x="120" y="250" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">1</text>
+
+<text x="360" y="210" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">2</text>
+
+<text x="225" y="180" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">3</text>
+
+<text x="480" y="190" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">4</text>
+
+<text x="240" y="250" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">5</text>
+
+<text x="470" y="290" style="font-family:Verdana; font-size:19px; fill:#000; text-anchor:middle;dominant-baseline:middle">6</text>
+
+</svg>

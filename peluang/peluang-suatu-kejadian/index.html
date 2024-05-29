@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adem">
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2024-05-20">
 
-<title>Kelas Adem - Peluang Suatu Kejadian</title>
+<title>Kelas Adem - Peluang (Probabilitas)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,6 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -126,6 +158,14 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-peluang">    
         <li>
+    <a class="dropdown-item" href="../../peluang/aturan-penjumlahan-dan-perkalian/">
+ <span class="dropdown-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../peluang/ruang-sampel/">
+ <span class="dropdown-text">Ruang Sampel</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../peluang/peluang-suatu-kejadian/">
  <span class="dropdown-text">Peluang Suatu Kejadian</span></a>
   </li>  
@@ -139,6 +179,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../../slides/kuartil/">
  <span class="dropdown-text">Kuartil dan Box Plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../slides/scatter/">
+ <span class="dropdown-text">Diagram Pencar</span></a>
   </li>  
     </ul>
   </li>
@@ -162,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Peluang Suatu Kejadian</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Peluang (Probabilitas)</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -220,6 +264,18 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../peluang/aturan-penjumlahan-dan-perkalian/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../peluang/ruang-sampel/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ruang Sampel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../peluang/peluang-suatu-kejadian/" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Peluang Suatu Kejadian</span></a>
   </div>
@@ -232,14 +288,31 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#apa-itu-peluang" id="toc-apa-itu-peluang" class="nav-link active" data-scroll-target="#apa-itu-peluang">Apa itu Peluang?</a></li>
+  <li><a href="#ingat-kembali-yang-dipelajari-di-smpmts-tentang-peluang" id="toc-ingat-kembali-yang-dipelajari-di-smpmts-tentang-peluang" class="nav-link" data-scroll-target="#ingat-kembali-yang-dipelajari-di-smpmts-tentang-peluang">Ingat kembali yang dipelajari di SMP/MTs tentang peluang</a></li>
+  <li><a href="#frekuensi-relatif-peluang-empiris-suatu-kejadian" id="toc-frekuensi-relatif-peluang-empiris-suatu-kejadian" class="nav-link" data-scroll-target="#frekuensi-relatif-peluang-empiris-suatu-kejadian">Frekuensi Relatif (Peluang Empiris) Suatu Kejadian</a></li>
+  <li><a href="#pengertian-peluang-peluang-teoretis" id="toc-pengertian-peluang-peluang-teoretis" class="nav-link" data-scroll-target="#pengertian-peluang-peluang-teoretis">Pengertian Peluang (Peluang Teoretis)</a>
+  <ul class="collapse">
+  <li><a href="#contoh-soal-1" id="toc-contoh-soal-1" class="nav-link" data-scroll-target="#contoh-soal-1">Contoh Soal 1</a></li>
+  <li><a href="#contoh-2" id="toc-contoh-2" class="nav-link" data-scroll-target="#contoh-2">Contoh 2</a></li>
+  <li><a href="#contoh-3" id="toc-contoh-3" class="nav-link" data-scroll-target="#contoh-3">Contoh 3</a></li>
+  <li><a href="#contoh-4" id="toc-contoh-4" class="nav-link" data-scroll-target="#contoh-4">Contoh 4</a></li>
+  <li><a href="#contoh-5" id="toc-contoh-5" class="nav-link" data-scroll-target="#contoh-5">Contoh 5</a></li>
+  </ul></li>
+  <li><a href="#halaman-sebelum-dan-sesudahnya" id="toc-halaman-sebelum-dan-sesudahnya" class="nav-link" data-scroll-target="#halaman-sebelum-dan-sesudahnya">Halaman sebelum dan sesudahnya</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Peluang Suatu Kejadian</h1>
+<h1 class="title">Peluang (Probabilitas)</h1>
 </div>
 
 
@@ -256,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2024</p>
+      <p class="date">May 20, 2024</p>
     </div>
   </div>
   
@@ -268,16 +341,365 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Halaman ini masih akan dikembangkan. Untuk sementara, halaman ini berisi link materi peluang matematika Umum kelas XII Kurikulum 2013. Link materi dapat diakses menggunakan akun belajar.id.</p>
-<p><a href="https://drive.google.com/file/d/1Y1YHNcT-3R0TEdMiwf2gtqcxYxW6XRXq/view?usp=sharing" target="_blank">Kaidah Pencacahan</a></p>
-<p><a href="https://drive.google.com/file/d/1Gv1MDWf9OGi5jhUKwrvViSci83Syb1_e/view?usp=sharing" target="_blank">Permutasi</a></p>
-<p><a href="https://drive.google.com/file/d/18SwSqUBt6N7FUJdBLuLpHURrTur7ewVT/view?usp=sharing" target="_blank">Kombinasi</a></p>
-<p><a href="https://drive.google.com/file/d/1XcjRUZ_2_JSFzKANcCpfW7kZji5VMRcQ/view?usp=sharing" target="_blank">Peluang Suatu Kejadian</a></p>
-<p><a href="https://drive.google.com/file/d/1pe-mvjeDXnAyONMs7pqW-fx-bpKdDAqE/view?usp=sharing" target="_blank">Peluang Kejadian Majemuk</a></p>
-<p><a href="https://drive.google.com/file/d/1w2YZziKWQjsg768Lm16b6X0xG34T-vlQ/view?usp=sharing" target="_blank">Soal Latihan Kaidah Pencacahan</a></p>
-<p><a href="https://drive.google.com/file/d/1rrY_luh7c4ZhzWRHN-OOzCJAKBEQzroY/view?usp=sharing" target="_blank">Soal Latihan Peluang</a></p>
+<style>
+.kuis {padding-left: .8em; text-indent: -.8em;}
+.kuis button {border-radius: 50%; width: .8rem; height: .8rem; border-color:transparent; background-color: aquamarine;}
+.kuis button:hover {background-color:blue;}
+input {border-radius: 50%; width: .8em; height: .8em; border-color:transparent; background-color: aquamarine;}
+</style>
+<section id="apa-itu-peluang" class="level2">
+<h2 class="anchored" data-anchor-id="apa-itu-peluang">Apa itu Peluang?</h2>
+<p>Jika saya mengatakan, “Hari ini mungkin akan turun hujan”.</p>
+<p>Apa yang saya maksud?</p>
+<div class="kuis">
+<p>
+<button onclick="document.getElementById('a').innerHTML='❌'">
+</button>
+Saat ini sedang hujan. <span id="a"></span>
+</p>
+<p>
+<button onclick="document.getElementById('b').innerHTML='❌'">
+</button>
+Saat ini sedang gerimis. <span id="b"></span>
+</p>
+<p>
+<button onclick="document.getElementById('c').innerHTML='❌'">
+</button>
+Sore ini akan turun hujan. <span id="c"></span>
+</p>
+<p>
+<button onclick="document.getElementById('d').innerHTML='❌'">
+</button>
+Beberapa hari ini selalu turun hujan. <span id="d"></span>
+</p>
+<p>
+<button onclick="document.getElementById('e').innerHTML='✅'">
+</button>
+Ada kemungkinan hari ini akan turun hujan. Mungkin akan turun hujan, tapi mungkin juga tidak. <span id="e"></span>
+</p>
+</div>
+<hr>
+</section>
+<section id="ingat-kembali-yang-dipelajari-di-smpmts-tentang-peluang" class="level2">
+<h2 class="anchored" data-anchor-id="ingat-kembali-yang-dipelajari-di-smpmts-tentang-peluang">Ingat kembali yang dipelajari di SMP/MTs tentang peluang</h2>
+<p>
+<input type="radio" id="rememberPeluang" name="rememberPeluang"> <label for="rememberPeluang">Ingat dan siap.</label>
+</p>
+<ul style="list-style: none;">
+<li>
+<input type="checkbox" id="ingat1" name="ingredient" value="ingat1"> <label for="ingat1">Peluang adalah ukuran (nilai) kemungkinan terjadinya sesuatu.</label>
+</li>
+<input type="checkbox" id="ingat1a" name="ingredient" value="ingat1a"> <label for="ingat1a">Nilai peluang dinyatakan dalam bentuk pecahan atau persen.</label>
+
+<li>
+<input type="checkbox" id="ingat2" name="ingredient" value="ingat2"> <label for="ingat2">Nilai dalam rentang 0 (0%) hingga 1 (100%).</label>
+</li>
+<li>
+<input type="checkbox" id="ingat3" name="ingredient" value="ingat3"> <label for="ingat3">Jika sesuatu memiliki peluang 100%, maka itu adalah “pasti”.</label>
+</li>
+<li>
+<input type="checkbox" id="ingat4" name="ingredient" value="ingat4"> <label for="ingat4">Sesuatu dengan peluang 0% adalah “tidak mungkin (mustahil)”.</label>
+</li>
+<li>
+<input type="checkbox" id="ingat5" name="ingredient" value="ingat5"> <label for="ingat5">Jelaskan maksud peluang hujan pada 16.00 WIB adalah 80% ?</label>
+</li>
+</ul>
+<script>
+const overall = document.querySelector('#rememberPeluang');
+const ingredients = document.querySelectorAll('ul input');
+overall.addEventListener('click', (e) => {
+e.preventDefault();
+});
+for(const ingredient of ingredients) {
+ingredient.addEventListener('click', updateDisplay);
+}
+function updateDisplay() {
+let checkedCount = 0;
+for(const ingredient of ingredients) {
+if(ingredient.checked) {
+checkedCount++;
+}
+}
+if(checkedCount === 0) {
+overall.checked = false;
+overall.indeterminate = false;
+} else if(checkedCount === ingredients.length) {
+overall.checked = true;
+overall.indeterminate = false;
+} else {
+overall.checked = false;
+overall.indeterminate = true;
+}
+}
+</script>
+<hr>
+</section>
+<section id="frekuensi-relatif-peluang-empiris-suatu-kejadian" class="level2">
+<h2 class="anchored" data-anchor-id="frekuensi-relatif-peluang-empiris-suatu-kejadian">Frekuensi Relatif (Peluang Empiris) Suatu Kejadian</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Frekuensi relatif disebut juga sebagai <code>peluang empiris</code>.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Pada bagian berikutnya akan dibahas tentang <code>peluang teoretis</code>. <br> Kami memilih kata <a href="https://kbbi.kemdikbud.go.id/entri/empiris" target="_blank">empiris</a> dan <a href="https://kbbi.kemdikbud.go.id/entri/teoretis" target="_blank">teoretis</a> karena dua kata itu yang baku menurut KBBI.</p>
+</div>
+</div>
+</div>
+<p>Jika pada percobaan melempar undi dadu sebanyak 100 kali dan diperoleh kemunculan sisi dadu bermata 5 sebanyak 20 kali, maka peluang empiris muncul mata dadu 5 adalah <span class="math inline">\(\frac{20}{100} = \frac{1}{5}\)</span> atau 0,2 atau 20%.</p>
+<p>Berapa frekuensi relatif (peluang empiris) muncul sisi angka pada pelemparan undi mata uang? Untuk menjawabnya, Ananda dapat melakukan aktivitas berikut:</p>
+<ul>
+<li>
+Cobalah undi sebuah koin uang. <br> Dapatkah kamu menduga berapa banyak munculnya sisi muka? <br> Dapatkah kamu menyatakan bahwa kamu akan selalu mendapat hasil tersebut? <br>
+</li>
+<li>
+Cobalah undi koin uang sebanyak 10 kali dan selidiki frekuensi relatif munculnya sisi gambar. <br> Selidiki pula perubahan frekuensi relatif munculnya sisi gambar, jika banyaknya pelemparan koin uang adalah 20, 40, 60, ….
+</li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Banyak Percobaan</th>
+<th>10</th>
+<th>20</th>
+<th>30</th>
+<th>40</th>
+<th>50</th>
+<th>…</th>
+<th>360</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Banyak muncul sisi angka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Banyak muncul sisi gambar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../assets/imgs/wave.svg" style="width:100.0%" alt="wave" height="8"></p>
+<p>Untuk menghitung frekuensi relatifnya dengan rumus berikut:</p>
+<p style="text-align: center;">
+<img src="https://latex.codecogs.com/svg.latex?%5CLARGE%20%5Ctext%7BFrekuensi%20relatif%20muncul%20sisi%20gambar%7D%20%3D%20%5Cdfrac%7B%5Ctext%7BBanyak%20muncul%20sisi%20gambar%7D%7D%7B%5Ctext%7BBanyak%20sisi%20berbeda%20pada%20mata%20uang%7D%20%5Ctimes%20%5Ctext%7BBanyaknya%20percobaan%20mengundi%20koin%20uang%7D%7D" width="100%" alt="frekuensi relatif">
+</p>
+<!-- $$ \text{Frekuensi relatif muncul sisi gambar} = \dfrac{\text{Banyak muncul sisi gambar}}{\text{Banyak sisi berbeda pada mata uang} \times \text{Banyaknya percobaan mengundi koin uang}} $$ -->
+<blockquote class="blockquote">
+<p>Bagaimana nilai frekuensi relatif suatu kejadian, jika percobaannya sebanyak <em>n</em> kali yang mendekati tak hingga <span class="math inline">\((n \to \infty)\)</span>?</p>
+</blockquote>
+<hr>
+</section>
+<section id="pengertian-peluang-peluang-teoretis" class="level2">
+<h2 class="anchored" data-anchor-id="pengertian-peluang-peluang-teoretis">Pengertian Peluang (Peluang Teoretis)</h2>
+<p>Dalam peluang teoretis, kita tidak perlu melihat berapa banyak percobaan dilakukan.</p>
+<p>Coba perhatikan koin uang, banyaknya sisi pada koin ada dua. Terdapat satu sisi angka dan satu sisi gambar. <br> Peluang teoretis munculnya sisi angka adalah banyaknya sisi angka dibagi banyaknya sisi pada koin, yaitu <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+<p><strong>Peluang</strong> merupakan cara pengukuran kuantitatif tentang kemungkinan munculnya suatu kejadian tertentu dalam suatu <strong>percobaan</strong>.</p>
+<p>Suatu <strong>percobaan</strong> akan menghasilkan <strong>ruang sampel</strong>, yaitu semesta pembicaraan atau semua kejadian yang mungkin terjadi dari suatu <strong>percobaan</strong>.</p>
+<p><strong>Kejadian</strong> adalah himpunan bagian dari <strong>ruang sampel</strong>.</p>
+<p>Jika <strong>S</strong> adalah <strong>ruang sampel</strong> dan <strong>E</strong> adalah suatu kejadian yang akan dicari nilai peluangnya, maka P(E) adalah peluang kejadian E:</p>
+<p><span class="math display">\[P(E) = \frac{n(E)}{n(S)}\]</span></p>
+<p>Nilai <span class="math inline">\(P(E)\)</span> berada pada rentang nilai dari 0 s.d. 1 yang diilustrasikan pada gambar berikut.</p>
+<div id="fig-peluang" class="text-center lightbox quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-peluang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../../assets/imgs/probability-line.svg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="../../assets/imgs/probability-line.svg" class="text-center img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-peluang-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Sumber gambar: <a href="https://www.mathsisfun.com/data/images/probability-line.svg" target="_blank">https://www.mathsisfun.com/data/images/probability-line.svg</a>
+</figcaption>
+</figure>
+</div>
+<p><img src="../../assets/imgs/wave.svg" style="width:100.0%" alt="wave" height="8"></p>
+<section id="contoh-soal-1" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-soal-1">Contoh Soal 1</h3>
+<p>Pada percobaan melempar undi dadu bersisi enam dengan sisi-sisinya bermata 1, 2, 3, 4, 5, dan 6 yang dilakukan satu kali lemparan, tentukan peluang muncul sisi dadu bermata prima ganjil.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solusi contoh soal 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Pada <strong>percobaan melempar undi sekali</strong> dadu bersisi enam dengan sisi-sisinya bermata 1, 2, 3, 4, 5, dan 6:</p>
+<p><strong>Ruang sampel</strong>-nya adalah <br> <span class="math inline">\(S = \{1, 2, 3, 4, 5, 6\}\)</span> dan <span class="math inline">\(n(S) = 6\)</span>.</p>
+<p><strong>Kejadian <span class="math inline">\(E\)</span></strong> kita sebut sebagai kejadian muncul mata dadu prima ganjil. <br> <span class="math inline">\(E = \{ 3 , 5 \}\)</span> dan <span class="math inline">\(n(E) = 2\)</span>.</p>
+<p>Maka</p>
+<p><span class="math display">\[ P(E) = \frac{n(E)}{n(S)} = \frac{2}{6} = \frac{1}{3}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="contoh-2" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-2">Contoh 2</h3>
+<p>Pada percobaan melempar undi tiga koin bersisi angka dan gambar yang dilakukan satu kali lemparan, hitunglah peluang muncul 2 angka.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solusi contoh soal 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Pada <strong>percobaan melempar undi sekali</strong> tiga koin bersisi angka (A) dan gambar (G):</p>
+<p><strong>Ruang sampel</strong>-nya adalah: <br> <span class="math inline">\(\begin{align*}
+S = \{ &amp;AAA, \\
+       &amp;AAG, AGA, GAA, \\
+       &amp;AGG, GAG, GGA, \\
+       &amp;GGG \}
+\end{align*}\)</span></p>
+<p><span class="math inline">\(n(S) = 8\)</span></p>
+<p><strong>Kejadian <span class="math inline">\(E\)</span></strong> kita sebut sebagai kejadian muncul 2 angka (1 gambar). <br> <span class="math inline">\(E = \{ AAG , AGA, GAA \}\)</span> dan <span class="math inline">\(n(E) = 3\)</span>.</p>
+<p>Maka</p>
+<p><span class="math display">\[ P(E) = \frac{n(E)}{n(S)} = \frac{3}{8}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="contoh-3" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-3">Contoh 3</h3>
+<p>Pada percobaan melempar undi dua dadu masing-masing bersisi enam yang dilakukan satu kali lemparan, hitunglah peluang muncul sisi mata dadu berjumlah 11.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solusi contoh soal 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Pada <strong>percobaan melempar undi sekali</strong> dua dadu masing-masing bersisi enam dengan sisi-sisinya bermata 1, 2, 3, 4, 5, dan 6:</p>
+<p><strong>Ruang sampel</strong>-nya adalah <br> <span class="math inline">\(\begin{align*}
+S = \{&amp;(1, 1), (1, 2), … , (1, 6), \\
+      &amp;(2, 1), (2, 2), … , (2, 6), \\
+      &amp;(3, 1), (3, 2), … , (3, 6), \\
+      &amp;(4, 1), (4, 2), … , (4, 6), \\
+      &amp;(5, 1), (5, 2), … , (5, 6), \\
+      &amp;(6, 1), (6, 2), … ,(6, 6)\}
+\end{align*}\)</span></p>
+<p><span class="math inline">\(n(S) = 36\)</span>.</p>
+<p><strong>Kejadian <span class="math inline">\(E\)</span></strong> kita sebut sebagai kejadian muncul sisi mata dadu berjumlah 11. <br> <span class="math inline">\(E = \{(5, 6), (6, 5)\}\)</span> dan <span class="math inline">\(n(E) = 2\)</span>.</p>
+<p>Maka</p>
+<p><span class="math display">\[ P(E) = \frac{n(E)}{n(S)} = \frac{2}{36} = \frac{1}{18}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="contoh-4" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-4">Contoh 4</h3>
+<p>Pada percobaan mengambil dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu, hitunglah peluang terambil 2 bola putih.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solusi contoh soal 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Pada <strong>percobaan mengambil</strong> dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu:</p>
+<p><strong>Ruang sampel</strong>-nya adalah <br> <span class="math inline">\(\begin{align*}
+S = \{ &amp;P_1P_2, P_1P_3, P_1P_4, P_1O_1, P_1O_2, P_1O_3, P_1U_1, P_1U_2, \\
+       &amp;P_2P_3, P_2P_4, P_2O_1, P_2O_2, P_2O_3, P_2U_1, P_2U_2, \\
+       &amp;P_3P_4, P_3O_1, P_3O_2, P_3O_3, P_3U_1, P_3U_2, \\
+       &amp;P_4O_1, P_4O_2, P_4O_3, P_4U_1, P_4U_2, \\
+       &amp;O_1O_2, O_1O_3, O_1U_1, O_1U_2, \\
+       &amp;O_2O_3, O_2U_1, O_2U_2, \\
+       &amp;O_3U_1, O_3U_2, \\
+       &amp;U_1U_2 \}
+\end{align*}\)</span></p>
+<p><span class="math inline">\(n(S) = 36\)</span>.</p>
+<p><strong>Kejadian <span class="math inline">\(E\)</span></strong> kita sebut sebagai kejadian terambil 2 bola putih. <br> <span class="math inline">\(E = \{ P_1P_2, P_1P_3, P_1P_4, P_2P_3, P_2P_4, P_3P_4 \}\)</span></p>
+<p><span class="math inline">\(n(E) = 6\)</span>.</p>
+<p>Maka</p>
+<p><span class="math display">\[ P(E) = \frac{n(E)}{n(S)} = \frac{6}{36} = \frac{1}{6}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="contoh-5" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-5">Contoh 5</h3>
+<p>Pada kegiatan lomba cepat tepat yang diikuti lima regu A, B, C, D, dan E, akan diambil juara 1, 2, dan 3.<br> Hitunglah peluang A sebagai juara 1 dan B juara 2.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solusi contoh soal 5
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Ruang sampel</strong>-nya adalah <br> <span class="math inline">\(\begin{align*}
+S = \{ &amp;ABC, ABD, ABE, ACB, ACD, ACE, ADB, ADC, ADE, AEB, AEC, AED, \\
+&amp;BAC, BAD, BAE, BCA, BCD, BCE, BDA, BDC, BDE, BEA, BEC, BED, \\
+&amp;CAB, CAD, CAE, CBA, CBD, CBE, CDA, CDB, CDE, CEA, CDB, CDE, \\
+&amp;DAB, DAC, DAE, DBA, DBC, DBE, DCA, DCB, DCE, DEA, DEB, DEC, \\
+&amp;EAB, EAC, EAD, EBA, EBC, EBD, ECA, ECB, ECD, EDA, EDB, EDC \}
+\end{align*}\)</span></p>
+<p><span class="math inline">\(n(S) = 60\)</span>.</p>
+<p><strong>Kejadian <span class="math inline">\(E\)</span></strong> kita sebut sebagai kejadian <span class="math inline">\(A\)</span> sebagai juara 1 dan <span class="math inline">\(B\)</span> juara 2. <br> <span class="math inline">\(E = \{ ABC, ABD, ABE \}\)</span> dan <span class="math inline">\(n(E) = 3\)</span>.</p>
+<p>Maka</p>
+<p><span class="math display">\[ P(E) = \frac{n(E)}{n(S)} = \frac{3}{60} = \frac{1}{20}\]</span></p>
+</div>
+</div>
+</div>
+<p><img src="../../assets/imgs/wave.svg" style="width:100.0%" alt="wave" height="8"></p>
+</section>
+</section>
+<section id="halaman-sebelum-dan-sesudahnya" class="level2">
+<h2 class="anchored" data-anchor-id="halaman-sebelum-dan-sesudahnya">Halaman sebelum dan sesudahnya</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><a href="../aturan-penjumlahan-dan-perkalian" class="underlined underlined-thin-gradient">Aturan Penjumlahan dan Perkalian</a></p>
+</div><div class="column" style="width:20%;">
+
+</div><div class="column text-end" style="width:40%;">
+
+</div>
+</div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Sumber gambar: <a href="https://www.mathsisfun.com/data/images/probability-line.svg" target="_blank">https://www.mathsisfun.com/data/images/probability-line.svg</a></span>
+</div>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script type="text/javascript">
@@ -733,6 +1155,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
