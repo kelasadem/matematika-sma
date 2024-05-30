@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -71,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -98,8 +97,58 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-statistika">    
         <li>
-    <a class="dropdown-item" href="./kuartil-box-plot.html">
+    <a class="dropdown-item" href="./statistika/">
+ <span class="dropdown-text">Statistika dan Statistik</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./statistika/kuartil/">
  <span class="dropdown-text">Kuartil dan Box Plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./statistika/boxplot-dotplot-histogram/">
+ <span class="dropdown-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./statistika/diagram-pencar/">
+ <span class="dropdown-text">Diagram Pencar</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./statistika/statistik-di-media/">
+ <span class="dropdown-text">Statistik di Media</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-peluang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Peluang</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-peluang">    
+        <li>
+    <a class="dropdown-item" href="./peluang/aturan-penjumlahan-dan-perkalian/">
+ <span class="dropdown-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./peluang/ruang-sampel/">
+ <span class="dropdown-text">Ruang Sampel</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./peluang/peluang-suatu-kejadian/">
+ <span class="dropdown-text">Peluang Suatu Kejadian</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bahan-tayang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bahan Tayang</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bahan-tayang">    
+        <li>
+    <a class="dropdown-item" href="./slides/kuartil/">
+ <span class="dropdown-text">Kuartil dan Box Plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./slides/scatter/">
+ <span class="dropdown-text">Diagram Pencar</span></a>
   </li>  
     </ul>
   </li>
@@ -126,26 +175,18 @@ ul.task-list li input[type="checkbox"] {
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a href="./statistika/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statitika</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -154,8 +195,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kuartil-box-plot.html" class="sidebar-item-text sidebar-link">
+  <a href="./statistika/kuartil/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kuartil dan Box Plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistika/boxplot-dotplot-histogram/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistika/diagram-pencar/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagram Pencar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistika/statistik-di-media/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistik di Media</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./peluang/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Peluang</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./peluang/aturan-penjumlahan-dan-perkalian/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./peluang/ruang-sampel/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ruang Sampel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./peluang/peluang-suatu-kejadian/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Peluang Suatu Kejadian</span></a>
   </div>
 </li>
       </ul>
@@ -191,12 +279,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Kata ADEM diambil dari huruf awal setiap kata pada nama Muchamad Eka Djuniar Arifien.</p>
-<p><a href="https://kelasadem.blogspot.com/">Blog Kelas Adem</a></p>
-<p><a href="https://sites.google.com/view/kelasadem">Sites Google Kelas Adem</a></p>
+<p><a href="https://kelasadem.blogspot.com/" target="_blank">Blog Kelas Adem</a></p>
+<p><a href="https://sites.google.com/view/kelasadem" target="_blank">Sites Google Kelas Adem</a></p>
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+// tweak headings in pymd
+document.querySelectorAll(".pymd span.co").forEach(el => {
+   if (!el.innerText.startsWith("#|")) {
+      el.style.fontWeight = 1000;
+   }
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -613,7 +720,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>Kelas Adem <br>SMAN 1 Majalengka</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Matematika SMA
+  </li>  
+</ul>
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
