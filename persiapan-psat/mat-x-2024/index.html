@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Adem">
+<meta name="dcterms.date" content="2024-06-03">
 
-<title>Kelas Adem - Matematika</title>
+<title>Kelas Adem - Persiapan PSAT Matematika Kelas X</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +25,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,8 +68,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -77,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Kelas Adem</span>
     </a>
   </div>
@@ -88,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -97,23 +128,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-statistika">    
         <li>
-    <a class="dropdown-item" href="./statistika/">
+    <a class="dropdown-item" href="../../statistika/">
  <span class="dropdown-text">Statistika dan Statistik</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./statistika/kuartil/">
+    <a class="dropdown-item" href="../../statistika/kuartil/">
  <span class="dropdown-text">Kuartil dan Box Plot</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./statistika/boxplot-dotplot-histogram/">
+    <a class="dropdown-item" href="../../statistika/boxplot-dotplot-histogram/">
  <span class="dropdown-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./statistika/diagram-pencar/">
+    <a class="dropdown-item" href="../../statistika/diagram-pencar/">
  <span class="dropdown-text">Diagram Pencar</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./statistika/statistik-di-media/">
+    <a class="dropdown-item" href="../../statistika/statistik-di-media/">
  <span class="dropdown-text">Statistik di Media</span></a>
   </li>  
     </ul>
@@ -124,15 +155,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-peluang">    
         <li>
-    <a class="dropdown-item" href="./peluang/aturan-penjumlahan-dan-perkalian/">
+    <a class="dropdown-item" href="../../peluang/aturan-penjumlahan-dan-perkalian/">
  <span class="dropdown-text">Aturan Penjumlahan dan Perkalian</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./peluang/ruang-sampel/">
+    <a class="dropdown-item" href="../../peluang/ruang-sampel/">
  <span class="dropdown-text">Ruang Sampel</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./peluang/peluang-suatu-kejadian/">
+    <a class="dropdown-item" href="../../peluang/peluang-suatu-kejadian/">
  <span class="dropdown-text">Peluang Suatu Kejadian</span></a>
   </li>  
     </ul>
@@ -143,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-persiapan-psat">    
         <li>
-    <a class="dropdown-item" href="./persiapan-psat/mat-x-2024/">
+    <a class="dropdown-item" href="../../persiapan-psat/mat-x-2024/">
  <span class="dropdown-text">Persiapan PSAT Kelas X 2024</span></a>
   </li>  
     </ul>
@@ -154,17 +185,17 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-bahan-tayang">    
         <li>
-    <a class="dropdown-item" href="./slides/kuartil/">
+    <a class="dropdown-item" href="../../slides/kuartil/">
  <span class="dropdown-text">Kuartil dan Box Plot</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./slides/scatter/">
+    <a class="dropdown-item" href="../../slides/scatter/">
  <span class="dropdown-text">Diagram Pencar</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -183,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Matematika</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Persiapan PSAT Matematika Kelas X</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -197,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./statistika/" class="sidebar-item-text sidebar-link">
+            <a href="../../statistika/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statitika</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -206,25 +237,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistika/kuartil/" class="sidebar-item-text sidebar-link">
+  <a href="../../statistika/kuartil/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kuartil dan Box Plot</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistika/boxplot-dotplot-histogram/" class="sidebar-item-text sidebar-link">
+  <a href="../../statistika/boxplot-dotplot-histogram/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistika/diagram-pencar/" class="sidebar-item-text sidebar-link">
+  <a href="../../statistika/diagram-pencar/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Diagram Pencar</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./statistika/statistik-di-media/" class="sidebar-item-text sidebar-link">
+  <a href="../../statistika/statistik-di-media/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistik di Media</span></a>
   </div>
 </li>
@@ -232,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./peluang/" class="sidebar-item-text sidebar-link">
+            <a href="../../peluang/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Peluang</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -241,19 +272,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./peluang/aturan-penjumlahan-dan-perkalian/" class="sidebar-item-text sidebar-link">
+  <a href="../../peluang/aturan-penjumlahan-dan-perkalian/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aturan Penjumlahan dan Perkalian</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./peluang/ruang-sampel/" class="sidebar-item-text sidebar-link">
+  <a href="../../peluang/ruang-sampel/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ruang Sampel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./peluang/peluang-suatu-kejadian/" class="sidebar-item-text sidebar-link">
+  <a href="../../peluang/peluang-suatu-kejadian/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Peluang Suatu Kejadian</span></a>
   </div>
 </li>
@@ -261,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./persiapan-psat/" class="sidebar-item-text sidebar-link">
+            <a href="../../persiapan-psat/" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Persiapan PSAT</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -270,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./persiapan-psat/mat-x-2024/" class="sidebar-item-text sidebar-link">
+  <a href="../../persiapan-psat/mat-x-2024/" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Persiapan PSAT Kelas X 2024</span></a>
   </div>
 </li>
@@ -286,7 +317,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#selamat-datang-di-kelas-matematika-sma" id="toc-selamat-datang-di-kelas-matematika-sma" class="nav-link active" data-scroll-target="#selamat-datang-di-kelas-matematika-sma">Selamat Datang di Kelas Matematika SMA!</a></li>
+  <li><a href="#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan" id="toc-mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan" class="nav-link active" data-scroll-target="#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan">Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan</a></li>
+  <li><a href="#halaman-sebelumnya" id="toc-halaman-sebelumnya" class="nav-link" data-scroll-target="#halaman-sebelumnya">Halaman sebelumnya</a></li>
   </ul>
 </nav>
     </div>
@@ -295,14 +327,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Matematika</h1>
+<h1 class="title">Persiapan PSAT Matematika Kelas X</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Adem </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 3, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -312,22 +356,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="selamat-datang-di-kelas-matematika-sma" class="level2">
-<h2 class="anchored" data-anchor-id="selamat-datang-di-kelas-matematika-sma">Selamat Datang di Kelas Matematika SMA!</h2>
-<p>Matematika merupakan salah satu ilmu dasar yang penting untuk dipelajari di masa SMA. Ilmu ini memiliki peran penting dalam berbagai bidang kehidupan, mulai dari sains dan teknologi hingga ekonomi dan keuangan.</p>
-<p><strong>Manfaat Belajar Matematika SMA:</strong></p>
-<ul>
-<li>Mengembangkan kemampuan berpikir logis dan analitis</li>
-<li>Meningkatkan kemampuan problem solving</li>
-<li>Melatih ketelitian dan ketekunan</li>
-<li>Mempersiapkan diri untuk melanjutkan pendidikan ke jenjang yang lebih tinggi</li>
-<li>Membuka peluang karir di berbagai bidang</li>
-</ul>
-<p><strong>Ajakan untuk Belajar Matematika:</strong></p>
-<p>Matematika memang sering dianggap sebagai mata pelajaran yang sulit. Namun, dengan tekad dan usaha yang keras, Anda pasti bisa menguasainya. Gunakan halaman web ini sebagai sumber belajar yang bermanfaat dan jangan ragu untuk bertanya kepada guru atau teman jika Anda mengalami kesulitan.</p>
-<p><strong>Mari kita bersama-sama belajar matematika dan raih prestasi yang gemilang!</strong></p>
-<p><strong>Salam Sukses,</strong></p>
-<p><a href="https://www.youtube.com/@muchamadekadjuniararifien1518" target="_blank"><em>M. Eka Djuniar Arifien (Adem)</em></a></p>
+<p><img src="../../assets/imgs/wave.svg" style="width:100.0%" alt="wave" height="8"></p>
+<section id="mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan" class="level2">
+<h2 class="anchored" data-anchor-id="mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan">Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan</h2>
+<ol type="1">
+<li>Diketahui sistem persamaan linear tiga variabel berikut ini.<br> <span class="math inline">\(\begin{align*}
+x + y + z &amp;= 3 \\
+2x + y - 5z &amp;= -8 \\
+3x - 2y + z &amp;= 5
+\end{align*}\)</span><br> Dari sistem persamaan linear itu dapat diperoleh persamaan linear dua variabel berikut, <em>kecuali</em>:<br>
+
+<ol type="a">
+<li>
+<span class="math inline">\(2x - z = 0\)</span>
+</li>
+<li>
+<span class="math inline">\(5x + 3z = 11\)</span>
+</li>
+<li>
+<span class="math inline">\(-x + 6z = 11\)</span>
+</li>
+<li>
+<span class="math inline">\(3x + 7z = -11\)</span>
+</li>
+<li>
+<span class="math inline">\(7x - 9z = -11\)</span>
+</li>
+</ol></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Jawabannya adalah opsi d
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\begin{align*}
+   x + y + z &amp;= 3 &amp;\quad (1)\\
+   2x + y - 5z &amp;= -8 &amp;\quad (2)\\
+   3x - 2y + z &amp;= 5 &amp;\quad (3)
+   \end{align*}\)</span><br></p>
+<p>Persamaan pada opsi a <span class="math inline">\(2x - z = 0\)</span> dapat diperoleh dari: <br> <span class="math inline">\(\frac{1}{3}\left((1)+(2)+(3)\right) \Rightarrow  2x - z = 0\)</span></p>
+<p>Persamaan pada opsi b <span class="math inline">\(5x + 3z = 11\)</span> dapat diperoleh dari: <br> <span class="math inline">\(2 \times (1) + (3) \Rightarrow 5x + 3z = 11\)</span></p>
+<p>Persamaan pada opsi c <span class="math inline">\(-x + 6z = 11\)</span> dapat diperoleh dari: <br> <span class="math inline">\((1) - (2) \Rightarrow -x + 6z = 11\)</span></p>
+<p>Persamaan pada opsi e <span class="math inline">\(7x - 9z = -11\)</span> dapat diperoleh dari: <br> <span class="math inline">\(2 \times (2) + (3) \Rightarrow 7x -9z = -11\)</span></p>
+<p>Persamaan pada opsi d tidak dapat diperoleh dari sistem persamaan linear yang diketahui. <br> <span class="math inline">\(\frac{1}{3}\left(-2 \times (1) + 4 \times \times (2) + (3)\right) \Rightarrow  3x - 7z = -11 \,\text{ bukan }\, 3x + 7x = -11\)</span> <br> Jadi <strong>Opsi d jawabannya</strong>.</p>
+</div>
+</div>
+</div>
+<p><img src="../../assets/imgs/wave.svg" style="width:100.0%" alt="wave" height="8"></p>
+</section>
+<section id="halaman-sebelumnya" class="level2">
+<h2 class="anchored" data-anchor-id="halaman-sebelumnya">Halaman sebelumnya</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><a href="../" class="underlined underlined-thin-gradient">Persiapan PSAT Tahun 2024</a></p>
+</div><div class="column" style="width:20%;">
+
+</div><div class="column" style="width:40%;">
+
+</div>
+</div>
 
 
 </section>

@@ -401,7 +401,7 @@
     "href": "peluang/ruang-sampel/index.html",
     "title": "Ruang Sampel",
     "section": "",
-    "text": "Suatu percobaan akan menghasilkan ruang sampel, yaitu semesta pembicaraan atau semua kejadian yang mungkin terjadi dari suatu percobaan.\n\n\nPada percobaan mengambil dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu, tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 1\n\n\n\n\n\nS = { P1P2, P1P3, P1P4, P1O1, P1O2, P1O3, P1U1, P1U2,  P2P3, P2P4, P2O1, P2O2, P2O3, P2U1, P2U2,  P3P4, P3O1, P3O2, P3O3, P3U1, P3U2,  P4O1, P4O2, P4O3, P4U1, P4U2,  O1O2, O1O3, O1U1, O1U2, O2O3,  O2U1, O2U2,  O3U1, O3U2,  U1U2 }\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, tiga koin bersisi angka (A) dan gambar (G), tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 2\n\n\n\n\n\nS = {AAA,  AAG, AGA, GAA,  AGG, GAG, GGA,  GGG} \n\n\n\n\n\n\nPada percobaan melempar undi sekali, dua dadu bermata enam\n\n\n\n\n\n\nRuang sampel percobaan 3\n\n\n\n\n\nS = {(1, 1), (1, 2), …, (1, 6),  (2, 1), (2, 2),…,(2, 6),  (3, 1), (3, 2),…,(3, 6),  (4, 1), (4, 2),…,(4, 6),  (5, 1), (5, 2),…,(5, 6),  (6, 1), (6, 2),…,(6, 6)}\n\n\n\n\n\n\n\n\nPada kegiatan lomba cepat tepat yang diikuti lima regu A, B, C, D, dan E, akan diambil juara 1, 2, dan 3. Berapa banyak anggota dari ruang sampelnya?\n\n\n\n\n\n\nRuang sampel percobaan 4\n\n\n\n\n\nS = { ABC, ABD, ABE, ACB, ACD, ACE, ADB, ADC, ADE, AEB, AEC, AED,  BAC, BAD, BAE, BCA, BCD, BCE, BDA, BDC, BDE, BEA, BEC, BED,  CAB, CAD, CAE, CBA, CBD, CBE, CDA, CDB, CDE, CEA, CDB, CDE,  DAB, DAC, DAE, DBA, DBC, DBE, DCA, DCB, DCE, DEA, DEB, DEC,  EAB, EAC, EAD, EBA, EBC, EBD, ECA, ECB, ECD, EDA, EDB, EDC}"
+    "text": "Suatu percobaan akan menghasilkan ruang sampel, yaitu semesta pembicaraan atau semua kejadian yang mungkin terjadi dari suatu percobaan.\n\n\nPada percobaan mengambil dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu, tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 1\n\n\n\n\n\nS = { P1P2, P1P3, P1P4, P1O1, P1O2, P1O3, P1U1, P1U2,  P2P3, P2P4, P2O1, P2O2, P2O3, P2U1, P2U2,  P3P4, P3O1, P3O2, P3O3, P3U1, P3U2,  P4O1, P4O2, P4O3, P4U1, P4U2,  O1O2, O1O3, O1U1, O1U2, O2O3,  O2U1, O2U2,  O3U1, O3U2,  U1U2 }\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, tiga koin bersisi angka (A) dan gambar (G), tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 2\n\n\n\n\n\nS = {AAA, AAG, AGA, GAA, AGG, GAG, GGA, GGG}\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, dua dadu bermata enam\n\n\n\n\n\n\nRuang sampel percobaan 3\n\n\n\n\n\nS = {(1, 1), (1, 2), …, (1, 6),  (2, 1), (2, 2),…,(2, 6),  (3, 1), (3, 2),…,(3, 6),  (4, 1), (4, 2),…,(4, 6),  (5, 1), (5, 2),…,(5, 6),  (6, 1), (6, 2),…,(6, 6)}\n\n\n\n\n\n\n\n\nPada kegiatan lomba cepat tepat yang diikuti lima regu A, B, C, D, dan E, akan diambil juara 1, 2, dan 3. Berapa banyak anggota dari ruang sampelnya?\n\n\n\n\n\n\nRuang sampel percobaan 4\n\n\n\n\n\nS = { ABC, ABD, ABE, ACB, ACD, ACE, ADB, ADC, ADE, AEB, AEC, AED,  BAC, BAD, BAE, BCA, BCD, BCE, BDA, BDC, BDE, BEA, BEC, BED,  CAB, CAD, CAE, CBA, CBD, CBE, CDA, CDB, CDE, CEA, CDB, CDE,  DAB, DAC, DAE, DBA, DBC, DBE, DCA, DCB, DCE, DEA, DEB, DEC,  EAB, EAC, EAD, EBA, EBC, EBD, ECA, ECB, ECD, EDA, EDB, EDC}"
   },
   {
     "objectID": "statistika/diagram-pencar/index.html#pengertian-diagram-pencar",
@@ -688,14 +688,14 @@
     "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html",
     "title": "Aturan Penjumlahan dan Perkalian",
     "section": "",
-    "text": "Ayah memiliki kendaraan yang biasa digunakannya untuk pergi ke kantor yaitu satu mobil dan dua motor (lihat gambar ilustrasinya).  Bagaimana menghitung banyak cara Ayah pergi ke kantor menggunakan kendaraan itu?\n\n\n\n\n\n\n\n\n\n\n\nBerdasarkan gambar, berapa banyak lintasan terpendek yang mungkin dari P ke Q?\n\n\n\n\n\n\n\n\nSolusi masalah pembuka 2.\n\n\n\n\n\n\n\n\nLintasan ke-1: P-A-B-E-Q\nLintasan ke-2: P-A-D-E-Q\nLintasan ke-3: P-A-D-G-Q\nLintasan ke-4: P-C-D-E-Q\nLintasan ke-5: P-C-D-G-Q\nLintasan ke-6: P-C-F-G-Q\n\n\nAda 6 lintasan terpendek yang mungkin dari P ke Q.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAturan Penjumlahan - Jika satu tindakan dan tindakan lainnya tidak dapat dilakukan pada saat yang bersamaan, tindakan pertama dapat dilakukan sebanyak m pilihan dan tindakan lainnya dapat dilakukan sebanyak n pilihan, maka ada m + n cara untuk memilih salah satu tindakan ini. - Jika kejadian1 dengan kejadian2 saling lepas serta kejadian1 dapat terjadi m cara dan kejadian2 dapat terjadi n cara, maka banyak cara terjadi kejadian1 atau kejadian2 adalah sebanyak m + n cara - Aturan penjumlahan hanya berlaku untuk kejadian/pilihan yang saling lepas (saling eksklusif), yaitu hanya satu kejadian/pilihan yang dapat terjadi/dipilih."
+    "text": "Ayah memiliki kendaraan yang biasa digunakannya untuk pergi ke kantor yaitu satu mobil dan dua motor (lihat gambar ilustrasinya).  Bagaimana menghitung banyak cara Ayah pergi ke kantor menggunakan kendaraan itu?\n\n\n\n\n\n\n\n\n\n\n\nBerdasarkan gambar, berapa banyak lintasan terpendek yang mungkin dari P ke Q?\n\n\n\n\n\n\n\n\nSolusi masalah pembuka 2.\n\n\n\n\n\n\n\n\nLintasan ke-1: P-A-B-E-Q\nLintasan ke-2: P-A-D-E-Q\nLintasan ke-3: P-A-D-G-Q\nLintasan ke-4: P-C-D-E-Q\nLintasan ke-5: P-C-D-G-Q\nLintasan ke-6: P-C-F-G-Q\n\n\nAda 6 lintasan terpendek yang mungkin dari P ke Q.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAturan Penjumlahan\n\nJika satu tindakan dan tindakan lainnya tidak dapat dilakukan pada saat yang bersamaan, tindakan pertama dapat dilakukan sebanyak m pilihan dan tindakan lainnya dapat dilakukan sebanyak n pilihan, maka ada m + n cara untuk memilih salah satu tindakan ini.\nJika kejadian1 dengan kejadian2 saling lepas serta kejadian1 dapat terjadi m cara dan kejadian2 dapat terjadi n cara, maka banyak cara terjadi kejadian1 atau kejadian2 adalah sebanyak m + n cara\nAturan penjumlahan hanya berlaku untuk kejadian/pilihan yang saling lepas (saling eksklusif), yaitu hanya satu kejadian/pilihan yang dapat terjadi/dipilih."
   },
   {
     "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#aturan-penjumlahan",
     "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html#aturan-penjumlahan",
     "title": "Aturan Penjumlahan dan Perkalian",
     "section": "",
-    "text": "Ayah memiliki kendaraan yang biasa digunakannya untuk pergi ke kantor yaitu satu mobil dan dua motor (lihat gambar ilustrasinya).  Bagaimana menghitung banyak cara Ayah pergi ke kantor menggunakan kendaraan itu?\n\n\n\n\n\n\n\n\n\n\n\nBerdasarkan gambar, berapa banyak lintasan terpendek yang mungkin dari P ke Q?\n\n\n\n\n\n\n\n\nSolusi masalah pembuka 2.\n\n\n\n\n\n\n\n\nLintasan ke-1: P-A-B-E-Q\nLintasan ke-2: P-A-D-E-Q\nLintasan ke-3: P-A-D-G-Q\nLintasan ke-4: P-C-D-E-Q\nLintasan ke-5: P-C-D-G-Q\nLintasan ke-6: P-C-F-G-Q\n\n\nAda 6 lintasan terpendek yang mungkin dari P ke Q.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAturan Penjumlahan - Jika satu tindakan dan tindakan lainnya tidak dapat dilakukan pada saat yang bersamaan, tindakan pertama dapat dilakukan sebanyak m pilihan dan tindakan lainnya dapat dilakukan sebanyak n pilihan, maka ada m + n cara untuk memilih salah satu tindakan ini. - Jika kejadian1 dengan kejadian2 saling lepas serta kejadian1 dapat terjadi m cara dan kejadian2 dapat terjadi n cara, maka banyak cara terjadi kejadian1 atau kejadian2 adalah sebanyak m + n cara - Aturan penjumlahan hanya berlaku untuk kejadian/pilihan yang saling lepas (saling eksklusif), yaitu hanya satu kejadian/pilihan yang dapat terjadi/dipilih."
+    "text": "Ayah memiliki kendaraan yang biasa digunakannya untuk pergi ke kantor yaitu satu mobil dan dua motor (lihat gambar ilustrasinya).  Bagaimana menghitung banyak cara Ayah pergi ke kantor menggunakan kendaraan itu?\n\n\n\n\n\n\n\n\n\n\n\nBerdasarkan gambar, berapa banyak lintasan terpendek yang mungkin dari P ke Q?\n\n\n\n\n\n\n\n\nSolusi masalah pembuka 2.\n\n\n\n\n\n\n\n\nLintasan ke-1: P-A-B-E-Q\nLintasan ke-2: P-A-D-E-Q\nLintasan ke-3: P-A-D-G-Q\nLintasan ke-4: P-C-D-E-Q\nLintasan ke-5: P-C-D-G-Q\nLintasan ke-6: P-C-F-G-Q\n\n\nAda 6 lintasan terpendek yang mungkin dari P ke Q.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAturan Penjumlahan\n\nJika satu tindakan dan tindakan lainnya tidak dapat dilakukan pada saat yang bersamaan, tindakan pertama dapat dilakukan sebanyak m pilihan dan tindakan lainnya dapat dilakukan sebanyak n pilihan, maka ada m + n cara untuk memilih salah satu tindakan ini.\nJika kejadian1 dengan kejadian2 saling lepas serta kejadian1 dapat terjadi m cara dan kejadian2 dapat terjadi n cara, maka banyak cara terjadi kejadian1 atau kejadian2 adalah sebanyak m + n cara\nAturan penjumlahan hanya berlaku untuk kejadian/pilihan yang saling lepas (saling eksklusif), yaitu hanya satu kejadian/pilihan yang dapat terjadi/dipilih."
   },
   {
     "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#percobaan-dan-ruang-sampel",
@@ -744,7 +744,7 @@
     "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html#permasalahan-aturan-penjumlahan",
     "title": "Aturan Penjumlahan dan Perkalian",
     "section": "Permasalahan Aturan Penjumlahan",
-    "text": "Permasalahan Aturan Penjumlahan\n\n\n\n\n\n\n\nPermasalahan 1 \nBadu akan melaksanakan Shalat Jumat, yang bersangkutan sudah berada di Mushola Al-Hidayah. Ternyata di Mushola Al-Hidayah tidak menyelenggarakan shalat Jumat. Masjid terdekat adalah Masjid Al-Muhajirin.  Perhatikan potret dari atas yang menggambarkan posisi Mushola dan Masjid itu serta jalan-jalan alternatif yang dapat digunakan.\n\nBerapa banyak lintasan terpendek untuk menempuh perjalanan dari Mushola Al-Hidayah dengan Masjid Al-Muhajirin (dihitung dari dua titik pertigaan/perempatan, yaitu dari A ke B).\nBagaimana menghitung banyak lintasan itu?\n\n\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPermasalahan 2 \nBadu akan berangkat ke sekolah. Badu terkadang pergi ke sekolah melalui Chandra atau Dodo. Rute jalan melalui rumah Chandra, ada satu rute jalan dari rumah Badu ke rumah Chandra dan ada tiga rute jalan dari rumah Chandra ke sekolah. Rute jalan melalui rumah Dodo, ada dua rute jalan dari rumah Badu ke rumah Dodo dan satu rute jalan dari rumah Dodo ke sekolah. Berapa banyak rute jalan terpendek yang dapat ditempuh oleh Badu untuk sampai ke sekolah dari rumahnya kalau rutenya melalui rumah Chandra atau Dodo?\n\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPermasalahan 3 \nBerapa banyak kata SEHAT yang dapat dibuat dari susunan huruf berikut, jika menyusun kata SEHAT itu dapat mengikuti alur/arah dari kiri ke kanan, kanan ke kiri, atas ke bawah, dan bawah ke atas.\n\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 3\n\n\n\n\n\n\n\n\n\n\nPermasalahan 4\nPada satu kali pelemparan dadu bersisi enam yang masing-masing bermata 1, 2, 3, 4, 5, dan 6, apa yang dapat Ananda jelaskan tentang:\n\nKejadian muncul mata dadu ganjil atau genap.\nKejadian muncul mata dadu ganjil atau prima.\nKejadian muncul mata dadu genap atau prima.\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 4\n\n\n\n\n\n\nRuang sampelnya: S = {1, 2, 3, 4, 5, 6}\nKejadian mata dadu ganjil: A = { 1, 3, 5 }\nKejadian mata dadu genap: B = { 2, 4, 6 }\nKejadian mata dadu prima: C = { 2, 3, 5 }\nKejadian mata dadu ganjil atau genap: A∪B = { 1, 2, 3, 4, 5, 6 }\nKejadian mata dadu ganjil atau prima: A∪C = { 1, 2, 3, 5 }\nKejadian mata dadu genap atau prima: B∪C = { 2, 3, 4, 5, 6 }\n\n\nPerhatikan \\(A \\cap B = \\{ \\}\\), \\(A\\) dan \\(B\\) disebut dua kejadian saling lepas.\nSementara itu \\(A \\cap C = \\{3, 5 \\} \\neq \\{ \\}\\) demikian juga \\(B \\cap C = \\{2\\} \\neq \\{ \\}\\).  \\(A\\) dengan \\(C\\) dan \\(B\\) dengan \\(C\\) disebut tidak saling lepas.\nUntuk dua kejadian saling lepas seperti \\(A\\) dan \\(B\\) bilangan kardinal \\(A \\cup B\\): \\[ n(A \\cup B) = 5 = 3 + 3 = n(A) + n(B)\\] Untuk dua kejadian yang tidak saling lepas seperti \\(A\\) dan \\(C\\) bilangan kardinal \\(A \\cup C\\): \\[ n(A \\cup C) = 4 = 3 + 3 - 2 = n(A) + n(C) - n(A \\cap C)\\]\n\nApa yang dapat Ananda simpulkan dari pembahasan di atas?"
+    "text": "Permasalahan Aturan Penjumlahan\n\nPermasalahan 1\n\n\n\n\n\n\nBadu akan melaksanakan Shalat Jumat, yang bersangkutan sudah berada di Mushola Al-Hidayah. Ternyata di Mushola Al-Hidayah tidak menyelenggarakan shalat Jumat. Masjid terdekat adalah Masjid Al-Muhajirin.  Perhatikan potret dari atas yang menggambarkan posisi Mushola dan Masjid itu serta jalan-jalan alternatif yang dapat digunakan.\n\nBerapa banyak lintasan terpendek untuk menempuh perjalanan dari Mushola Al-Hidayah dengan Masjid Al-Muhajirin (dihitung dari dua titik pertigaan/perempatan, yaitu dari A ke B).\nBagaimana menghitung banyak lintasan itu?\n\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 1\n\n\n\n\n\n\n\n\n\n\n\nPermasalahan 2\n\n\n\n\n\n\nBadu akan berangkat ke sekolah. Badu terkadang pergi ke sekolah melalui Chandra atau Dodo. Rute jalan melalui rumah Chandra, ada satu rute jalan dari rumah Badu ke rumah Chandra dan ada tiga rute jalan dari rumah Chandra ke sekolah. Rute jalan melalui rumah Dodo, ada dua rute jalan dari rumah Badu ke rumah Dodo dan satu rute jalan dari rumah Dodo ke sekolah. Berapa banyak rute jalan terpendek yang dapat ditempuh oleh Badu untuk sampai ke sekolah dari rumahnya kalau rutenya melalui rumah Chandra atau Dodo?\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 2\n\n\n\n\n\n\n\n\n\n\n\nPermasalahan 3\n\n\n\n\n\n\nBerapa banyak kata SEHAT yang dapat dibuat dari susunan huruf berikut, jika menyusun kata SEHAT itu dapat mengikuti alur/arah dari kiri ke kanan, kanan ke kiri, atas ke bawah, dan bawah ke atas.\n\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 3\n\n\n\n\n\n\n\n\n\n\n\nPermasalahan 4\nPada satu kali pelemparan dadu bersisi enam yang masing-masing bermata 1, 2, 3, 4, 5, dan 6, apa yang dapat Ananda jelaskan tentang:\n\nKejadian muncul mata dadu ganjil atau genap.\nKejadian muncul mata dadu ganjil atau prima.\nKejadian muncul mata dadu genap atau prima.\n\n\n\n\n\n\n\nHint untuk solusi permasalahan 4\n\n\n\n\n\n\nRuang sampelnya: S = {1, 2, 3, 4, 5, 6}\nKejadian mata dadu ganjil: A = { 1, 3, 5 }\nKejadian mata dadu genap: B = { 2, 4, 6 }\nKejadian mata dadu prima: C = { 2, 3, 5 }\nKejadian mata dadu ganjil atau genap: A∪B = { 1, 2, 3, 4, 5, 6 }\nKejadian mata dadu ganjil atau prima: A∪C = { 1, 2, 3, 5 }\nKejadian mata dadu genap atau prima: B∪C = { 2, 3, 4, 5, 6 }\n\n\nPerhatikan \\(A \\cap B = \\{ \\}\\), \\(A\\) dan \\(B\\) disebut dua kejadian saling lepas.\nSementara itu \\(A \\cap C = \\{3, 5 \\} \\neq \\{ \\}\\) demikian juga \\(B \\cap C = \\{2\\} \\neq \\{ \\}\\).  \\(A\\) dengan \\(C\\) dan \\(B\\) dengan \\(C\\) disebut tidak saling lepas.\nUntuk dua kejadian saling lepas seperti \\(A\\) dan \\(B\\) bilangan kardinal \\(A \\cup B\\): \\[ n(A \\cup B) = 6 = 3 + 3 = n(A) + n(B)\\] Untuk dua kejadian yang tidak saling lepas seperti \\(A\\) dan \\(C\\) bilangan kardinal \\(A \\cup C\\): \\[ n(A \\cup C) = 4 = 3 + 3 - 2 = n(A) + n(C) - n(A \\cap C)\\]\n\nApa yang dapat Ananda simpulkan dari pembahasan di atas?"
   },
   {
     "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#aturan-perkalian",
@@ -849,7 +849,7 @@
     "href": "peluang/ruang-sampel/index.html#percobaan-dan-ruang-sampelnya",
     "title": "Ruang Sampel",
     "section": "",
-    "text": "Suatu percobaan akan menghasilkan ruang sampel, yaitu semesta pembicaraan atau semua kejadian yang mungkin terjadi dari suatu percobaan.\n\n\nPada percobaan mengambil dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu, tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 1\n\n\n\n\n\nS = { P1P2, P1P3, P1P4, P1O1, P1O2, P1O3, P1U1, P1U2,  P2P3, P2P4, P2O1, P2O2, P2O3, P2U1, P2U2,  P3P4, P3O1, P3O2, P3O3, P3U1, P3U2,  P4O1, P4O2, P4O3, P4U1, P4U2,  O1O2, O1O3, O1U1, O1U2, O2O3,  O2U1, O2U2,  O3U1, O3U2,  U1U2 }\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, tiga koin bersisi angka (A) dan gambar (G), tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 2\n\n\n\n\n\nS = {AAA,  AAG, AGA, GAA,  AGG, GAG, GGA,  GGG} \n\n\n\n\n\n\nPada percobaan melempar undi sekali, dua dadu bermata enam\n\n\n\n\n\n\nRuang sampel percobaan 3\n\n\n\n\n\nS = {(1, 1), (1, 2), …, (1, 6),  (2, 1), (2, 2),…,(2, 6),  (3, 1), (3, 2),…,(3, 6),  (4, 1), (4, 2),…,(4, 6),  (5, 1), (5, 2),…,(5, 6),  (6, 1), (6, 2),…,(6, 6)}\n\n\n\n\n\n\n\n\nPada kegiatan lomba cepat tepat yang diikuti lima regu A, B, C, D, dan E, akan diambil juara 1, 2, dan 3. Berapa banyak anggota dari ruang sampelnya?\n\n\n\n\n\n\nRuang sampel percobaan 4\n\n\n\n\n\nS = { ABC, ABD, ABE, ACB, ACD, ACE, ADB, ADC, ADE, AEB, AEC, AED,  BAC, BAD, BAE, BCA, BCD, BCE, BDA, BDC, BDE, BEA, BEC, BED,  CAB, CAD, CAE, CBA, CBD, CBE, CDA, CDB, CDE, CEA, CDB, CDE,  DAB, DAC, DAE, DBA, DBC, DBE, DCA, DCB, DCE, DEA, DEB, DEC,  EAB, EAC, EAD, EBA, EBC, EBD, ECA, ECB, ECD, EDA, EDB, EDC}"
+    "text": "Suatu percobaan akan menghasilkan ruang sampel, yaitu semesta pembicaraan atau semua kejadian yang mungkin terjadi dari suatu percobaan.\n\n\nPada percobaan mengambil dua bola dari kantong berisi 4 bola putih, 3 bola orange, dan 2 bola ungu, tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 1\n\n\n\n\n\nS = { P1P2, P1P3, P1P4, P1O1, P1O2, P1O3, P1U1, P1U2,  P2P3, P2P4, P2O1, P2O2, P2O3, P2U1, P2U2,  P3P4, P3O1, P3O2, P3O3, P3U1, P3U2,  P4O1, P4O2, P4O3, P4U1, P4U2,  O1O2, O1O3, O1U1, O1U2, O2O3,  O2U1, O2U2,  O3U1, O3U2,  U1U2 }\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, tiga koin bersisi angka (A) dan gambar (G), tentukan ruang sampelnya.\n\n\n\n\n\n\nRuang sampel percobaan 2\n\n\n\n\n\nS = {AAA, AAG, AGA, GAA, AGG, GAG, GGA, GGG}\n\n\n\n\n\n\n\nPada percobaan melempar undi sekali, dua dadu bermata enam\n\n\n\n\n\n\nRuang sampel percobaan 3\n\n\n\n\n\nS = {(1, 1), (1, 2), …, (1, 6),  (2, 1), (2, 2),…,(2, 6),  (3, 1), (3, 2),…,(3, 6),  (4, 1), (4, 2),…,(4, 6),  (5, 1), (5, 2),…,(5, 6),  (6, 1), (6, 2),…,(6, 6)}\n\n\n\n\n\n\n\n\nPada kegiatan lomba cepat tepat yang diikuti lima regu A, B, C, D, dan E, akan diambil juara 1, 2, dan 3. Berapa banyak anggota dari ruang sampelnya?\n\n\n\n\n\n\nRuang sampel percobaan 4\n\n\n\n\n\nS = { ABC, ABD, ABE, ACB, ACD, ACE, ADB, ADC, ADE, AEB, AEC, AED,  BAC, BAD, BAE, BCA, BCD, BCE, BDA, BDC, BDE, BEA, BEC, BED,  CAB, CAD, CAE, CBA, CBD, CBE, CDA, CDB, CDE, CEA, CDB, CDE,  DAB, DAC, DAE, DBA, DBC, DBE, DCA, DCB, DCE, DEA, DEB, DEC,  EAB, EAC, EAD, EBA, EBC, EBD, ECA, ECB, ECD, EDA, EDB, EDC}"
   },
   {
     "objectID": "statistika/index.html#halaman-sebelum-dan-sesudahnya",
@@ -857,5 +857,614 @@
     "title": "Statistika",
     "section": "Halaman sebelum dan sesudahnya",
     "text": "Halaman sebelum dan sesudahnya\n\n\nMatematika\n\n\n\nKuartil dan Box Plot"
+  },
+  {
+    "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#latihan-soal",
+    "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html#latihan-soal",
+    "title": "Aturan Penjumlahan dan Perkalian",
+    "section": "Latihan Soal",
+    "text": "Latihan Soal\nSilakan Ananda menyelesaikan soal-soal pada tautan berikut (untuk mengaksesnya gunakan akun belajar id Ananda).\nLatihan Soal Aturan Penjumlahan dan Perkalian"
+  },
+  {
+    "objectID": "peluang/peluang-suatu-kejadian/index.html#latihan-soal-ruang-sampel-dan-peluang-suatu-kejadian",
+    "href": "peluang/peluang-suatu-kejadian/index.html#latihan-soal-ruang-sampel-dan-peluang-suatu-kejadian",
+    "title": "Peluang (Probabilitas)",
+    "section": "Latihan Soal Ruang Sampel dan Peluang Suatu Kejadian",
+    "text": "Latihan Soal Ruang Sampel dan Peluang Suatu Kejadian\nSilakan Ananda menyelesaikan soal-soal pada tautan berikut (untuk mengaksesnya gunakan akun belajar id Ananda).\nLatihan Soal Ruang Sampel dan Peluang Suatu Kejadian"
+  },
+  {
+    "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#uji-kompetensi-peluang-aturan-penjumlahan-dan-perkalian",
+    "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html#uji-kompetensi-peluang-aturan-penjumlahan-dan-perkalian",
+    "title": "Aturan Penjumlahan dan Perkalian",
+    "section": "Uji Kompetensi Peluang: Aturan Penjumlahan dan Perkalian",
+    "text": "Uji Kompetensi Peluang: Aturan Penjumlahan dan Perkalian\nSilakan Ananda menyelesaikan soal-soal pada tautan berikut (untuk mengaksesnya gunakan akun belajar id Ananda).\nUji Kompetensi Peluang (1): Aturan Penjumlahan dan Perkalian"
+  },
+  {
+    "objectID": "peluang/aturan-penjumlahan-dan-perkalian/index.html#uji-kompetensi-aturan-penjumlahan-dan-perkalian",
+    "href": "peluang/aturan-penjumlahan-dan-perkalian/index.html#uji-kompetensi-aturan-penjumlahan-dan-perkalian",
+    "title": "Aturan Penjumlahan dan Perkalian",
+    "section": "Uji Kompetensi Aturan Penjumlahan dan Perkalian",
+    "text": "Uji Kompetensi Aturan Penjumlahan dan Perkalian\nSilakan Ananda menyelesaikan soal-soal pada tautan berikut (untuk mengaksesnya gunakan akun belajar id Ananda).\nUji Kompetensi Aturan Penjumlahan dan Perkalian"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "href": "persiapan-psat/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan",
+    "text": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-varaibel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "href": "persiapan-psat/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-varaibel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai varaibel ke-3 dari sistem persamaan linear tiga varibel yang disajikan",
+    "text": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai varaibel ke-3 dari sistem persamaan linear tiga varibel yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "href": "persiapan-psat/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan penyelesaian sistem persamaan liniear tiga variabel",
+    "text": "Menentukan penyelesaian sistem persamaan liniear tiga variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "href": "persiapan-psat/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan",
+    "text": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "href": "persiapan-psat/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.",
+    "text": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;",
+    "text": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel",
+    "text": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel",
+    "text": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "href": "persiapan-psat/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel",
+    "text": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "href": "persiapan-psat/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan penyelesaian persamaan kuadrat",
+    "text": "Menentukan penyelesaian persamaan kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "href": "persiapan-psat/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x",
+    "text": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "href": "persiapan-psat/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah",
+    "text": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "href": "persiapan-psat/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan titik potong parabola dengan sumbu-y",
+    "text": "Menentukan titik potong parabola dengan sumbu-y\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "href": "persiapan-psat/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan",
+    "text": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "href": "persiapan-psat/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mentukan model dari masalah terkait fungsi kuadrat",
+    "text": "Mentukan model dari masalah terkait fungsi kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "href": "persiapan-psat/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya",
+    "text": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "href": "persiapan-psat/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan Q1 atau Q3 dari data yang belum diurutkan",
+    "text": "Menentukan Q1 atau Q3 dari data yang belum diurutkan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan",
+    "text": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan",
+    "text": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "href": "persiapan-psat/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan",
+    "text": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "href": "persiapan-psat/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot",
+    "text": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "href": "persiapan-psat/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data",
+    "text": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "href": "persiapan-psat/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana",
+    "text": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "href": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven",
+    "text": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "href": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk saling bebas",
+    "text": "Menentukan peluang kejadian majemuk saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "href": "persiapan-psat/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling bebas",
+    "text": "Menentukan peluang kejadian majemuk tidak saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "href": "persiapan-psat/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan",
+    "text": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#kisi-kisi-psat-matematika-kelas-x-tahun-2024",
+    "href": "persiapan-psat/index.html#kisi-kisi-psat-matematika-kelas-x-tahun-2024",
+    "title": "Persiapan PAST Matematika",
+    "section": "Kisi-kisi PSAT Matematika Kelas X Tahun 2024",
+    "text": "Kisi-kisi PSAT Matematika Kelas X Tahun 2024"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan",
+    "text": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan",
+    "text": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan penyelesaian sistem persamaan liniear tiga variabel",
+    "text": "Menentukan penyelesaian sistem persamaan liniear tiga variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan",
+    "text": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.",
+    "text": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;",
+    "text": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel",
+    "text": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel",
+    "text": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel",
+    "text": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan penyelesaian persamaan kuadrat",
+    "text": "Menentukan penyelesaian persamaan kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x",
+    "text": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah",
+    "text": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan titik potong parabola dengan sumbu-y",
+    "text": "Menentukan titik potong parabola dengan sumbu-y\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan",
+    "text": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mentukan model dari masalah terkait fungsi kuadrat",
+    "text": "Mentukan model dari masalah terkait fungsi kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya",
+    "text": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan Q1 atau Q3 dari data yang belum diurutkan",
+    "text": "Menentukan Q1 atau Q3 dari data yang belum diurutkan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan",
+    "text": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan",
+    "text": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan",
+    "text": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot",
+    "text": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data",
+    "text": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana",
+    "text": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven",
+    "text": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk saling bebas",
+    "text": "Menentukan peluang kejadian majemuk saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "href": "persiapan-psat/persiapan-psat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling bebas",
+    "text": "Menentukan peluang kejadian majemuk tidak saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/index.html#halaman-sesudahnya",
+    "href": "persiapan-psat/index.html#halaman-sesudahnya",
+    "title": "Persiapan PAST Matematika",
+    "section": "Halaman sesudahnya",
+    "text": "Halaman sesudahnya\n\n\n\n\n\n\nPersiapan PSAT Matematika Kelas X Tahun 2024"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#mengeliminasi-satu-variabel-dari-sistem-persamaan-linear-tiga-variabel-yang-diberikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan",
+    "text": "Mengeliminasi satu variabel dari sistem persamaan linear tiga variabel yang diberikan\n\nDiketahui sistem persamaan linear tiga variabel berikut ini. \\(\\begin{align*}\nx + y + z &= 3 \\\\\n2x + y - 5z &= -8 \\\\\n3x - 2y + z &= 5\n\\end{align*}\\) Dari sistem persamaan linear itu dapat diperoleh persamaan linear dua variabel berikut, kecuali:\n\n\n\n\\(2x - z = 0\\)\n\n\n\\(5x + 3z = 11\\)\n\n\n\\(-x + 6z = 11\\)\n\n\n\\(3x + 7z = -11\\)\n\n\n\\(7x - 9z = -11\\)\n\n\n\n\n\n\n\n\n\nJawabannya adalah opsi d\n\n\n\n\n\n\\(\\begin{align*}\n   x + y + z &= 3 &\\quad (1)\\\\\n   2x + y - 5z &= -8 &\\quad (2)\\\\\n   3x - 2y + z &= 5 &\\quad (3)\n   \\end{align*}\\)\nPersamaan pada opsi a \\(2x - z = 0\\) dapat diperoleh dari:  \\(\\frac{1}{3}\\left((1)+(2)+(3)\\right) \\Rightarrow  2x - z = 0\\)\nPersamaan pada opsi b \\(5x + 3z = 11\\) dapat diperoleh dari:  \\(2 \\times (1) + (3) \\Rightarrow 5x + 3z = 11\\)\nPersamaan pada opsi c \\(-x + 6z = 11\\) dapat diperoleh dari:  \\((1) - (2) \\Rightarrow -x + 6z = 11\\)\nPersamaan pada opsi e \\(7x - 9z = -11\\) dapat diperoleh dari:  \\(2 \\times (2) + (3) \\Rightarrow 7x -9z = -11\\)\nPersamaan pada opsi d tidak dapat diperoleh dari sistem persamaan linear yang diketahui.  \\(\\frac{1}{3}\\left(-2 \\times (1) + 4 \\times \\times (2) + (3)\\right) \\Rightarrow  3x - 7z = -11 \\,\\text{ bukan }\\, 3x + 7x = -11\\)  Jadi Opsi d jawabannya."
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#diketahui-nilai-dari-dua-varibel-peserta-didik-dapat-menentukan-nilai-variabel-ke-3-dari-sistem-persamaan-linear-tiga-varibel-yang-disajikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan",
+    "text": "Diketahui nilai dari dua varibel peserta didik dapat menentukan nilai variabel ke-3 dari sistem persamaan linear tiga varibel yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-penyelesaian-sistem-persamaan-liniear-tiga-variabel",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan penyelesaian sistem persamaan liniear tiga variabel",
+    "text": "Menentukan penyelesaian sistem persamaan liniear tiga variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#menyelesaikan-masalah-sistem-persamaan-linier-tiga-variabel-menentukan-model-matematika-dari-masalah-yang-diberikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan",
+    "text": "Menyelesaikan masalah sistem persamaan linier tiga variabel, menentukan model matematika dari masalah yang diberikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-apakah-sebuah-titik-terletak-pada-daerah-penyelsaian-suatu-pertidaksamaan-linier-dua-variabel.",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.",
+    "text": "Menentukan apakah sebuah titik terletak pada daerah penyelsaian suatu pertidaksamaan linier dua variabel.\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-daerah-penyelesaian-dari-suatu-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;",
+    "text": "Menentukan daerah penyelesaian dari suatu pertidaksamaan linier dua variabel;\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/mat-x-2024/index.html#menetukan-daerah-penyelesaian-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel",
+    "text": "Menetukan daerah penyelesaian sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-model-sistem-pertidaksamaan-liner-dua-variabel-dari-masalah-terkait-sistem-pertidaksamaan-linier-dua-variabel",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel",
+    "text": "Menentukan model sistem pertidaksamaan liner dua variabel dari masalah terkait sistem pertidaksamaan linier dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "href": "persiapan-psat/mat-x-2024/index.html#mentukan-solusi-dari-masalah-terkait-sistem-pertidaksamaan-linear-dua-variabel",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel",
+    "text": "Mentukan solusi dari masalah terkait sistem pertidaksamaan linear dua variabel\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-penyelesaian-persamaan-kuadrat",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan penyelesaian persamaan kuadrat",
+    "text": "Menentukan penyelesaian persamaan kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "href": "persiapan-psat/mat-x-2024/index.html#menyelesaikan-masalah-persamaan-kuadrat-terkait-dengan-titik-porong-parabola-dengan-sumbu-x",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x",
+    "text": "Menyelesaikan masalah persamaan kuadrat, terkait dengan titik porong parabola dengan sumbu-x\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "href": "persiapan-psat/mat-x-2024/index.html#diberikan-beberapa-persamaan-parabola-peserta-didik-dapat-menentukan-parabola-yang-terbuka-ke-atas-atau-ke-bawah",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah",
+    "text": "Diberikan beberapa persamaan parabola, peserta didik dapat menentukan parabola yang terbuka ke atas atau ke bawah\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-titik-potong-parabola-dengan-sumbu-y",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan titik potong parabola dengan sumbu-y",
+    "text": "Menentukan titik potong parabola dengan sumbu-y\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#mengiidentifikasi-titik-potong-dengan-sumbu-y-titik-potong-dengan-sumbu-x-persamaan-sumbu-simegtri-nilai-maksimumminimum-dan-titik-balik-dari-parabola-yang-disajikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan",
+    "text": "Mengiidentifikasi titik potong dengan sumbu y, titik potong dengan sumbu x, persamaan sumbu simegtri, nilai maksimum/minimum, dan titik balik dari parabola yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "href": "persiapan-psat/mat-x-2024/index.html#mentukan-model-dari-masalah-terkait-fungsi-kuadrat",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mentukan model dari masalah terkait fungsi kuadrat",
+    "text": "Mentukan model dari masalah terkait fungsi kuadrat\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-nilai-maksimum-dari-masalah-fungsi-kuadrat-yang-disajikan-modelnya",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya",
+    "text": "Menentukan nilai maksimum dari masalah fungsi kuadrat yang disajikan modelnya\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-q1-atau-q3-dari-data-yang-belum-diurutkan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan Q1 atau Q3 dari data yang belum diurutkan",
+    "text": "Menentukan Q1 atau Q3 dari data yang belum diurutkan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#mengidentifikasi-nilai-minimum-q1-q2-q3-atau-nilai-maksimum-dari-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan",
+    "text": "Mengidentifikasi nilai minimum, Q1, Q2, Q3, atau nilai maksimum dari diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#menganalisa-dan-mengevaluasi-penyebaran-data-dari-dua-diagram-kotak-garis-yang-disajikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan",
+    "text": "Menganalisa dan mengevaluasi penyebaran data dari dua diagram kotak-garis yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-diagram-kotak-garis-yang-sesuai-dari-histogram-yang-disajikan",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan",
+    "text": "Menentukan diagram kotak garis yang sesuai dari histogram yang disajikan\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "href": "persiapan-psat/mat-x-2024/index.html#menjelaskan-hubungan-antara-dua-vaiabel-data-numerik-yang-disajikan-dalam-scatter-plot",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot",
+    "text": "Menjelaskan hubungan antara dua vaiabel data numerik yang disajikan dalam scatter plot\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "href": "persiapan-psat/mat-x-2024/index.html#mengevaluasi-laporan-statistika-di-media-berdasarkan-tampilan-statistik-dan-representasi-data",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data",
+    "text": "Mengevaluasi laporan statistika di media berdasarkan tampilan statistik dan representasi data\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "href": "persiapan-psat/mat-x-2024/index.html#menetukan-peluang-kejadian-majemuk-saling-lepas-dari-percobaan-sederhana",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana",
+    "text": "Menetukan peluang kejadian majemuk saling lepas dari percobaan sederhana\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-lepas-yang-dapat-dianalisa-dengan-menggunakan-diagram-ven",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven",
+    "text": "Menentukan peluang kejadian majemuk tidak saling lepas, yang dapat dianalisa dengan menggunakan diagram Ven\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-saling-bebas",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk saling bebas",
+    "text": "Menentukan peluang kejadian majemuk saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "href": "persiapan-psat/mat-x-2024/index.html#menentukan-peluang-kejadian-majemuk-tidak-saling-bebas",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Menentukan peluang kejadian majemuk tidak saling bebas",
+    "text": "Menentukan peluang kejadian majemuk tidak saling bebas\n\nSoal 1\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 2\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…\n\n\n\n\nSoal 3\n\n\n\n\n\n\n\nJawaban soal 1\n\n\n\n\n\n…"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#halaman-sesudahnya",
+    "href": "persiapan-psat/mat-x-2024/index.html#halaman-sesudahnya",
+    "title": "Persiapan PAST Matematika Kelas X",
+    "section": "Halaman sesudahnya",
+    "text": "Halaman sesudahnya\n\n\nPersiapan PSAT Tahun 2024"
+  },
+  {
+    "objectID": "persiapan-psat/mat-x-2024/index.html#halaman-sebelumnya",
+    "href": "persiapan-psat/mat-x-2024/index.html#halaman-sebelumnya",
+    "title": "Persiapan PSAT Matematika Kelas X",
+    "section": "Halaman sebelumnya",
+    "text": "Halaman sebelumnya\n\n\nPersiapan PSAT Tahun 2024"
   }
 ]
