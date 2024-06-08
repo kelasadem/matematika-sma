@@ -1,0 +1,101 @@
+<svg
+   width="300" height="300"
+   viewBox="0 0 300 300" fill="none" 
+   xmlns="http://www.w3.org/2000/svg">
+   <defs
+    id="defs8">
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id01">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="stroke:#b88100;stroke-width:1pt"
+         id="path2" />
+   </marker>
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id02">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#b88100;stroke:#b88100;stroke-width:1pt"
+         id="path5" />
+   </marker>
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id03">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#888;fill-opacity:1;stroke:#888;stroke-width:1pt;stroke-opacity:1"
+         id="path116809" />
+   </marker>
+   </defs>
+  <path d="M 25 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 50 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 75 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 100 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 125 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 175 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 200 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 225 148 v 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 250 148 v 4" stroke="#505" stroke-width="0.22" />
+
+  <path d="M 123 50 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 75 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 100 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 125 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 175 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 200 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 225 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 250 h 4" stroke="#505" stroke-width="0.22" />
+  <path d="M 123 275 h 4" stroke="#505" stroke-width="0.22" />
+
+  <text x="25" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-4</text>
+  <text x="50" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-3</text>
+  <text x="75" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-2</text>
+  <text x="100" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-1</text>
+  <text x="150" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">1</text>
+  <text x="175" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">2</text>
+  <text x="200" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">3</text>
+  <text x="225" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">4</text>
+  <text x="250" y="160" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">5</text>
+
+  <text dominant-baseline="middle" x="115" y="50" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">4</text>
+  <text dominant-baseline="middle" x="115" y="75" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">3</text>
+  <text dominant-baseline="middle" x="115" y="100" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">2</text>
+  <text dominant-baseline="middle" x="115" y="125" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">1</text>
+  <text dominant-baseline="middle" x="115" y="175" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-1</text>
+  <text dominant-baseline="middle" x="115" y="200" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-2</text>
+  <text dominant-baseline="middle" x="115" y="225" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-3</text>
+  <text dominant-baseline="middle" x="115" y="250" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-4</text>
+  <text dominant-baseline="middle" x="115" y="275" font-family="Verdana" font-size="8px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">-5</text>
+
+<path d="M125 290 V 20" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000" fill-opacity="0.75" marker-end="url(#id03)"/>
+<path d="M10 150 H 290" stroke="#888" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000" fill-opacity="0.75" marker-end="url(#id03)"/>
+
+
+  <!-- <circle cx="125" cy="250" r="2" fill="red" />
+  <circle cx="175" cy="150" r="2" fill="red" />
+  <circle cx="125" cy="125" r="2" fill="red" />
+  <circle cx="150" cy="150" r="2" fill="red" /> -->
+
+<path d="M 0,0 L 166.67,166.67 L 175,150 L 250,0 " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#888" fill-opacity="0.5"/>
+
+<path d="M 112.5,275 L 125,250 L 175,150 L 237.5,25 " stroke="#c00" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000" fill-opacity="0.75"/>
+
+<path d="M 25,25 L 125,125 L 150,150 L 250,250 " stroke="#c00" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#000" fill-opacity="0.75"/>
+
+  <text dominant-baseline="middle" x="260" y="50" font-family="Verdana" font-size="11px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">2x - y = 4</text>
+
+  <text dominant-baseline="middle" x="260" y="265" font-family="Verdana" font-size="11px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">x + y = 1</text>
+
+  <text
+     x="387.5"
+     y="115"
+     style="font-family:Verdana; font-size:8px; color:#000000; overflow:visible; fill:#0000ff; stroke-width:0.52px; text-anchor:middle;">107.5</text>
+</svg>
