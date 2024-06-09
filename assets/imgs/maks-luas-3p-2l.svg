@@ -1,0 +1,60 @@
+<svg
+   width="300" height="210"
+   viewBox="0 0 300 210" fill="none" 
+   xmlns="http://www.w3.org/2000/svg">
+   <defs
+    id="defs8">
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id01">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="stroke:#b88100;stroke-width:1pt"
+         id="path2" />
+   </marker>
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id02">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#b88100;stroke:#b88100;stroke-width:1pt"
+         id="path5" />
+   </marker>
+   <marker
+      style="overflow:visible"
+      orient="auto"
+      id="id03">
+      <path
+         d="M 0,0 3,-3 -12.3,0 3,3 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#888;fill-opacity:1;stroke:#888;stroke-width:1pt;stroke-opacity:1"
+         id="path116809" />
+   </marker>
+   </defs>
+
+   <rect x="15" y="15" stroke="#212" fill="none" stroke-width="1" width="270" height="180" />
+   
+   <path d="M 150,15 L 150,195" stroke="#212" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-opacity="0.75"/>
+
+  <!-- <circle cx="25" cy="25" r="2" fill="red" />
+  <circle cx="25" cy="75" r="2" fill="red" />
+  <circle cx="25" cy="125" r="2" fill="red" />
+  <circle cx="25" cy="175" r="2" fill="red" />
+
+  <circle cx="75" cy="25" r="2" fill="red" />
+  <circle cx="125" cy="25" r="2" fill="red" />
+  <circle cx="175" cy="25" r="2" fill="red" />
+  <circle cx="225" cy="25" r="2" fill="red" /> -->
+
+  <text x="15" y="210" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">A</text>
+  <text x="150" y="210" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">B</text>
+  <text x="285" y="210" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">C</text>
+  <text x="285" y="10" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">D</text>
+  <text x="150" y="10" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">E</text>
+  <text x="15" y="10" style="font-family:Verdana; font-size:14px; fill:#212; stroke-width:0.52px; text-anchor:middle;">F</text>
+
+</svg>

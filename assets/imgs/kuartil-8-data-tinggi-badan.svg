@@ -1,0 +1,37 @@
+<svg width="345" height="60" viewBox="0 0 345 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="15" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">155</text>
+<rect x="41" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="55" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">160</text>
+<path
+  d="M 80,10 V 60"
+  style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<circle cx = "80" cy = "15" r = "15" fill="#f60" />
+<!-- <rect x="60" y="1" width="40" height="25" rx="5px" fill="#f60" stroke="#000" stroke-width=".5"/> -->
+  <text x="80" y="19" style="font-size:12px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₁</text>
+<rect x="91" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="105" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">165</text>
+<rect x="131" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="145" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">168</text>
+<path
+  d="M 170,10 V 60"
+  style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<!-- <circle cx="140" cy="15" r="50" ry="15" fill="#f60"> </circle> -->
+<ellipse cx="170" cy="15" rx="25" ry="15" fill="#f60" />
+<!-- <rect x="140" y="1" width="60" height="25" rx="5px" fill="#f60" stroke="#000" stroke-width=".5"/> -->
+  <text x="170" y="19" style="font-size:12px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₂=Me</text>
+<rect x="181" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="195" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">170</text>
+<rect x="221" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="235" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">173</text>
+<path
+  d="M 260,10 V 60"
+  style="fill:none;stroke:#f00;stroke-width:1.21;stroke-dasharray:none" />
+<circle cx = "260" cy = "15" r = "15" fill="#f60" />
+<!-- <rect x="260" y="1" width="40" height="25" rx="5px" fill="#f60" stroke="#000" stroke-width=".5"/> -->
+  <text x="260" y="19" style="font-size:12px;font-family:Verdana;fill:#fff;stroke-width:0.6;text-anchor:middle;">Q₃</text>
+<rect x="271" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="285" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">175</text>
+<rect x="311" y="31" width="29" height="25" rx="5px" fill="#f1f2f3" stroke="#000" stroke-width=".5"/>
+  <text x="325" y="48" style="font-size:12px;font-family:Verdana;fill:#000;stroke-width:0.6;text-anchor:middle;">180</text>
+</svg>
