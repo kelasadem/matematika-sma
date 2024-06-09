@@ -94,8 +94,4 @@
 
   <text dominant-baseline="middle" x="260" y="265" font-family="Verdana" font-size="11px" fill="#000" overflow="visible" stroke-width="0.52px" text-anchor="middle">x + y = 1</text>
 
-  <text
-     x="387.5"
-     y="115"
-     style="font-family:Verdana; font-size:8px; color:#000000; overflow:visible; fill:#0000ff; stroke-width:0.52px; text-anchor:middle;">107.5</text>
 </svg>
