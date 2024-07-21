@@ -1,0 +1,88 @@
+<svg version="1.1"
+     width="460" height="340"
+     viewBox="-10 30 220 200"
+     xmlns="http://www.w3.org/2000/svg">
+
+<marker
+    style="overflow:visible"
+    orient="auto"
+    id="xy">
+    <path
+        d="M 0,0 5,-5 -10,0 5,5 Z"
+        transform="matrix(-.5,0,0,-0.5,-5,0)"
+        style="fill:olive;fill-opacity:1;stroke:olive;stroke-width:1pt;stroke-opacity:1"
+        id="path116809" />
+</marker>
+
+  <path d="M 0,200 L 200,200" fill="none" stroke='olive' stroke-width='0.5%' />
+
+  <path d="M -6,192 L 154,72" fill="none" stroke='olive' stroke-width='0.05%' />
+  <path d="M 0,200 L -9,188" fill="none" stroke='olive' stroke-width='0.05%' stroke-dasharray="3,3" />
+  <path d="M 160,80 L 151,68" fill="none" stroke='olive' stroke-width='0.05%' stroke-dasharray="3,3" />
+  <path d="M 0,200 L 200,50" fill="none" stroke='olive' stroke-width='0.5%' />
+  <g transform="translate(80, 130)">
+     <text text-anchor="middle" transform="rotate(-37)" fill="cadetblue">r</text>
+  </g>
+
+  <text x="5" y="-5" font-family="verdana" font-size="14" text-anchor="midlle" fill="olive">Y</text>
+
+  <circle cx="0" cy="200" r="1.5" fill="olive" stroke='olive' stroke-width='0.5%' />
+
+  <!-- <circle cx="0" cy="200" r="200" fill="none" stroke='olive' stroke-width='0.05%' /> -->
+
+  <circle cx="200" cy="200" r="2" fill="none" stroke='cadetblue' stroke-width='0.5%' />
+
+  <circle cx="160" cy="200" r="2" fill="blue" stroke='cadetblue' stroke-width='0.5%' />
+
+  <circle cx="160" cy="80" r="2" fill="none" stroke='cadetblue' stroke-width='0.5%' />
+
+  <path d="M 200,200 L 200,50" fill="none" stroke='Green' stroke-width='0.75%'/>
+  <circle cx="200" cy="50" r="2" fill="Green" stroke='cadetblue' stroke-width='0.5%' />
+
+  <path d="M 160,200 L 160,80" fill="none" stroke='blue' stroke-width='0.75%'/>
+
+  <!-- <path d="M 128 104
+           A 150 150, 0, 0, 1, 160 200
+            190 140 Z" stroke="purple" fill="none" stroke-width='0.75%'/>
+  <circle cx="128" cy="104" r="2" fill="purple"/>
+  <circle cx="150" cy="150" r="2" fill="purple"/>
+  <circle cx="160" cy="200" r="2" fill="purple"/>
+  <circle cx="190" cy="140" r="2" fill="purple"/> -->
+
+  <path d="M 160 80
+           A 190 190, 0, 0, 1, 200 200
+            190 140 Z" stroke="red" fill="none" stroke-width='0.75%'/>
+  <circle cx="160" cy="80" r="2" fill="red"/>
+  <!-- <circle cx="190" cy="140" r="2" fill="red"/> -->
+  <circle cx="200" cy="200" r="2" fill="red"/>
+  <!-- <circle cx="190" cy="140" r="2" fill="red"/> -->
+
+  <text x="25" y="195" font-size="14" text-anchor="start" fill="cadetblue">θ</text>
+
+  <path d="M 0,214 L 160,214" fill="none" stroke='olive' stroke-width='0.05%' />
+  <path d="M 0,200 L 0,225" fill="none" stroke='olive' stroke-width='0.05%' stroke-dasharray="3,3" />
+  <path d="M 160,200 L 160,219" fill="none" stroke='olive' stroke-width='0.05%' stroke-dasharray="3,3" />
+  <text x="80" y="217" font-size="14" text-anchor="middle" fill="cadetblue">r cos θ</text>
+
+  <g transform="translate(165, 145)">
+     <text text-anchor="middle" transform="rotate(90)" fill="blue">r sin θ</text>
+  </g>
+
+  <g transform="translate(205, 125)">
+     <text text-anchor="middle" transform="rotate(90)" fill="Green">r tan θ</text>
+  </g>
+
+  <text x="-7" y="215" font-size="14" text-anchor="middle" fill="black">0</text>
+
+  <path d="M 0,223 L 200,223" fill="none" stroke='olive' stroke-width='0.05%' />
+  <path d="M 200,200 L 200,225" fill="none" stroke='olive' stroke-width='0.05%' stroke-dasharray="3,3" />
+  <text x="120" y="225" font-size="14" text-anchor="middle" fill="cadetblue">r</text>
+  <text x="200" y="215" font-size="14" text-anchor="middle" fill="black">A</text>
+
+  <text x="160" y="215" font-size="14" text-anchor="middle" fill="black">B</text>
+
+  <text x="160" y="75" font-size="14" text-anchor="middle" fill="black">P</text>
+
+  <text x="200" y="43" font-size="14" text-anchor="middle"  fill="black">Q</text>
+
+</svg>

@@ -301,7 +301,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../peluang/" class="sidebar-item-text sidebar-link">
+            <a href="../limit/" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Limit</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -348,11 +348,15 @@ window.Quarto = {
   <li><a href="#pengertian-limit" id="toc-pengertian-limit" class="nav-link" data-scroll-target="#pengertian-limit">Pengertian Limit</a>
   <ul class="collapse">
   <li><a href="#pengantar-limit" id="toc-pengantar-limit" class="nav-link" data-scroll-target="#pengantar-limit">Pengantar Limit</a></li>
-  <li><a href="#contoh" id="toc-contoh" class="nav-link" data-scroll-target="#contoh">Contoh</a></li>
+  <li><a href="#contoh-1" id="toc-contoh-1" class="nav-link" data-scroll-target="#contoh-1">Contoh 1</a></li>
   </ul></li>
   <li><a href="#teorema-limit" id="toc-teorema-limit" class="nav-link" data-scroll-target="#teorema-limit">Teorema Limit</a>
   <ul class="collapse">
-  <li><a href="#contoh-1" id="toc-contoh-1" class="nav-link" data-scroll-target="#contoh-1">Contoh</a></li>
+  <li><a href="#contoh-2" id="toc-contoh-2" class="nav-link" data-scroll-target="#contoh-2">Contoh 2</a></li>
+  </ul></li>
+  <li><a href="#hukum-substitusi" id="toc-hukum-substitusi" class="nav-link" data-scroll-target="#hukum-substitusi">Hukum substitusi:</a>
+  <ul class="collapse">
+  <li><a href="#contoh" id="toc-contoh" class="nav-link" data-scroll-target="#contoh">Contoh</a></li>
   </ul></li>
   <li><a href="#kuis-menentukan-limit-suatu-fungsi" id="toc-kuis-menentukan-limit-suatu-fungsi" class="nav-link" data-scroll-target="#kuis-menentukan-limit-suatu-fungsi">Kuis Menentukan Limit Suatu Fungsi</a></li>
   </ul></li>
@@ -367,21 +371,23 @@ window.Quarto = {
 
 <section id="limit" class="level1">
 <h1>Limit</h1>
-<p>TP: Memahami <code>konsep limit</code> dan menentukan nilai limit <code>secara intuitif</code>.</p>
-<p>Misalkan <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span> dan <span class="math inline">\(c\in I\)</span>. Fungsi <span class="math inline">\(f(x)\)</span> terdefinisi di <span class="math inline">\(I\)</span>, kecuali mungkin di <span class="math inline">\(c\)</span> (di <span class="math inline">\(x=c\)</span> mungkin <span class="math inline">\(f(x)\)</span> terdefinisi mungkin tidak).</p>
-<p>Berikut ini diberikan empat contoh fungsi, tinjau nilai fungsi <span class="math inline">\(f\)</span> pada saat <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c\)</span>.</p>
+<p>Tujuan Pembelajaran:<br> Memahami <code>konsep limit</code> dan menentukan nilai limit <code>secara intuitif</code>.</p>
+<p>Misalkan <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span> dan <span class="math inline">\(c\in I\)</span>. Fungsi <span class="math inline">\(f(x)\)</span> terdefinisi di <span class="math inline">\(I\)</span>, kecuali mungkin di <span class="math inline">\(c\)</span> (di <span class="math inline">\(x=c\)</span>, <span class="math inline">\(f(x)\)</span> mungkin terdefinisi, tetapi mungkin juga tidak terdefinisi).</p>
+<p>Berikut ini diberikan empat contoh fungsi. Kita tinjau nilai fungsi <span class="math inline">\(f\)</span> pada saat <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c\)</span>.</p>
 <div class="list grid" style="column-gap: 10px;">
 <div class="g-col-6 g-col-sm-6 g-col-md-6">
 <div class="card border-1 rounded-3 mb-2">
 <p><img src="./imgs/konsep-limit-1.png" class="img-fluid"></p>
 </div>
 <p><span class="math inline">\(\scriptsize f(x)=(x-1)^3+1\)</span></p>
+<p>Pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c=1\)</span>, <br> nilai <span class="math inline">\(f\)</span> di sekitar 1.</p>
 </div>
 <div class="g-col-6 g-col-sm-6 g-col-md-6">
 <div class="card border-.5 rounded-3 mb-2">
 <p><img src="./imgs/konsep-limit-2.png" class="img-fluid"></p>
 </div>
 <p><span class="math inline">\(\scriptsize f(x)=\dfrac{x^4-4x^3+6x^2-3x}{x-1}\)</span></p>
+<p>Pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c=1\)</span>, <br> nilai <span class="math inline">\(f\)</span> di sekitar 1.</p>
 </div>
 </div>
 <div class="list grid mt-4" style="column-gap: 10px;">
@@ -393,27 +399,29 @@ window.Quarto = {
 (x-1)^3+2 &amp; ;\,x \leq 1\\
 (x-1)^3+1 &amp; ;\,x &gt; 1
 \end{matrix}\right.\)</span></p>
+<p>Bagaimana nilai fungsi <span class="math inline">\(f\)</span> ini, pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c=1\)</span>?</p>
 </div>
 <div class="g-col-6 g-col-sm-6 g-col-md-6">
 <div class="card border-1 rounded-3 mb-2">
 <p><img src="./imgs/konsep-limit-4.png" class="img-fluid"></p>
 </div>
 <p><span class="math inline">\(\scriptsize f(x)=\left\{\begin{matrix}
-(x-1)^3+1 &amp; ;\,x &lt; 1\\
-(x-1)^3+2 &amp; ;\,x \geq 1
+(x-1)^3+2 &amp; ;\,x &lt; 1\\
+(x-1)^3+1 &amp; ;\,x \geq 1
 \end{matrix}\right.\)</span></p>
+<p>Bagaimana nilai fungsi <span class="math inline">\(f\)</span> ini, pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(c=1\)</span>?</p>
 </div>
 </div>
 <section id="pengertian-limit" class="level2">
 <h2 class="anchored" data-anchor-id="pengertian-limit">Pengertian Limit</h2>
 <section id="pengantar-limit" class="level3">
 <h3 class="anchored" data-anchor-id="pengantar-limit">Pengantar Limit</h3>
-<p>Ingat fungsi <span class="math inline">\(f(x) = \frac{x^4-4x^3+6x^2-3x}{x-1}\)</span> terdefinisi untuk setiap <span class="math inline">\(x \in \mathbb{R}\)</span>, kecuali untuk <span class="math inline">\(x=1\)</span>.</p>
+<p>Ingat fungsi <span class="math inline">\(f(x) = \dfrac{x^4-4x^3+6x^2-3x}{x-1}\)</span> terdefinisi untuk setiap <span class="math inline">\(x \in \mathbb{R}\)</span>, kecuali untuk <span class="math inline">\(x=1\)</span>.</p>
 <p><img src="./imgs/konsep-limit-2.png" class="img-fluid"></p>
 <p>Yang terjadi dengan nilai <span class="math inline">\(f(x)\)</span> di sekitar <span class="math inline">\(x=1\)</span>, kita dapat melihat bahwa nilai <span class="math inline">\(f(x)\)</span> mendekati 1.</p>
-<p>Demikian juga fungsi <span class="math inline">\(f(x) = \frac{x^3-1}{x-1}\)</span> terdefinisi untuk setiap <span class="math inline">\(x \in \mathbb{R}\)</span>, kecuali untuk <span class="math inline">\(x=1\)</span>.</p>
+<p>Demikian juga fungsi <span class="math inline">\(f(x) = \dfrac{x^3-1}{x-1}\)</span> terdefinisi untuk setiap <span class="math inline">\(x \in \mathbb{R}\)</span>, kecuali untuk <span class="math inline">\(x=1\)</span>.</p>
 <p>Apa yang terjadi dengan nilai <span class="math inline">\(f(x)\)</span> di sekitar <span class="math inline">\(x=1\)</span>?</p>
-<p>Perhatikan tabel berikut, kita dapat melihat bahwa nilai <span class="math inline">\(f(x)\)</span> mendekati 3.</p>
+<p>Perhatikan tabel berikut.</p>
 <table class="table">
 <tbody>
 <tr class="odd">
@@ -438,6 +446,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>Kita dapat melihat bahwa pada saat nilai <span class="math inline">\(x\)</span> mendekati 1, maka nilai <span class="math inline">\(f(x)\dfrac{x^3-1}{x-1}\)</span> mendekati 3.</p>
 <iframe src="https://www.geogebra.org/material/iframe/id/wcs6rmv7/width/800/height/600/border/888888/sfsb/true/smb/?embed" width="100%" height="500" style="border: 0px">
 </iframe>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -446,22 +455,22 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Pengertian limit secara intuitif
+Pengertian limit secara <code>intuitif</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(\lim\limits_{x \to a} f(x) = L\)</span> berarti nilai <span class="math inline">\(L\)</span> adalah nilai <span class="math inline">\(f(x)\)</span>, jika <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(a\)</span> (tidak berarti <span class="math inline">\(x\)</span> sama dengan <span class="math inline">\(a\)</span>, melainkan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(a\)</span> dari arah kiri dan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(a\)</span> dari arah kanan).</p>
-<p>Jika fungsi <span class="math inline">\(f(x)\)</span> terdefinisi pada interval yang memuat <span class="math inline">\(x=a\)</span>, maka:</p>
+<p><span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span> berarti nilai <span class="math inline">\(L\)</span> adalah nilai <span class="math inline">\(f(x)\)</span>, jika <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> (tidak berarti <span class="math inline">\(x\)</span> sama dengan <span class="math inline">\(c\)</span>, melainkan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> dari arah kiri dan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> dari arah kanan).</p>
+<p>Jika fungsi <span class="math inline">\(f(x)\)</span> terdefinisi pada interval yang memuat <span class="math inline">\(x=c\)</span>, maka:</p>
 <ol type="1">
-<li><span class="math inline">\(\lim\limits_{x \to a} f(x) = L\)</span> jika dan hanya jika <span class="math inline">\(\lim\limits_{x \to a^-} f(x) = L\)</span> dan <span class="math inline">\(\lim\limits_{x \to a^+} f(x) = L\)</span></li>
-<li>Jika <span class="math inline">\(\lim\limits_{x \to a^-} f(x) = L_1\)</span> dan <span class="math inline">\(\lim\limits_{x \to a^+} f(x) = L_2\)</span> dengan <span class="math inline">\(L_1 \neq L_2\)</span>, maka <span class="math inline">\(\lim\limits_{x \to a} f(x)\)</span> tidak ada.</li>
+<li><span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span> jika dan hanya jika <span class="math inline">\(\lim\limits_{x \to c^-} f(x) = L\)</span> dan <span class="math inline">\(\lim\limits_{x \to c^+} f(x) = L\)</span></li>
+<li>Jika <span class="math inline">\(\lim\limits_{x \to c^-} f(x) = L_1\)</span> dan <span class="math inline">\(\lim\limits_{x \to c^+} f(x) = L_2\)</span> dengan <span class="math inline">\(L_1 \neq L_2\)</span>, maka <span class="math inline">\(\lim\limits_{x \to c} f(x)\)</span> tidak ada.</li>
 </ol>
 <p>Keterangan</p>
 <ul>
-<li><span class="math inline">\(\lim\limits_{x \to a^-} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(a\)</span> dari kiri (<span class="math inline">\(x&lt;a\)</span>).</li>
-<li><span class="math inline">\(\lim\limits_{x \to a^+} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(a\)</span> dari kanan (<span class="math inline">\(x&gt;a\)</span>).</li>
+<li><span class="math inline">\(\lim\limits_{x \to c^-} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(c\)</span> dari kiri (<span class="math inline">\(x&lt;c\)</span>).</li>
+<li><span class="math inline">\(\lim\limits_{x \to c^+} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(c\)</span> dari kanan (<span class="math inline">\(x&gt;c\)</span>).</li>
 </ul>
 </div>
 </div>
@@ -478,14 +487,14 @@ Definisi <code>Formal</code> Limit fungsi
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Fungsi <span class="math inline">\(f\)</span> mempunyai limit <span class="math inline">\(L\)</span> untuk <span class="math inline">\(x \to a\)</span> atau <span class="math inline">\(\lim\limits_{x \to a} f(x) = L\)</span> berarti untuk <span class="math inline">\(\epsilon &gt; 0\)</span> bagaimana pun kecinya akan didapat bilangan postif <span class="math inline">\(\delta\)</span> sedemikian sehingga untuk nilai <span class="math inline">\(x\)</span> yang memenuhi <span class="math inline">\(|x - a| &lt; \delta\)</span> berlaku <span class="math inline">\(|f(x) - L| &lt; \epsilon\)</span>.</p>
+<p>Fungsi <span class="math inline">\(f\)</span> mempunyai limit <span class="math inline">\(L\)</span> untuk <span class="math inline">\(x \to c\)</span> atau <span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span> berarti untuk <span class="math inline">\(\epsilon &gt; 0\)</span> bagaimana pun kecinya akan didapat bilangan postif <span class="math inline">\(\delta\)</span> sedemikian sehingga untuk nilai <span class="math inline">\(x\)</span> yang memenuhi <span class="math inline">\(|x - c| &lt; \delta\)</span> berlaku <span class="math inline">\(|f(x) - L| &lt; \epsilon\)</span>.</p>
 </div>
 </div>
 </div>
-<p>Pada pembicaraan tentang limit di sini, Kita akan menggunakan pengertian secara intuitif.</p>
+<!-- Pada pembicaraan tentang limit di sini, Kita akan menggunakan pengertian limit secara `intuitif`. -->
 </section>
-<section id="contoh" class="level3">
-<h3 class="anchored" data-anchor-id="contoh">Contoh</h3>
+<section id="contoh-1" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-1">Contoh 1</h3>
 <!--
 a. $\lim\limits_{x \to 2} 1 = 1$
 b. $\lim\limits_{x \to 2} x = 2$
@@ -496,27 +505,27 @@ e. $\lim\limits_{x \to \infty} \sqrt{x} = \infty$
 Ilustrasi untuk setiap nomor diberikan grafik dari fungsi berikut.
 -->
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">1a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">1b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">1c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">1d</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">1e</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">1a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">1b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">1c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">1d</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Karena limit kiri <span class="math inline">\(\lim\limits_{x \to 2^{-}} 1 = 1\)</span> dan limit kanan <span class="math inline">\(\lim\limits_{x \to 2^{+}} 1 = 1\)</span> sama, maka:</p>
 <p><span class="math inline">\(\lim\limits_{x \to 2} 1 = 1\)</span></p>
 <p><img src="./imgs/1a.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Karena limit kiri <span class="math inline">\(\lim\limits_{x \to 2^{-}} x = 2\)</span> dan limit kanan <span class="math inline">\(\lim\limits_{x \to 2^{+}} x = 2\)</span> sama, maka:</p>
 <p><span class="math inline">\(\lim\limits_{x \to 2} x = 2\)</span></p>
 <p><img src="./imgs/1b.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Karena limit kiri <span class="math inline">\(\lim\limits_{x \to 0^{-}} x^2 = \infty\)</span> dan limit kanan <span class="math inline">\(\lim\limits_{x \to 0^{+}} x^2 = \infty\)</span> sama, maka:</p>
 <p><span class="math inline">\(\lim\limits_{x \to 0} x^2 = \infty\)</span></p>
 <p><img src="./imgs/1c.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Karena limit krir <span class="math inline">\(\lim\limits_{x \to 0^{-}} \dfrac{1}{x} = -\infty\)</span> dan limit kanan <span class="math inline">\(\lim\limits_{x \to 0^{+}} \dfrac{1}{x} = \infty\)</span> tidak sama, maka</p>
 <p><span class="math inline">\(\lim\limits_{x \to 0} \dfrac{1}{x}\)</span> tidak ada</p>
 <p><img src="./imgs/1d.png" class="img-fluid"></p>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p><span class="math inline">\(\lim\limits_{x \to \infty} \sqrt{x} = \infty\)</span></p>
-<p><img src="./imgs/1e.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -536,7 +545,7 @@ Teorema Utama Limit
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Jika <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span>, <span class="math inline">\(c\in I\)</span>, <span class="math inline">\(k\in\mathbb{R}\)</span>, <span class="math inline">\(n\in\mathbb{Z}\)</span>, serta <span class="math inline">\(\lim\limits_{x \to c} f(x)\)</span>, <span class="math inline">\(\lim\limits_{x \to c} g(x)\)</span>, dan <span class="math inline">\(\lim\limits_{x \to c} h(x)\)</span> terdefinisi, maka berlaku:</p>
+<p>Jika <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span>, <span class="math inline">\(c\in I\)</span>, <span class="math inline">\(k\in\mathbb{R}\)</span>, <span class="math inline">\(n\in\mathbb{Z^+}\)</span>, serta <span class="math inline">\(\lim\limits_{x \to c} f(x)\)</span>, <span class="math inline">\(\lim\limits_{x \to c} g(x)\)</span>, dan <span class="math inline">\(\lim\limits_{x \to c} h(x)\)</span> terdefinisi, maka berlaku:</p>
 <ol type="1">
 <li><span class="math inline">\(\lim\limits_{x \to c} k = k\)</span></li>
 <li><span class="math inline">\(\lim\limits_{x \to c} x = c\)</span></li>
@@ -546,35 +555,27 @@ Teorema Utama Limit
 <li><span class="math inline">\(\lim\limits_{x \to c} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to c} f(x)}{\lim\limits_{x \to c} g(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x \to c} g(x) \neq 0\)</span></li>
 <li><span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \right)^n = \left( \lim\limits_{x \to c} f(x) \right)^n\)</span></li>
 <li><span class="math inline">\(\lim\limits_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to c} f(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x\to c} f(x) &gt; 0\)</span> untuk <span class="math inline">\(n\)</span> genap.</li>
-<li>Hukum substitusi:</li>
-</ol>
-<ul>
-<li>Jika <span class="math inline">\(f(X)\)</span> fungsi polinomial, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)\]</span></li>
-<li>Jika <span class="math inline">\(f(x)=\frac{g(x)}{h(x)}\)</span> (fungsi rasional) dan <span class="math inline">\(f(c)\)</span> terdefinisi, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)=\frac{g(c)}{h(c)}\]</span></li>
-</ul>
-<ol start="10" type="1">
-<li>Teorema Apit (Sequeeze Teorem) atau teorema sandwich: <br> Misalkan <span class="math inline">\(g(x) \leq f(x) \leq h(x)\)</span> untuk setiap <span class="math inline">\(x \in I\)</span>. Jika <span class="math inline">\(\lim\limits_{x \to c} g(x) = L\)</span> dan <span class="math inline">\(\lim\limits_{x \to c} h(x) = L\)</span>, maka <span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span></li>
 </ol>
 </div>
 </div>
 </div>
-<section id="contoh-1" class="level3">
-<h3 class="anchored" data-anchor-id="contoh-1">Contoh</h3>
+<section id="contoh-2" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-2">Contoh 2</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">2a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">2b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">2c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">2d</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">2f</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">2g</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false">2h</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false">2i</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-9" role="tab" aria-controls="tabset-2-9" aria-selected="false">2j</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">2a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">2b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">2c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">2d</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">2e</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">2f</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false">2g</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false">2h</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} c = c\)</span></p>
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} k = k\)</span></p>
 <p>Maka</p>
 <p><span class="math inline">\(\lim\limits_{x \to 4} 11 = 11\)</span></p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} x = a\)</span></p>
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} x = c\)</span></p>
 <p>Maka</p>
 <p><span class="math inline">\(\lim\limits_{x \to 8} x = 8\)</span></p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} c\cdot f(x) = c \times \lim\limits_{x \to a} f(x)\)</span></p>
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} k\cdot f(x) = k \times \lim\limits_{x \to c} f(x)\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}\lim\limits_{x \to -2} 6\cdot (x^3 + 11)^2 &amp;= 6 \times \lim\limits_{x \to a} (x^3 + 11)^2 \\
 &amp;= 6 \times ((-2)^3 + 11)^2 \\
@@ -582,14 +583,17 @@ Teorema Utama Limit
 &amp;= 6 \times 3^2 = 54\end{align*}\]</span></p>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} \left( f(x) \pm g(x) \right) = \lim\limits_{x \to a} f(x) \pm \lim\limits_{x \to a} g(x)\)</span></p>
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \pm g(x) \right) = \lim\limits_{x \to c} f(x) \pm \lim\limits_{x \to c} g(x)\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}
 \lim\limits_{x \to 3} \left( 2(x-2)^5 + 3\sqrt{2x+3} \right) &amp;= \lim\limits_{x \to 3} 2(x-2)^5 + \lim\limits_{x \to 3} 3\sqrt{2x +3} \\
 &amp;= 2(3-2)^5 + 3\sqrt{2\cdot 3 +3} \\
 &amp;= 2(1)^5 + 3\sqrt{9}  \\
 &amp;= 2 + 9 = 11
-\end{align*}\]</span> #### 2e Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} \left( f(x) \times g(x) \right) = \lim\limits_{x \to a} f(x) \times \lim\limits_{x \to a} g(x)\)</span></p>
+\end{align*}\]</span></p>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \times g(x) \right) = \lim\limits_{x \to c} f(x) \times \lim\limits_{x \to c} g(x)\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}
 &amp;\lim\limits_{x \to -1} (4x^4+3x^2-2x-1)\sqrt{\cos{(x+1)}} \\
@@ -599,16 +603,16 @@ Teorema Utama Limit
 &amp;= 8 \times 1 = 8
 \end{align*}\]</span></p>
 </div>
-<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x \to a} g(x) \neq 0\)</span></p>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to c} f(x)}{\lim\limits_{x \to c} g(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x \to c} g(x) \neq 0\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}
 \lim\limits_{x \to 2} \frac{x^3-1}{x^2-1} &amp;= \frac{\lim\limits_{x \to 2} (x^3-1)}{\lim\limits_{x \to 2} (x^2-1)} \\
 &amp;= \frac{2^3-1}{2^2-1} = \frac{7}{3}
 \end{align*}\]</span></p>
 </div>
-<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} \left( f(x) \right)^n = \left( \lim\limits_{x \to a} f(x) \right)^n\)</span></p>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \right)^n = \left( \lim\limits_{x \to c} f(x) \right)^n\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}
 \lim\limits_{x \to 3} \left( x-2 \right)^{2024} &amp;= \left( \lim\limits_{x \to 3} (x-2) \right)^{2024} \\
@@ -616,8 +620,8 @@ Teorema Utama Limit
 &amp;= 1^{2024} = 1
 \end{align*}\]</span></p>
 </div>
-<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
-<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to a} f(x)}\)</span></p>
+<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to c} f(x)}\)</span></p>
 <p>Maka</p>
 <p><span class="math display">\[\begin{align*}
 \lim\limits_{x \to 3} \sqrt[5]{10x+2} &amp;= \sqrt[5]{\lim\limits_{x \to 3} (10x+2)} \\
@@ -625,21 +629,35 @@ Teorema Utama Limit
 &amp;= \sqrt[5]{32} = \sqrt[5]{2^5} = 2
 \end{align*}\]</span></p>
 </div>
-<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
-<p>Ingat Hukum Substitusi: <br> Jika fungsi <code>$f(x)$ kontinu</code> pada interval yang memuat <span class="math inline">\(x=a\)</span>, maka: <span class="math display">\[\lim\limits_{x \to a} f(x) = f(a)\]</span></p>
-<p>Maka</p>
-<p><span class="math display">\[\begin{align*}
-\end{align*}\]</span></p>
 </div>
-<div id="tabset-2-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-9-tab">
-<p>Ingat Teorema Apit (Sandwich): <br> Misalkan <span class="math inline">\(g(x) &lt; f(x) &lt; h(x)\)</span> pada setiap interval yang memuat <span class="math inline">\(x = a\)</span> dan dipenuhi <span class="math inline">\(\lim\limits_{x \to a} g(x) = L = \lim\limits_{x \to a} h(x)\)</span>, maka <span class="math inline">\(\lim\limits_{x \to a} f(x) = L\)</span></p>
-<p>Maka</p>
-<p><span class="math display">\[\begin{align*}
-\end{align*}\]</span></p>
-<p><span class="math display">\[\begin{align*}\lim\limits_{x \to -2} 6\cdot (x^3 + 11)^2 &amp;= 6 \times \lim\limits_{x \to a} (x^3 + 11)^2 \\
-&amp;= 6 \times ((-2)^3 + 11)^2 \\
+</div>
+</section>
+</section>
+<section id="hukum-substitusi" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-substitusi">Hukum substitusi:</h2>
+<ol type="1">
+<li>Jika <span class="math inline">\(f(x)\)</span> fungsi polinomial, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)\]</span></li>
+<li>Jika <span class="math inline">\(f(x)\)</span> fungsi rasional, <span class="math inline">\(f(x)=\dfrac{g(x)}{h(x)}\)</span> dan <span class="math inline">\(f(c)\)</span> terdefinisi, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)=\frac{g(c)}{h(c)}\]</span></li>
+</ol>
+<section id="contoh" class="level3">
+<h3 class="anchored" data-anchor-id="contoh">Contoh</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">3a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">3b</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Tentukan nilai <span class="math inline">\(\lim\limits_{x \to -2} 6\cdot (x^3 + 11)^2\)</span>.</p>
+<p>Jawab</p>
+<p>Karena fungsi <span class="math inline">\(f(x)=6\cdot (x^3 + 11)^2\)</span> kontinu pada <span class="math inline">\(x\in\mathbb{R}\)</span>, maka:</p>
+<p><span class="math display">\[\begin{align*}\lim\limits_{x \to -2} 6\cdot (x^3 + 11)^2 &amp;= 6 \times ((-2)^3 + 11)^2 \\
 &amp;= 6 \times (-8 + 11)^2 \\
 &amp;= 6 \times 3^2 = 54\end{align*}\]</span></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 5} \dfrac{x^2-1}{x+1}\)</span>.</p>
+<p>Jawab</p>
+<p>Karena fungsi <span class="math inline">\(f(x)=\dfrac{x^2-1}{x+1}\)</span> kontinu pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(5\)</span>, maka:</p>
+<p><span class="math display">\[\begin{align*}\lim\limits_{x \to 5} \frac{x^2-1}{x+1} &amp;= \frac{5^2-1}{5+1} \\
+&amp;= \frac{24}{6} = 4 \end{align*}\]</span></p>
 </div>
 </div>
 </div>
