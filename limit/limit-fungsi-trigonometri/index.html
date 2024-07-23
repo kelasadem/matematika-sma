@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Limit Suatu Fungsi</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Kelas Adem</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-statistika" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Statistika</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-statistika">    
+        <li>
+    <a class="dropdown-item" href="../../statistika/">
+ <span class="dropdown-text">Statistika dan Statistik</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../statistika/kuartil/">
+ <span class="dropdown-text">Kuartil dan Box Plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../statistika/boxplot-dotplot-histogram/">
+ <span class="dropdown-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../statistika/diagram-pencar/">
+ <span class="dropdown-text">Diagram Pencar</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../statistika/statistik-di-media/">
+ <span class="dropdown-text">Statistik di Media</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-peluang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Peluang</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-peluang">    
+        <li>
+    <a class="dropdown-item" href="../../peluang/aturan-penjumlahan-dan-perkalian/">
+ <span class="dropdown-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../peluang/ruang-sampel/">
+ <span class="dropdown-text">Ruang Sampel</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../peluang/peluang-suatu-kejadian/">
+ <span class="dropdown-text">Peluang Suatu Kejadian</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-limit" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Limit</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-limit">    
+        <li>
+    <a class="dropdown-item" href="../../limit/">
+ <span class="dropdown-text">Limit</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../limit/limit-fungsi-trigonometri">
+ <span class="dropdown-text">Limit Fungsi Trigonometri</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-persiapan-psat" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Persiapan PSAT</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-persiapan-psat">    
+        <li>
+    <a class="dropdown-item" href="../../persiapan-psat/mat-x-2024/">
+ <span class="dropdown-text">Persiapan PSAT Kelas X 2024</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bahan-tayang" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bahan Tayang</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bahan-tayang">    
+        <li>
+    <a class="dropdown-item" href="../../slides/kuartil/">
+ <span class="dropdown-text">Kuartil dan Box Plot</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../slides/scatter/">
+ <span class="dropdown-text">Diagram Pencar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../statistika/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statitika</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../statistika/kuartil/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kuartil dan Box Plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../statistika/boxplot-dotplot-histogram/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Menggunakan Box Plot, Dot Plot, dan Histogram</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../statistika/diagram-pencar/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagram Pencar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../statistika/statistik-di-media/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistik di Media</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../peluang/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Peluang</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../peluang/aturan-penjumlahan-dan-perkalian/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aturan Penjumlahan dan Perkalian</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../peluang/ruang-sampel/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ruang Sampel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../peluang/peluang-suatu-kejadian/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Peluang Suatu Kejadian</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../limit/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limit</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../limit/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limit Suatu Fungsi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../limit/limit-fungsi-trigonometri" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limit Fungsi Trigonometri</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../persiapan-psat/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Persiapan PSAT</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../persiapan-psat/mat-x-2024/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Persiapan PSAT Kelas X 2024</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#limit-fungsi-trigonometri" id="toc-limit-fungsi-trigonometri" class="nav-link active" data-scroll-target="#limit-fungsi-trigonometri">Limit Fungsi Trigonometri</a>
+  <ul class="collapse">
+  <li><a href="#konsep-limit" id="toc-konsep-limit" class="nav-link" data-scroll-target="#konsep-limit">Konsep Limit</a></li>
+  <li><a href="#teorema-limit" id="toc-teorema-limit" class="nav-link" data-scroll-target="#teorema-limit">Teorema Limit</a>
+  <ul class="collapse">
+  <li><a href="#contoh-1" id="toc-contoh-1" class="nav-link" data-scroll-target="#contoh-1">Contoh 1</a></li>
+  </ul></li>
+  <li><a href="#hukum-substitusi" id="toc-hukum-substitusi" class="nav-link" data-scroll-target="#hukum-substitusi">Hukum substitusi:</a>
+  <ul class="collapse">
+  <li><a href="#contoh-2" id="toc-contoh-2" class="nav-link" data-scroll-target="#contoh-2">Contoh 2</a></li>
+  </ul></li>
+  <li><a href="#teorema-apit" id="toc-teorema-apit" class="nav-link" data-scroll-target="#teorema-apit">Teorema Apit:</a>
+  <ul class="collapse">
+  <li><a href="#contoh-3" id="toc-contoh-3" class="nav-link" data-scroll-target="#contoh-3">Contoh 3</a></li>
+  </ul></li>
+  <li><a href="#sifat-sifat-limit-1" id="toc-sifat-sifat-limit-1" class="nav-link" data-scroll-target="#sifat-sifat-limit-1">Sifat-sifat Limit (1)</a>
+  <ul class="collapse">
+  <li><a href="#contoh-4" id="toc-contoh-4" class="nav-link" data-scroll-target="#contoh-4">Contoh 4</a></li>
+  </ul></li>
+  <li><a href="#sifat-sifat-limit-2" id="toc-sifat-sifat-limit-2" class="nav-link" data-scroll-target="#sifat-sifat-limit-2">Sifat-sifat Limit (2)</a>
+  <ul class="collapse">
+  <li><a href="#contoh-5" id="toc-contoh-5" class="nav-link" data-scroll-target="#contoh-5">Contoh 5</a></li>
+  </ul></li>
+  <li><a href="#xtoc-ekuivalen-dengan-x-cto0" id="toc-xtoc-ekuivalen-dengan-x-cto0" class="nav-link" data-scroll-target="#xtoc-ekuivalen-dengan-x-cto0"><span class="math inline">\(x\to{c}\,\,\,\)</span> ekuivalen dengan <span class="math inline">\(\,\,\,(x-c)\to{0}\)</span></a>
+  <ul class="collapse">
+  <li><a href="#contoh-6" id="toc-contoh-6" class="nav-link" data-scroll-target="#contoh-6">Contoh 6</a></li>
+  </ul></li>
+  <li><a href="#manipulasi-ekspresi-limit-fungsi-trigonometri" id="toc-manipulasi-ekspresi-limit-fungsi-trigonometri" class="nav-link" data-scroll-target="#manipulasi-ekspresi-limit-fungsi-trigonometri">Manipulasi Ekspresi Limit Fungsi Trigonometri</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="limit-fungsi-trigonometri" class="level1">
+<h1>Limit Fungsi Trigonometri</h1>
+<p>Tujuan Pembelajaran:<br> Menentukan nilai limit fungsi trigonometri.</p>
+<section id="konsep-limit" class="level2">
+<h2 class="anchored" data-anchor-id="konsep-limit">Konsep Limit</h2>
+<p>Ingat pengertian limit seperti pada <a href="https://kelasadem.github.io/matematika-sma/limit/" target="_blank">https://kelasadem.github.io/matematika-sma/limit/</a>. <br> Di sini ditulis ulang pengertian limit secara <code>intuitif</code>.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pengertian limit secara <code>intuitif</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span> berarti nilai <span class="math inline">\(L\)</span> adalah nilai <span class="math inline">\(f(x)\)</span>, jika <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> (tidak berarti <span class="math inline">\(x\)</span> sama dengan <span class="math inline">\(c\)</span>, melainkan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> dari arah kiri dan <span class="math inline">\(x\)</span> dekat ke <span class="math inline">\(c\)</span> dari arah kanan).</p>
+<p>Jika fungsi <span class="math inline">\(f(x)\)</span> terdefinisi pada interval yang memuat <span class="math inline">\(x=c\)</span>, maka:</p>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span> jika dan hanya jika <span class="math inline">\(\lim\limits_{x \to c^-} f(x) = L\)</span> dan <span class="math inline">\(\lim\limits_{x \to c^+} f(x) = L\)</span></li>
+<li>Jika <span class="math inline">\(\lim\limits_{x \to c^-} f(x) = L_1\)</span> dan <span class="math inline">\(\lim\limits_{x \to c^+} f(x) = L_2\)</span> dengan <span class="math inline">\(L_1 \neq L_2\)</span>, maka <span class="math inline">\(\lim\limits_{x \to c} f(x)\)</span> tidak ada.</li>
+</ol>
+<p>Keterangan</p>
+<ul>
+<li><span class="math inline">\(\lim\limits_{x \to c^-} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(c\)</span> dari kiri (<span class="math inline">\(x&lt;c\)</span>).</li>
+<li><span class="math inline">\(\lim\limits_{x \to c^+} f(x)\)</span> dibaca limit <span class="math inline">\(f(x)\)</span> untuk nilai <span class="math inline">\(x\)</span> yang mendekati <span class="math inline">\(c\)</span> dari kanan (<span class="math inline">\(x&gt;c\)</span>).</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Kita akan meninjau nilai <span class="math inline">\(f(x)=\dfrac{\sin{x}}{x}\)</span> di sekitar <span class="math inline">\(x=0\)</span>, yaitu menentukan nilai <span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{x}}{x}\)</span>.</p>
+<p>Perhatikan tabel berikut.</p>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;">-0,1</td>
+<td style="text-align: center;">-0,01</td>
+<td style="text-align: center;">-0,001</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0,001</td>
+<td style="text-align: center;">0,01</td>
+<td style="text-align: center;">0,1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f(x)=\dfrac{\sin{x}}{x}\)</span></td>
+<td style="text-align: center;">0,99833</td>
+<td style="text-align: center;">0,99998</td>
+<td style="text-align: center;">0,9999998</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;">0,9999998</td>
+<td style="text-align: center;">0,99998</td>
+<td style="text-align: center;">0,99833</td>
+</tr>
+</tbody>
+</table>
+<p>Kita dapat melihat bahwa:</p>
+<ul>
+<li>saat <span class="math inline">\(x\)</span> mendekati 0 dari arah kiri, nilai <span class="math inline">\(\dfrac{\sin{x}}{x}\)</span> mendekati 1, kita tulis <span class="math inline">\(\lim\limits_{x\to{0^-}}\dfrac{\sin{x}}{x}=1\)</span>. Ini kita sebut limit kirinya.</li>
+<li>saat <span class="math inline">\(x\)</span> mendekati 0 dari arah kanan, nilai <span class="math inline">\(\dfrac{\sin{x}}{x}\)</span> mendekati 1 juga, kita tulis <span class="math inline">\(\lim\limits_{x\to{0^+}}\dfrac{\sin{x}}{x}=1\)</span>. Ini kita sebut limit kanannya.</li>
+<li>Karena limit kiri dan limit kanan bernilai sama, maka dapat kita simpulkan bahwa <span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{x}}{x}=1\)</span></li>
+</ul>
+<!-- Kita dapat melihat bahwa pada saat nilai $x$ mendekati 0, nilai $f(x)=\dfrac{\sin{x}}{x}$ mendekati 1.-->
+</section>
+<section id="teorema-limit" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-limit">Teorema Limit</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Teorema Utama Limit
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Jika <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span>, <span class="math inline">\(c\in I\)</span>, <span class="math inline">\(k\in\mathbb{R}\)</span>, <span class="math inline">\(n\in\mathbb{Z^+}\)</span>, serta <span class="math inline">\(\lim\limits_{x \to c} f(x)\)</span>, <span class="math inline">\(\lim\limits_{x \to c} g(x)\)</span>, dan <span class="math inline">\(\lim\limits_{x \to c} h(x)\)</span> terdefinisi, maka berlaku:</p>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{x \to c} k = k\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} x = c\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} k \cdot f(x) = k \times \lim\limits_{x \to c} f(x)\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \pm g(x) \right) = \lim\limits_{x \to c} f(x) \pm \lim\limits_{x \to c} g(x)\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \times g(x) \right) = \lim\limits_{x \to c} f(x) \times \lim\limits_{x \to c} g(x)\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to c} f(x)}{\lim\limits_{x \to c} g(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x \to c} g(x) \neq 0\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \right)^n = \left( \lim\limits_{x \to c} f(x) \right)^n\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to c} f(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x\to c} f(x) &gt; 0\)</span> untuk <span class="math inline">\(n\)</span> genap.</li>
+</ol>
+</div>
+</div>
+</div>
+<section id="contoh-1" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-1">Contoh 1</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">1a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">1b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">1c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">1d</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">1e</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">1f</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">1g</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">1h</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} k = k\)</span></p>
+<p>Maka</p>
+<p><span class="math inline">\(\lim\limits_{x \to 0} \pi = \pi\)</span></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} x = c\)</span></p>
+<p>Maka</p>
+<p><span class="math inline">\(\lim\limits_{x \to \frac{1}{4}\pi} x = \frac{1}{4}\pi\)</span></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} k\cdot f(x) = k \times \lim\limits_{x \to c} f(x)\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}\lim\limits_{x \to \frac{1}{6}\pi} 8\sin{x} &amp;= 8\times \lim\limits_{x \to \frac{1}{6}\pi} \sin{x} \\
+&amp;= 8\times \sin{\frac{1}{6}\pi} \\
+&amp;= 8\times \frac{1}{2} \\
+&amp;= 4\end{align*}\]</span></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \pm g(x) \right) = \lim\limits_{x \to c} f(x) \pm \lim\limits_{x \to c} g(x)\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}
+\lim\limits_{x \to \frac{1}{3}\pi} \left( \sin{x}+\cos{x}-\tan{x} \right) &amp;= \lim\limits_{x \to \frac{1}{3}\pi} \sin{x} + \lim\limits_{x \to  \frac{1}{3}\pi} \cos{x} - \lim\limits_{x \to  \frac{1}{3}\pi} \tan{x} \\
+&amp;= \sin{\frac{1}{3}\pi} + \cos{\frac{1}{3}\pi} - \tan{\frac{1}{3}\pi} \\
+&amp;= \frac{1}{2}\sqrt{3} + \frac{1}{2} -\sqrt{3}  \\
+&amp;= \frac{1}{2} - \frac{1}{2}\sqrt{3}  \\
+&amp;= \frac{1}{2}\left(1-\sqrt{3}\right)
+\end{align*}\]</span></p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \times g(x) \right) = \lim\limits_{x \to a} f(x) \times \lim\limits_{x \to a} g(x)\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}
+&amp;\lim\limits_{x \to \frac{1}{4}\pi} \sin{x}\times\cos{x} \\
+&amp;= \lim\limits_{x \to \frac{1}{4}\pi} \sin{x} \times \lim\limits_{x \to \frac{1}{4}\pi} \cos{x} \\
+&amp;= \sin{\frac{1}{4}}\times\cos{\frac{1}{4}} \\
+&amp;= \frac{1}{2}\sqrt{2}\times\frac{1}{2}\sqrt{2} \\
+&amp;= \left(\frac{\sqrt{2}}{2}\right)^2 = \frac{2}{4}=\frac{1}{2}
+\end{align*}\]</span></p>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to c} f(x)}{\lim\limits_{x \to c} g(x)}\)</span> dengan <span class="math inline">\(\lim\limits_{x \to c} g(x) \neq 0\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}
+\lim\limits_{x \to 0} \frac{1-2\,\sin{x}}{\cos{x}} &amp;= \frac{\lim\limits_{x \to 0} (1-2\,\sin{x})}{\lim\limits_{x \to 0} \cos{x}} \\
+&amp;= \frac{1-2\cdot{0}}{1} = \frac{1}{1}=1
+\end{align*}\]</span></p>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \left( f(x) \right)^n = \left( \lim\limits_{x \to c} f(x) \right)^n\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}
+\lim\limits_{x \to \frac{1}{6}\pi} \left(1-\sin^2{x}\right)^{3} &amp;= \lim\limits_{x \to \frac{1}{6}\pi} \left(\cos^2{x}\right)^{3} \\
+&amp;= \lim\limits_{x \to \frac{1}{6}\pi} \left(\cos{x}\right)^{2\times{3}} \\
+&amp;= \left(\lim\limits_{x \to \frac{1}{6}\pi}\cos{x}\right)^{6} \\
+&amp;= \left(\frac{1}{2}\sqrt{3}\right)^{6} \\
+&amp;= \frac{27}{64}
+\end{align*}\]</span></p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<p>Ingat: <br> <span class="math inline">\(\lim\limits_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to c} f(x)}\)</span></p>
+<p>Maka</p>
+<p><span class="math display">\[\begin{align*}
+\lim\limits_{x \to \frac{1}{3}\pi} \sqrt{\sin^2{x}+\cos{x}} &amp;= \sqrt{\lim\limits_{x \to \frac{1}{3}\pi} (\sin^2{x}+\cos{x})} \\
+&amp;= \sqrt{\lim\limits_{x \to \frac{1}{3}\pi}\sin^2{x} + \lim\limits_{x \to \frac{1}{3}\pi} \cos{x})} \\
+&amp;= \sqrt{\left(\lim\limits_{x \to \frac{1}{3}\pi}\sin{x}\right)^2 + \frac{1}{2}} \\
+&amp;= \sqrt{\left(\frac{1}{2}\sqrt{3}\right)^2 + \frac{1}{2}} \\
+&amp;= \sqrt{\frac{3}{4} + \frac{2}{4}} = \sqrt{\frac{5}{4}} = \frac{1}{2}\,\sqrt{5}
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="hukum-substitusi" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-substitusi">Hukum substitusi:</h2>
+<p>Jika <span class="math inline">\(f(x)\)</span> <code>kontinu</code> seperti:</p>
+<ol type="1">
+<li><span class="math inline">\(f(x)\)</span> fungsi polinomial, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)\]</span></li>
+<li><span class="math inline">\(f(x)\)</span> fungsi rasional, <span class="math inline">\(f(x)=\dfrac{g(x)}{h(x)}\)</span> dan <span class="math inline">\(f(c)\)</span> terdefinisi, maka: <span class="math display">\[\lim\limits_{x \to c} f(x) = f(c)=\frac{g(c)}{h(c)}\]</span></li>
+</ol>
+<section id="contoh-2" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-2">Contoh 2</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">2a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">2b</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Tentukan nilai <span class="math inline">\(\lim\limits_{x \to \pi} \cos{x}(1-\sin{x})\)</span>.</p>
+<p>Jawab</p>
+<p>Karena fungsi <span class="math inline">\(f(x)=\cos{x}(1-\sin{x})\)</span> kontinu pada <span class="math inline">\(x\in\mathbb{R}\)</span>, maka:</p>
+<p><span class="math display">\[\begin{align*}\lim\limits_{x \to \pi} \cos{x}(1-\sin{x}) &amp;= \cos{\pi}(1-\sin{\pi}) \\
+&amp;= 1\times(1-0) \\
+&amp;= 1 \end{align*}\]</span></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\cos{x}}{1-\sin{x}}\)</span>.</p>
+<p>Jawab</p>
+<p>Karena fungsi <span class="math inline">\(f(x)=\dfrac{\cos{x}}{1-\sin{x}}\)</span> kontinu pada saat nilai <span class="math inline">\(x\)</span> di sekitar <span class="math inline">\(0\)</span>, maka:</p>
+<p><span class="math display">\[\begin{align*}\lim\limits_{x \to 0} \dfrac{\cos{x}}{1-\sin{x}} &amp;= \frac{\cos{0}}{1-\sin{0}} \\
+&amp;= \frac{1}{1-0} = 1 \end{align*}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="teorema-apit" class="level2">
+<h2 class="anchored" data-anchor-id="teorema-apit">Teorema Apit:</h2>
+<p>Untuk <span class="math inline">\(I\)</span> adalah interval nilai <span class="math inline">\(x\in\mathbb{R}\)</span> dengan <span class="math inline">\(a&lt;x&lt;b\)</span>, <span class="math inline">\(c\in I\)</span>, dan <span class="math inline">\(g(x) \leq f(x) \leq h(x)\)</span> untuk setiap <span class="math inline">\(x \in I\)</span>, jika <span class="math inline">\(\lim\limits_{x \to c} g(x) = L\)</span> dan <span class="math inline">\(\lim\limits_{x \to c} h(x) = L\)</span>, maka <span class="math inline">\(\lim\limits_{x \to c} f(x) = L\)</span></p>
+<p>Teorema Apit biasa disebut juga Sequeeze Teorem atau Teorema Sandwich.</p>
+<section id="contoh-3" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-3">Contoh 3</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Buktikan bahwa <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\sin{x}}{x}=1\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Berikut contoh penggunaan Teorema Apit dalam membuktikan bahwa: <span class="math display">\[\lim\limits_{x \to 0}\frac{\sin{x}}{x}=1\]</span></p>
+<p>Perhatikan lingkaran berjari-jari 1 dan lingkaran berjari-jari <span class="math inline">\(\cos{\theta}\)</span> serta luas juring <strong>OBQ</strong>, luas segitiga <strong>OBP</strong>, dan luas juring <strong>OAP</strong> pada gambar berikut.</p>
+<p><img src="../../assets/imgs/pro-bukti-lim-sin-x-per-x.svg" class="img-fluid"></p>
+<p>Luas juring suatu lingkaran dengan sudut pusat <span class="math inline">\(\theta\)</span> adalah <span class="math inline">\(\dfrac{\theta}{2\pi}\times\text{Luas lingkaran}\)</span>.</p>
+<p>Maka:</p>
+<ul>
+<li>Luas juring OBQ = <span class="math inline">\(\frac{\theta}{2\pi}\times{\pi}\times(\cos{\theta})^2 = \frac{1}{2}\,\theta\,\cos^2{\theta}\)</span> <br> <span style="font-size:.8em; color:cadetblue;">Dapat kita lihat bahwa nilai <span class="math inline">\(\theta\,\cos{\theta}&gt;0\)</span> (positif)</span></li>
+<li>Luas segitiga OBP = <span class="math inline">\(\frac{1}{2}\times \cos{\theta} \times \sin{\theta}\)</span></li>
+<li>Luas juring OAP = <span class="math inline">\(\frac{\theta}{2\pi}\times\pi\times(1)^2 = \frac{1}{2}\,\theta\)</span></li>
+</ul>
+<p>Luas segitiga OBP diapit oleh (bernilai di antara) luas juring OBQ dan luas juring OAP.</p>
+<p>Sehingga diperoleh:</p>
+<p><span class="math inline">\(L_\text{Juring OBQ} \leq L_{\triangle\text{OBP}} \leq L_{\text{Juring OAP}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \frac{1}{2}\,\theta\cdot\cos^2{\theta} \leq  \frac{1}{2}\,\cos{\theta}\cdot\sin{\theta} \leq  \frac{1}{2}\,\theta\)</span> <span class="math inline">\(\small\color{cadetblue}\qquad\times\frac{2}{\theta\,\cos{\theta}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \cos{\theta} \leq \dfrac{\sin{\theta}}{\theta} \leq \dfrac{1}{\cos{\theta}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \lim\limits_{\theta \to 0}\cos{\theta} \leq \lim\limits_{\theta \to 0}\dfrac{\sin{\theta}}{\theta} \leq \lim\limits_{\theta \to 0}\dfrac{1}{\cos{\theta}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow 1 \leq \lim\limits_{\theta \to 0} \dfrac{\sin{\theta}}{\theta} \leq 1\)</span></p>
+Karena nilai <span class="math inline">\(\lim\limits_{\theta\to 0}\dfrac{\sin{\theta}}{\theta}\)</span> diapit oleh nilai 1 dan 1, maka <span class="math display">\[\lim\limits_{\theta\to 0}\frac{\sin{\theta}}{\theta}=1\]</span>
+<div style="text-align:right">
+∎
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sifat-sifat-limit-1" class="level2">
+<h2 class="anchored" data-anchor-id="sifat-sifat-limit-1">Sifat-sifat Limit (1)</h2>
+<ol type="1">
+<li><p><span class="math inline">\(\lim\limits_{x\to{c}}\sin{x}=\sin{c}\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{c}}\cos{x}=\cos{c}\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{x}}{x}=1\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{0}}\dfrac{x}{\sin{x}}=1\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\tan{x}}{x}=1\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{0}}\dfrac{x}{\tan{x}}=1\)</span></p></li>
+</ol>
+<section id="contoh-4" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-4">Contoh 4</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4.1 Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} (\cos{x}-\sin{x})\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Karena fungsi <span class="math inline">\(f(x)=\cos{x}-\sin{x}\)</span> kontinu pada <span class="math inline">\(x\in\mathbb{R}\)</span>, maka:</p>
+<p><span class="math inline">\(\begin{flalign*}\lim\limits_{x \to 0} \cos{x}-\sin{x} &amp;= \cos{0}-\sin{0} \\
+&amp;= 1-0 \\
+&amp;= 1 \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4.2a Buktikan bahwa <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{x}{\sin{x}}=1\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Pada Contoh 3 sudah dibuktikan bahwa <span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{x}}{x}=1\)</span>.</p>
+<p>Sekarang, akan dibuktikan bahwa: <span class="math display">\[\lim\limits_{x \to 0}\frac{x}{\sin{x}}=1\]</span></p>
+<p>Perhatikan lingkaran berpusat di <span class="math inline">\(O\)</span>, berjari-jari <span class="math inline">\(r\)</span>, melalui titik <span class="math inline">\(A\)</span> dan <span class="math inline">\(B\)</span> serta terbentuk segitiga siku-siku <span class="math inline">\(OCB\)</span>, juring <span class="math inline">\(OAB\)</span>, dan segitiga siku-siku <span class="math inline">\(OAD\)</span> pada gambar berikut.</p>
+<p><img src="../../assets/imgs/pro-bukti-lim-x-per-sin-x.svg" class="img-fluid"></p>
+<p>Dapat dihitung bahwa:</p>
+<p><span class="math inline">\(\begin{flalign*}\text{Luas }\triangle OCB &amp;= \frac{1}{2} \times OC \times CB \\
+&amp;= \frac{1}{2} \times r \times \cos{x} \times r \times \sin{x} \\
+&amp;= \frac{1}{2}\, r^2\, \cos{x} \, \sin{x}
+\end{flalign*}\)</span></p>
+<p><span class="math inline">\(\begin{flalign*}\text{Luas juring } OAB &amp;= \frac{x}{2\pi} \times \pi \cdot r^2 \\
+&amp;= \frac{1}{2}\, x \, r^2
+\end{flalign*}\)</span></p>
+<p><span class="math inline">\(\begin{flalign*}\text{Luas }\triangle OAD &amp;= \frac{1}{2} \times OA \times AD \\
+&amp;= \frac{1}{2} \times r \times r \times \tan{x} \\
+&amp;= \frac{1}{2} \, r^2 \, \frac{\sin{x}}{\cos{x}}
+\end{flalign*}\)</span></p>
+<p>Luas juring <span class="math inline">\(OAB\)</span> diapit oleh (bernilai di antara) luas <span class="math inline">\(\triangle OCB\)</span> dan luas <span class="math inline">\(\triangle OAD\)</span>.</p>
+<p>Sehingga diperoleh:</p>
+<p><span class="math inline">\(L_{\triangle OCB} \leq L_{\text{juring }OAB} \leq L_{\triangle{OAD}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \frac{1}{2}\,r^2\,\cos{x}\,\sin{x} \leq \frac{1}{2}\, x\, r^2 \leq \frac{1}{2}\,r^2\,\dfrac{\sin{x}}{\cos{x}}\)</span> <span class="math inline">\(\small\color{cadetblue}\qquad\times\frac{2}{r^2\,\sin{x}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \cos{x} \leq \dfrac{x}{\sin{x}} \leq \dfrac{1}{\cos{x}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \lim\limits_{x \to 0}\cos{x} \leq \lim\limits_{x\to 0}\dfrac{x}{\sin{x}} \leq \lim\limits_{\theta \to 0}\dfrac{1}{\cos{x}}\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow 1 \leq \lim\limits_{x\to{0}} \dfrac{x}{\sin{x}} \leq 1\)</span></p>
+Karena nilai <span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{x}{\sin{x}}\)</span> diapit oleh nilai 1 dan 1, maka <span class="math display">\[\lim\limits_{x\to{0}}\frac{x}{\sin{x}}=1\]</span>
+<div style="text-align:right">
+∎
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4.2b Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\sin{2x}}{4x}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 0} \frac{\sin{2x}}{4x} &amp;= \lim\limits_{x \to 0} \frac{\sin{2x}}{2 \times 2x} \qquad x\to{0}\,\Rightarrow\, 2x\to{0}\\
+&amp;= \frac{1}{2}\times\lim\limits_{2x \to 0} \frac{\sin{2x}}{2x} \\
+&amp;= \frac{1}{2}\times{1}=\frac{1}{2} \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4.2c Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\sin^2{8x}}{2x\,\tan{4x}}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab: Ingat <span class="math inline">\(x\to{0}\,\Leftrightarrow\, 4x\to{0}\,\Leftrightarrow\, 8x\to{0}\)</span></p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 0} \frac{\sin^2{8x}}{2x\,\tan{4x}}
+&amp;= \lim\limits_{x \to 0} \frac{\sin{8x}\times\sin{8x}}{{\color{orange}2}x\,\tan{4x}}\times\frac{{\color{red}8}\times{\color{green}8}\times{\color{blue}4}\times{\color{brown}x}}{{\color{red}8}\times{\color{green}8}\times{\color{blue}4}\times{\color{brown}x}}\\
+&amp;= \frac{{\color{red}8}\times{\color{green}8}}{{\color{orange}2}\times{\color{blue}4}}\times\lim\limits_{8x \to 0} \frac{\sin{8x}}{{\color{red}8}x}\times\lim\limits_{8x \to 0}\frac{\sin{8x}}{{\color{green}8}{\color{brown}x}}\times\lim\limits_{4x \to 0}\frac{{\color{blue}4}{\color{brown}x}}{\tan{4x}} \\
+&amp;= 8\times{1}\times{1}\times{1}=8 \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4.3 Tentukan nilai dari <span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{x}\cdot\tan{x}}{x^2}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x\to{0}}\dfrac{\sin{x}\cdot\tan{x}}{x^2}
+&amp;= \lim\limits_{x\to{0}}\dfrac{\sin{x}}{x} \times \lim\limits_{x\to{0}}\dfrac{\tan{x}}{x} \\
+&amp;= 1 \times 1 = 1
+\end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sifat-sifat-limit-2" class="level2">
+<h2 class="anchored" data-anchor-id="sifat-sifat-limit-2">Sifat-sifat Limit (2)</h2>
+<ol type="1">
+<li><p><span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{ax}}{bx}=\frac{a}{b}\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{0}}\dfrac{ax}{\sin{bx}}=\frac{a}{b}\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\tan{ax}}{bx}=\frac{a}{b}\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{0}}\dfrac{ax}{\tan{bx}}=\frac{a}{b}\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{x\to{0}}\dfrac{\sin{ax}}{\tan{bx}}=\frac{a}{b}\,\)</span> dan <span class="math inline">\(\,\lim\limits_{x\to{0}}\dfrac{\tan{ax}}{\sin{bx}}=\frac{a}{b}\)</span></p></li>
+</ol>
+<section id="contoh-5" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-5">Contoh 5</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+5a Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\sin^2{6x}}{2x\,\tan{9x}}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 0} \frac{\sin^2{6x}}{2x\,\tan{9x}}
+&amp;= \lim\limits_{x \to 0} \frac{\sin{6x}\times\sin{6x}}{2x\,\tan{9x}} \\
+&amp;= \lim\limits_{x \to 0} \frac{\sin{6x}}{2x} \times \lim\limits_{x \to 0} \frac{\sin{6x}}{\tan{9x}} \\
+&amp;= \frac{6}{2} \times \frac{6}{9} \\
+&amp;= 3 \times \frac{2}{3} = 2 \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+5b Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\tan^2{6x}}{\sin{6x}}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 0} \frac{\tan^2{6x}}{\sin{6x}}
+&amp;= \lim\limits_{x \to 0} \frac{\tan{6x}\times\tan{6x}}{\sin{6x}} \\
+&amp;= \lim\limits_{x \to 0} \frac{\tan{6x}}{\sin{6x}} \times \lim\limits_{x \to 0} \tan{6x} \\
+&amp;= 1 \times \tan{(6\times{0})} \\
+&amp;= 1 \times \tan{0} = 1 \times 0 = 0 \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+5c Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 0} \dfrac{\sin{x}+\tan{3x}-\sin{5x}}{x-\sin{2x}-\tan{3x}}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 0} \frac{\sin{x}+\tan{3x}-\sin{5x}}{x-\sin{2x}-\tan{3x}}
+&amp;= \lim\limits_{x \to 0} \frac{\sin{x}+\tan{3x}-\sin{5x}}{x-\sin{2x}-\tan{3x}} \times \frac{{\frac{1}{x}}}{{\frac{1}{x}}} \\
+&amp;= \lim\limits_{x \to 0} \frac{\frac{\sin{x}}{x} + \frac{\tan{3x}}{x} - \frac{\sin{5x}}{x}}{1 - \frac{\sin{2x}}{x} - \frac{\tan{3x}}{x}} \\
+&amp;= \frac{1+3-5}{1-2-3}=\frac{-1}{-4}=\frac{1}{4} \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="xtoc-ekuivalen-dengan-x-cto0" class="level2">
+<h2 class="anchored" data-anchor-id="xtoc-ekuivalen-dengan-x-cto0"><span class="math inline">\(x\to{c}\,\,\,\)</span> ekuivalen dengan <span class="math inline">\(\,\,\,(x-c)\to{0}\)</span></h2>
+<section id="contoh-6" class="level3">
+<h3 class="anchored" data-anchor-id="contoh-6">Contoh 6</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+6a Tentukan nilai <span class="math inline">\(\lim\limits_{x \to \frac{1}{2}\pi} \dfrac{\cos{x}}{x-\frac{1}{2}\pi}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Ingat <span class="math inline">\(\quad x\to\frac{1}{2}\pi\,\Leftrightarrow\,(x-\frac{1}{2}\pi)\to{0}\)</span></p>
+<p>Misalkan <span class="math inline">\(\quad y = x - \frac{1}{2}\pi\,\Leftrightarrow\, x = y + \frac{1}{2}\pi\)</span></p>
+<p>Maka <span class="math inline">\(\quad\cos{x}=\cos{(y+\frac{1}{2}\pi)}=-\sin{y}\)</span></p>
+<p>Sehingga diperoleh</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to \frac{1}{2}\pi} \dfrac{\cos{x}}{x-\frac{1}{2}\pi}
+&amp;= \lim\limits_{(x-\frac{1}{2}\pi)\to{0}} \frac{\cos{x}}{x-\frac{1}{2}\pi} \\
+&amp;= \lim\limits_{y\to{0}} \frac{-\sin{y}}{y} = -\lim\limits_{y\to{0}} \frac{\sin{y}}{y} \\
+&amp;= -1 \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+6b Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 2} \dfrac{3x\,\sin(2x-4)}{\tan(x-2)}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Ingat <span class="math inline">\(\quad x\to{2}\,\Leftrightarrow\,(x-2)\to{0}\)</span></p>
+<p>Misalkan <span class="math inline">\(\quad y=x-2\,\Leftrightarrow\, x=y+2\)</span>.</p>
+<p>Diperoleh:</p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 2} \frac{3x\,\sin(2x-4)}{\tan(x-2)}
+&amp;= \lim\limits_{x \to 2} 3x \times \lim\limits_{(x-2)\to 0} \frac{\sin{2(x-2)}}{\tan(x-2)} \\
+&amp;= \lim\limits_{x\to{2}} 3x\times\lim\limits_{y \to 0} \frac{\sin{2y}}{\tan{y}} \\
+&amp;= 3\cdot(2)\times\frac{2}{1}=12\end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+6c Tentukan nilai <span class="math inline">\(\lim\limits_{x \to 2} \dfrac{(x^2-7x+10)\,\sin{(x-2)}}{(x^2+x-6)^2}\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Jawab:</p>
+<p>Ingat <span class="math inline">\(\quad x\to{2}\,\Leftrightarrow\,(x-2)\to{0}\)</span></p>
+<p><span class="math inline">\(\begin{flalign*}
+\lim\limits_{x \to 2} \frac{(x^2-7x+10)\,\sin{(x-2)}}{(x^2+x-6)^2}
+&amp;= \lim\limits_{x \to 2} \frac{(x-2)\,(x-5)\,\sin{(x-2)}}{((x+3)(x-2))^2} \\
+&amp;= \lim\limits_{x \to 2} \frac{(x-2)\,(x-5)\,\sin{(x-2)}}{(x+3)\,(x+3)\,(x-2)\,(x-2)} \\
+&amp;= \lim\limits_{x \to 2}\frac{x-5}{(x+3)(x+3)}\times\lim\limits_{(x-2) \to 0}\frac{\sin{(x-2)}}{x-2} \\
+&amp;= \frac{2-5}{(2+3)(2+3)}\times{1} = -\frac{3}{25} \end{flalign*}\)</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="manipulasi-ekspresi-limit-fungsi-trigonometri" class="level2">
+<h2 class="anchored" data-anchor-id="manipulasi-ekspresi-limit-fungsi-trigonometri">Manipulasi Ekspresi Limit Fungsi Trigonometri</h2>
+<p>Perhatikan:</p>
+<ol type="1">
+<li><p>Ingat <span class="math inline">\(\cos{x}=\sin{(\frac{1}{2}\pi-x)}=\sin{-(x-\frac{1}{2}\pi)}=-\sin{(x-\frac{1}{2}\pi)}\)</span> dan <span class="math inline">\(x\to\frac{1}{2}\pi\,\equiv\,(x-\frac{1}{2}\pi)\to{0}\)</span>, sehingga<br><br> <span class="math inline">\(\lim\limits_{x\to{\frac{1}{2}\pi}}\dfrac{\cos{x}}{x-\frac{1}{2}\pi}=\lim\limits_{(x-\frac{1}{2}\pi)\to{0}}\dfrac{-\sin{(x-\frac{1}{2}\pi)}}{(x-\frac{1}{2}\pi)}=-1\)</span></p></li>
+<li><p>Ingat <span class="math inline">\(1-\cos^2{ax}=\sin^2{ax}\)</span>, sehingga <br><br> <span class="math inline">\(\begin{flalign*}
+\lim\limits_{x\to{0}}\frac{1-\cos^2{6x}}{4x\,\tan{3x}}
+&amp;= \lim\limits_{x\to{0}}\frac{\sin^2{6x}}{4x\,\tan{3x}} \\
+&amp;= \lim\limits_{x\to{0}}\frac{\sin{6x}}{4x}\times\lim\limits_{x\to{0}}\frac{\sin{6x}}{\tan{3x}} \\
+&amp;= \frac{6}{4}\times\frac{6}{3} = \frac{3}{2}\times{2} = 3
+\end{flalign*}\)</span></p></li>
+<li><p>Ingat <span class="math inline">\(\cos{2x}=1-2\sin^2{x}\)</span>, sehingga <br><br> <span class="math inline">\(\begin{flalign*}
+\lim\limits_{x\to{0}}\frac{1-\cos{6x}}{\sin{2x}\,\tan{3x}}
+&amp;= \lim\limits_{x\to{0}}\frac{1-\cos{2(3x)}}{\sin{2x}\,\tan{3x}} \\
+&amp;= \lim\limits_{x\to{0}}\frac{1-(1-2\sin^2{3x})}{\sin{2x}\,\tan{3x}} \\
+&amp;= \lim\limits_{x\to{0}}\frac{2\sin^2{3x}}{\sin{2x}\,\tan{3x}} \\
+&amp;= 2\times\lim\limits_{x\to{0}}\frac{\sin{3x}}{\sin{2x}}\times\frac{\sin{3x}}{\tan{3x}} \\
+&amp;= 2\times\frac{3}{2}\times{1} = 3
+\end{flalign*}\)</span></p></li>
+</ol>
+<!--
+::: {.callout-note icon=false collapse="true"}
+#### 6a Tentukan nilai $\lim\limits_{x \to 0} ...$
+
+Jawab:
+
+$\begin{flalign*}
+\lim\limits_{x \to 0} ... &= ... \\
+&= ... \\
+&= ... \end{flalign*}$
+:::
+-->
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script type="text/javascript">
+
+// replace cmd keyboard shortcut w/ control on non-Mac platforms
+const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+if (!kPlatformMac) {
+   var kbds = document.querySelectorAll("kbd")
+   kbds.forEach(function(kbd) {
+      kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+   });
+}
+
+// tweak headings in pymd
+document.querySelectorAll(".pymd span.co").forEach(el => {
+   if (!el.innerText.startsWith("#|")) {
+      el.style.fontWeight = 1000;
+   }
+});
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Kelas Adem <br>SMAN 1 Majalengka</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Matematika SMA
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@muchamadekadjuniararifien1518">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
