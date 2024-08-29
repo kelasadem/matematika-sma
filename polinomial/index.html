@@ -403,7 +403,6 @@ window.Quarto = {
   </ul></li>
   <li><a href="#identitas-polinomial" id="toc-identitas-polinomial" class="nav-link" data-scroll-target="#identitas-polinomial">Identitas Polinomial</a>
   <ul class="collapse">
-  <li><a href="#beberapa-identitas-polinomial" id="toc-beberapa-identitas-polinomial" class="nav-link" data-scroll-target="#beberapa-identitas-polinomial">Beberapa Identitas Polinomial</a></li>
   <li><a href="#fungsi-pecahan-sebagian" id="toc-fungsi-pecahan-sebagian" class="nav-link" data-scroll-target="#fungsi-pecahan-sebagian">Fungsi Pecahan Sebagian</a></li>
   </ul></li>
   <li><a href="#soal-jawab-polinomial" id="toc-soal-jawab-polinomial" class="nav-link" data-scroll-target="#soal-jawab-polinomial">Soal Jawab Polinomial</a>
@@ -954,16 +953,28 @@ c &amp;= -15
 </section>
 <section id="identitas-polinomial" class="level2">
 <h2 class="anchored" data-anchor-id="identitas-polinomial">Identitas Polinomial</h2>
-<section id="beberapa-identitas-polinomial" class="level3">
-<h3 class="anchored" data-anchor-id="beberapa-identitas-polinomial">Beberapa Identitas Polinomial</h3>
 <ol type="1">
-<li><span class="math inline">\(a^2 – b^2 = (a + b)(a – b)\)</span></li>
-<li><span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span></li>
-<li><span class="math inline">\((a – b)^2 = a^2 – 2ab + b^2\)</span></li>
-<li><span class="math inline">\(a^3 + b^3 = (a + b)(a2 – ab + b2)\)</span></li>
-<li><span class="math inline">\(a^3 – b^3 = (a – b)(a^2 + ab + b^2)\)</span></li>
-<li><span class="math inline">\((a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\)</span></li>
-<li><span class="math inline">\((a – b)^3 = a^3 – 3a^2b + 3ab^2 – b^3\)</span></li>
+<li><p><span class="math inline">\(\small a^2 - b^2 = (a+b)(a-b)\)</span> <br></p></li>
+<li><p><span class="math inline">\(\small (a + b)^2 = a^2 + 2ab + b^2\)</span></p>
+<ul>
+<li><span class="math inline">\(\small a^2 + b^2 = (a + b)^2 - 2ab\)</span> <br></li>
+</ul></li>
+<li><p><span class="math inline">\(\small (a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\)</span></p>
+<ul>
+<li><span class="math inline">\(\small a^3 - b^3 = (a - b)^3 + 3ab(a-b) = (a-b)(a^2+ab+b^2)\)</span> <br></li>
+</ul></li>
+<li><p><span class="math inline">\(\small (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\)</span></p>
+<ul>
+<li><span class="math inline">\(\small a^3 + b^3 = (a + b)^3 - 3ab(a+b) = (a+b)(a^2-ab+b^2)\)</span> <br></li>
+</ul></li>
+<li><p><span class="math inline">\(\small (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab+ac+bc)\)</span></p>
+<ul>
+<li><span class="math inline">\(\small a^2 + b^2 + c^2 = (a + b + c)^2 - 2(ab+ac+bc)\)</span> <br></li>
+</ul></li>
+<li><p><span class="math inline">\(\small (a + b + c)^3 = a^3 + b^3 + c^3 + 3(a+b+c)(ab+ac+ac)-3abc\)</span></p>
+<ul>
+<li><span class="math inline">\(\small a^3 + b^3 + c^3 = (a + b + c)^3 - 3(a+b+c)(ab+ac+ac)+3abc\)</span></li>
+</ul></li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1007,12 +1018,11 @@ c &amp;= -15
 \text{Ruas kanan } &amp;= (m^2-n^2)^2 + (2mn)^2 \\
 &amp;= (m^2)^2 - 2m^2n^2 + (n^2)^2 + 4m^2n^2 \\
 &amp;= (m^2)^2 + 2m^2n^2 + (n^2)^2 \\
-&amp;= (m^2 + n^2)^2
+&amp;= (m^2 + n^2)^2 \\
 &amp;= \text{Ruas kiri (Terbukti)}
 \end{flalign*}\)</span></p>
 </div>
 </div>
-</section>
 <section id="fungsi-pecahan-sebagian" class="level3">
 <h3 class="anchored" data-anchor-id="fungsi-pecahan-sebagian">Fungsi Pecahan Sebagian</h3>
 <p>Untuk setiap faktor linear <span class="math inline">\((ax+b)\)</span> dari penyebut suatu pecahan dapat dibuat pecahan sebagian dalam bentuk <span class="math inline">\(\dfrac{A}{ax+b}\)</span>.</p>
@@ -1637,7 +1647,7 @@ p &amp;= \frac{-72}{-4}=18
 &amp;= 1 + \frac{A}{x+1} + \frac{B}{x-2} \\
 &amp;= 1 + \frac{-\frac{1}{3}}{x+1} + \frac{\frac{4}{3}}{x-2}
 \end{flalign*}\)</span></p>
-<p>Penjelasan mendapatkan nilai <span class="math inline">\(A=-\frac{1}{3}\)</span> dan <span class="math inline">\(B=\frac{4}{3}\)</span> dapat dilihat di <a href="#fungsi-pecahan-sebagian">Contoh 7</a>.</p>
+<p>Penjelasan mendapatkan nilai <span class="math inline">\(A=-\frac{1}{3}\)</span> dan <span class="math inline">\(B=\frac{4}{3}\)</span> dapat dilihat di <a href="#fungsi-pecahan-sebagian">Contoh 12</a>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
@@ -1688,7 +1698,7 @@ A+B &amp;= 3 \\
 <li><p>Diketahui polinomial <span class="math inline">\(P(x)=3x^4-5x^3-14x^2+5x+16\)</span>. <br> Tentukan nilai <span class="math inline">\(P(\frac{3}{2})\)</span>.</p></li>
 <li><p>Tentukan hasil bagi dan sisa pembagian <span class="math inline">\(x^4-2x^3+3x^2-4\)</span> oleh <span class="math inline">\(x^2-x-2\)</span></p></li>
 <li><p>Polinomial <span class="math inline">\(P(x)\)</span> dibagi <span class="math inline">\(x-1\)</span> sisanya 4 dan dibagi <span class="math inline">\(x-2\)</span> sisanya 7. <br> Tentukan sisa pembagian <span class="math inline">\(P(x)\)</span> oleh <span class="math inline">\(x^2-3x+2\)</span>.</p></li>
-<li><p>Jika <span class="math inline">\(x^2+x-2\)</span> adalah faktor dari <span class="math inline">\(x^3-2x^2-x+2\)</span>, <br> tentukan faktor lainnya.</p></li>
+<li><p>Jika <span class="math inline">\(x^2-x-2\)</span> adalah faktor dari <span class="math inline">\(x^3-2x^2-x+2\)</span>, <br> tentukan faktor lainnya.</p></li>
 <li><p>Jika <span class="math inline">\(x^2-1\)</span> adalah faktor dari <span class="math inline">\(ax^3-3x^2-2x+3\)</span>, <br> tentukan faktor lainnya.</p></li>
 <li><p>Jika <span class="math inline">\(x^2-1\)</span> adalah faktor dari <span class="math inline">\(ax^3-2x^2-4x+2\)</span>, <br> tentukan nilai dari jumlah akar-akar dan hasil kali akar-akarnya.</p></li>
 <li><p>Jika <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, dan <span class="math inline">\(x_3\)</span> akar-akar dari <span class="math inline">\(x^3-7x+6=0\)</span>, <br> tentukan nilai dari <span class="math inline">\({x_1}^2+{x_2}^2+{x_3}^2\)</span></p></li>
@@ -1736,7 +1746,7 @@ A+B &amp;= 3 \\
 <span class="math inline">\(\begin{flalign*}
 \text{02. }
 &amp;\text{Diketahui polinomial } P(x)=3x^4-5x^3-14x^2+5x+16 \\
-&amp;\text{Tentukan nilai }P(\frac{3}{2}).\\
+&amp;\text{Tentukan nilai }P\left(\frac{3}{2}\right).\\
 \end{flalign*}\)</span>
 </div>
 </div>
@@ -1783,6 +1793,7 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 </div><div class="column" style="width:47%;">
 <section id="pembagian-sintetis-3" class="level4">
 <h4 class="anchored" data-anchor-id="pembagian-sintetis-3">Pembagian Sintetis</h4>
+<p>Pembagi <span class="math inline">\(x^2-x-2=(x+1)(x-2)\)</span>.</p>
 <svg viewbox="0 0 160 115" fill="white" xmlns="http://www.w3.org/2000/svg">
 <path d="M20,0 L20,70 M20,35 L139,35 M120,35 L120,55 M20,70 L115,70 M95,70 L95,87 " stroke="#8f7700" stroke-linecap="round"></path> <text font-size="11" text-anchor="end" x="10" y="25" fill="#c4a000">-1</text> <text font-size="11" text-anchor="end" x="35" y="10" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="10" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="85" y="10" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="111" y="10" fill="#729fcf">0</text> <text font-size="11" text-anchor="end" x="135" y="10" fill="#729fcf">-4</text> <text font-size="11" text-anchor="end" x="60" y="30" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="85" y="30" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="111" y="30" fill="#729fcf">-6</text> <text font-size="11" text-anchor="end" x="135" y="30" fill="#729fcf">6</text> <text font-size="11" text-anchor="end" x="35" y="50" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="50" fill="#729fcf">-3</text> <text font-size="11" text-anchor="end" x="85" y="50" fill="#729fcf">6</text> <text font-size="11" text-anchor="end" x="111" y="50" fill="#729fcf">-6</text> <text font-size="11" text-anchor="end" x="135" y="50" fill="#729fcf">2</text> <text font-size="11" text-anchor="start" x="138" y="50" fill="#729fcf">=</text> <text font-size="11" text-anchor="start" x="148" y="50" fill="#f00">S₁</text> <text font-size="11" text-anchor="end" x="15" y="65" fill="#c4a000">2</text> <text font-size="11" text-anchor="end" x="60" y="67" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="85" y="67" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="111" y="67" fill="#729fcf">8</text> <text font-size="11" text-anchor="end" x="35" y="85" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="85" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="85" y="85" fill="#729fcf">4</text> <text font-size="11" text-anchor="end" x="111" y="85" fill="#729fcf">2</text> <text font-size="11" text-anchor="start" x="115" y="85" fill="#729fcf">=</text> <text font-size="11" text-anchor="start" x="125" y="85" fill="#f00">S₂</text> <text font-size="9" text-anchor="middle" x="57" y="100" fill="red">x² - x + 4</text> <text font-size="8" text-anchor="middle" x="57" y="111" fill="brown">(Hasil Bagi)</text>
 </svg>
@@ -1807,14 +1818,17 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 <span class="math inline">\(\begin{flalign*}
 \text{04. }
 &amp;\text{Polinomial } P(x) \text{ dibagi } x-1 \text{ sisanya } 4 \\
-&amp;\text{dan dibagi } x-2 \text{ sisanya } 7\\
+&amp;\text{dan dibagi } x-2 \text{ sisanya } 7.\\
 &amp;\text{Tentukan sisa pembagian } P(x) \text{ oleh } x^2-3x+2.  \end{flalign*}\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
-<p><span class="math inline">\(\begin{flalign*}
-\end{flalign*}\)</span></p>
+<p><span class="math inline">\(P(x)\)</span> dibagi <span class="math inline">\(x^2-3x+2=(x-1)(x-2)\)</span> sisanya <span class="math inline">\(S(x)=px+q\)</span>.</p>
+<p><span class="math inline">\(P(x)\)</span> dibagi <span class="math inline">\((x-1)\)</span> sisanya <span class="math inline">\(P(1)=S(1)=p+q=4\)</span>.</p>
+<p><span class="math inline">\(P(x)\)</span> dibagi <span class="math inline">\((x-2)\)</span> sisanya <span class="math inline">\(P(2)=S(2)=2p+q=7\)</span>.</p>
+<p>Dari <span class="math inline">\(p+q = 4\)</span> dan <span class="math inline">\(2p+q = 7\)</span>, diperoleh <span class="math inline">\(p=3\)</span> dan <span class="math inline">\(q=1\)</span>.</p>
+<p><span class="math inline">\(\therefore\)</span> sisa pembagian <span class="math inline">\(P(x)\)</span> oleh <span class="math inline">\(x^2-3x+2\)</span> adalah <span class="math inline">\(3x+1\)</span>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1825,15 +1839,34 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 <div class="callout-title-container flex-fill">
 <span class="math inline">\(\begin{flalign*}
 \text{05. }
-&amp;\text{Jika } x^2+x-2 \text{ adalah faktor dari } x^3-2x^2-x+2\\
+&amp;\text{Jika } x^2-x-2 \text{ adalah faktor dari } x^3-2x^2-x+2\\
 &amp;\text{tentukan faktor lainnya.}
 \end{flalign*}\)</span>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
-<p><span class="math inline">\(\begin{flalign*}
-\end{flalign*}\)</span></p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<section id="pembagian-bersusun-4" class="level4">
+<h4 class="anchored" data-anchor-id="pembagian-bersusun-4">Pembagian Bersusun</h4>
+<svg viewbox="0 -5 168 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<rect x="67" y="0" rx="4" ry="20" width="40" height="13" style="color:#000000;overflow:visible;fill:#fce94f;fill-opacity:0.19;stroke-width:3.3;stroke-linecap:round"></rect> <rect x="140" y="95" rx="4" ry="20" width="25" height="13" style="color:#000000;overflow:visible;fill:#72a0ff;fill-opacity:0.09;stroke-width:3.3;stroke-linecap:round"></rect> <path d="M168,15 L63,15 A30,30 0 0,1 50,40" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="55" y="30" fill="#c4a000">x² − x − 2</text> <text font-size="11" text-anchor="end" x="81" y="30" fill="#729fcf">x³</text> <text font-size="11" text-anchor="end" x="91" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="109" y="30" fill="#729fcf">2x²</text> <text font-size="11" text-anchor="end" x="118" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="30" fill="#729fcf">x</text> <text font-size="11" text-anchor="end" x="145" y="30" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="30" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="79" y="11" fill="black">x</text> <text font-size="11" text-anchor="end" x="91" y="11" fill="black">−</text> <text font-size="11" text-anchor="end" x="100" y="11" fill="black">1</text> <!-- eliminasi x³ --> <text font-size="11" text-anchor="end" x="81" y="47.5" fill="#729fcf">x³</text> <text font-size="11" text-anchor="end" x="91" y="47.5" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="109" y="47.5" fill="#729fcf">x²</text> <text font-size="11" text-anchor="end" x="118" y="47.5" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="47.5" fill="#729fcf">2x</text> <path d="M60,55 L168,55" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="55" fill="#8f7700">−</text> <!-- hasil eliminasi x³ --> <text font-size="11" text-anchor="end" x="109" y="70" fill="#729fcf">-x²</text> <text font-size="11" text-anchor="end" x="118" y="70" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="132" y="70" fill="#729fcf">x</text> <text font-size="11" text-anchor="end" x="145" y="70" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="70" fill="#729fcf">2</text> <!-- eliminasi x² --> <text font-size="11" text-anchor="end" x="109" y="85" fill="#729fcf">-x²</text> <text font-size="11" text-anchor="end" x="118" y="85" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="132" y="85" fill="#729fcf">x</text> <text font-size="11" text-anchor="end" x="145" y="85" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="85" fill="#729fcf">2</text> <path d="M60,90 L168,90" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="90" fill="#8f7700">−</text> <!-- hasil eliminasi x² --> <text font-size="11" text-anchor="end" x="156" y="105" fill="#729fcf">0</text>
+</svg>
+</section>
+</div><div class="column" style="width:6%;">
+
+</div><div class="column" style="width:47%;">
+<section id="pembagian-sintetis-4" class="level4">
+<h4 class="anchored" data-anchor-id="pembagian-sintetis-4">Pembagian Sintetis</h4>
+<p>Pembagi <span class="math inline">\(x^2-x-2=(x+1)(x-2)\)</span>.</p>
+<svg viewbox="0 0 120 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M20,0 L20,70 M20,35 L120,35 M96,35 L96,55 M20,70 L95,70 M70,70 L70,87 " stroke="#8f7700" stroke-linecap="round"></path> <text font-size="11" text-anchor="end" x="13" y="25" fill="#c4a000">-1</text> <text font-size="11" text-anchor="end" x="35" y="10" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="10" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="85" y="10" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="111" y="10" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="60" y="30" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="85" y="30" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="111" y="30" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="35" y="50" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="50" fill="#729fcf">-3</text> <text font-size="11" text-anchor="end" x="85" y="50" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="111" y="50" fill="#729fcf">0</text> <text font-size="11" text-anchor="end" x="13" y="65" fill="#c4a000">2</text> <text font-size="11" text-anchor="end" x="60" y="67" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="85" y="67" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="35" y="85" fill="#729fcf">1</text> <text font-size="11" text-anchor="end" x="60" y="85" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="85" y="85" fill="#729fcf">0</text> <text font-size="9" text-anchor="middle" x="45" y="100" fill="red">x − 1</text> <text font-size="8" text-anchor="middle" x="45" y="111" fill="brown">(faktor lainnya)</text>
+</svg>
+</section>
+</div>
+</div>
+<p><span class="math inline">\(\therefore\)</span> Faktor lainnya adalah <span class="math inline">\(x-1\)</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1851,8 +1884,34 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 </div>
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
+<p>Diketahui <span class="math inline">\(x^2-1\)</span> atau <span class="math inline">\((x+1)\)</span> dan <span class="math inline">\((x-1)\)</span> adalah faktor-faktor dari <span class="math inline">\(ax^3-3x^2-2x+3\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<section id="menentukan-nilai-a-dengan-metode-substitusi" class="level4">
+<h4 class="anchored" data-anchor-id="menentukan-nilai-a-dengan-metode-substitusi">Menentukan Nilai <span class="math inline">\(a\)</span> dengan Metode Substitusi</h4>
+<p>Menentukan nilai <span class="math inline">\(a\)</span> dengan metode substitusi.</p>
+<p>Ambil <span class="math inline">\(x=1\)</span>, maka:</p>
 <p><span class="math inline">\(\begin{flalign*}
+a\cdot(1)^3 - 3\cdot(1)^2 - 2\cdot(1) + 3 &amp;= 0 \\
+a-3-2+3 &amp;= 0 \\
+a &amp;= 2
 \end{flalign*}\)</span></p>
+<svg viewbox="20 -5 148 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<rect x="67" y="0" rx="4" ry="20" width="40" height="13" style="color:#000000;overflow:visible;fill:#fce94f;fill-opacity:0.19;stroke-width:3.3;stroke-linecap:round"></rect> <rect x="140" y="95" rx="4" ry="20" width="25" height="13" style="color:#000000;overflow:visible;fill:#72a0ff;fill-opacity:0.09;stroke-width:3.3;stroke-linecap:round"></rect> <path d="M168,15 L63,15 A30,30 0 0,1 50,40" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="50" y="30" fill="#c4a000">x² − 1</text> <text font-size="11" text-anchor="end" x="81" y="30" fill="#729fcf">2x³</text> <text font-size="11" text-anchor="end" x="91" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="109" y="30" fill="#729fcf">3x²</text> <text font-size="11" text-anchor="end" x="118" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="30" fill="#729fcf">2x</text> <text font-size="11" text-anchor="end" x="145" y="30" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="30" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="79" y="11" fill="black">2x</text> <text font-size="11" text-anchor="end" x="91" y="11" fill="black">−</text> <text font-size="11" text-anchor="end" x="100" y="11" fill="black">3</text> <!-- eliminasi x³ --> <text font-size="11" text-anchor="end" x="81" y="47.5" fill="#729fcf">2x³</text> <text font-size="11" text-anchor="end" x="91" y="47.5" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="109" y="47.5" fill="#ccc">0x²</text> <text font-size="11" text-anchor="end" x="118" y="47.5" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="47.5" fill="#729fcf">2x</text> <path d="M60,55 L168,55" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="55" fill="#8f7700">−</text> <!-- hasil eliminasi x³ --> <text font-size="11" text-anchor="end" x="109" y="70" fill="#729fcf">-3x²</text> <text font-size="11" text-anchor="end" x="118" y="70" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="132" y="70" fill="#ccc">0x</text> <text font-size="11" text-anchor="end" x="145" y="70" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="70" fill="#729fcf">3</text> <!-- eliminasi x² --> <text font-size="11" text-anchor="end" x="109" y="85" fill="#729fcf">-3x²</text> <text font-size="11" text-anchor="end" x="118" y="85" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="132" y="85" fill="#ccc">0x</text> <text font-size="11" text-anchor="end" x="145" y="85" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="85" fill="#729fcf">3</text> <path d="M60,90 L168,90" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="90" fill="#8f7700">−</text> <!-- hasil eliminasi x² --> <text font-size="11" text-anchor="end" x="156" y="105" fill="#729fcf">0</text>
+</svg>
+</section>
+</div><div class="column" style="width:6%;">
+
+</div><div class="column" style="width:47%;">
+<section id="menentukan-nilai-a-dengan-metode-sintetis" class="level4">
+<h4 class="anchored" data-anchor-id="menentukan-nilai-a-dengan-metode-sintetis">Menentukan Nilai <span class="math inline">\(a\)</span> dengan Metode Sintetis</h4>
+<svg viewbox="0 0 120 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M20,0 L20,70 M20,35 L120,35 M96,35 L96,55 M20,70 L95,70 M70,70 L70,87 " stroke="#8f7700" stroke-linecap="round"></path> <text font-size="11" text-anchor="end" x="13" y="25" fill="#c4a000">1</text> <text font-size="11" text-anchor="end" x="35" y="10" fill="#729fcf">a</text> <text font-size="11" text-anchor="end" x="60" y="10" fill="#729fcf">-3</text> <text font-size="11" text-anchor="end" x="85" y="10" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="111" y="10" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="60" y="30" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="85" y="30" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="111" y="30" fill="#729fcf">-3</text> <text font-size="8" text-anchor="end" x="38" y="50" fill="#729fcf">a=2</text> <text font-size="11" text-anchor="end" x="60" y="50" fill="#729fcf">-1</text> <text font-size="11" text-anchor="end" x="85" y="50" fill="#729fcf">-3</text> <text font-size="11" text-anchor="end" x="111" y="50" fill="#729fcf">0</text> <text font-size="11" text-anchor="end" x="13" y="65" fill="#c4a000">-1</text> <text font-size="11" text-anchor="end" x="60" y="67" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="85" y="67" fill="#729fcf">3</text> <text font-size="11" text-anchor="end" x="35" y="85" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="60" y="85" fill="#729fcf">-3</text> <text font-size="11" text-anchor="end" x="85" y="85" fill="#729fcf">0</text> <text font-size="9" text-anchor="middle" x="45" y="100" fill="red">2x − 3</text> <text font-size="8" text-anchor="middle" x="45" y="111" fill="brown">(faktor lainnya)</text>
+</svg>
+</section>
+</div>
+</div>
+<p><span class="math inline">\(\therefore\)</span> Faktor lainnya adalah <span class="math inline">\(2x-3\)</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1870,8 +1929,33 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 </div>
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
+<p>Diketahui <span class="math inline">\(x^2-1\)</span> atau <span class="math inline">\((x+1)\)</span> dan <span class="math inline">\((x-1)\)</span> adalah faktor-faktor dari <span class="math inline">\(ax^3-2x^2-4x+2\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:47%;">
+<section id="menentukan-nilai-a-dengan-metode-substitusi-1" class="level4">
+<h4 class="anchored" data-anchor-id="menentukan-nilai-a-dengan-metode-substitusi-1">Menentukan Nilai <span class="math inline">\(a\)</span> dengan Metode Substitusi</h4>
+<p>Ambil <span class="math inline">\(x=1\)</span>, maka:</p>
 <p><span class="math inline">\(\begin{flalign*}
+a\cdot(1)^3 - 2\cdot(1)^2 - 4\cdot(1) + 2 &amp;= 0 \\
+a-2-4+2 &amp;= 0 \\
+a &amp;= 4
 \end{flalign*}\)</span></p>
+<svg viewbox="20 -5 148 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<rect x="67" y="0" rx="4" ry="20" width="40" height="13" style="color:#000000;overflow:visible;fill:#fce94f;fill-opacity:0.19;stroke-width:3.3;stroke-linecap:round"></rect> <rect x="140" y="95" rx="4" ry="20" width="25" height="13" style="color:#000000;overflow:visible;fill:#72a0ff;fill-opacity:0.09;stroke-width:3.3;stroke-linecap:round"></rect> <path d="M168,15 L63,15 A30,30 0 0,1 50,40" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="50" y="30" fill="#c4a000">x² − 1</text> <text font-size="11" text-anchor="end" x="81" y="30" fill="#729fcf">4x³</text> <text font-size="11" text-anchor="end" x="91" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="109" y="30" fill="#729fcf">2x²</text> <text font-size="11" text-anchor="end" x="118" y="30" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="30" fill="#729fcf">4x</text> <text font-size="11" text-anchor="end" x="145" y="30" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="30" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="79" y="11" fill="black">4x</text> <text font-size="11" text-anchor="end" x="91" y="11" fill="black">−</text> <text font-size="11" text-anchor="end" x="100" y="11" fill="black">2</text> <!-- eliminasi x³ --> <text font-size="11" text-anchor="end" x="81" y="47.5" fill="#729fcf">4x³</text> <text font-size="11" text-anchor="end" x="91" y="47.5" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="109" y="47.5" fill="#ccc">0x²</text> <text font-size="11" text-anchor="end" x="118" y="47.5" fill="#729fcf">−</text> <text font-size="11" text-anchor="end" x="132" y="47.5" fill="#729fcf">4x</text> <path d="M60,55 L168,55" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="55" fill="#8f7700">−</text> <!-- hasil eliminasi x³ --> <text font-size="11" text-anchor="end" x="109" y="70" fill="#729fcf">-2x²</text> <text font-size="11" text-anchor="end" x="118" y="70" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="132" y="70" fill="#ccc">0x</text> <text font-size="11" text-anchor="end" x="145" y="70" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="70" fill="#729fcf">2</text> <!-- eliminasi x² --> <text font-size="11" text-anchor="end" x="109" y="85" fill="#729fcf">-2x²</text> <text font-size="11" text-anchor="end" x="118" y="85" fill="#ccc">+</text> <text font-size="11" text-anchor="end" x="132" y="85" fill="#ccc">0x</text> <text font-size="11" text-anchor="end" x="145" y="85" fill="#729fcf">+</text> <text font-size="11" text-anchor="end" x="158" y="85" fill="#729fcf">2</text> <path d="M60,90 L168,90" stroke="#8f7700" stroke-linecap="round" stroke-width=".75"></path> <text font-size="11" text-anchor="end" x="168" y="90" fill="#8f7700">−</text> <!-- hasil eliminasi x² --> <text font-size="11" text-anchor="end" x="156" y="105" fill="#729fcf">0</text>
+</svg>
+</section>
+</div><div class="column" style="width:6%;">
+
+</div><div class="column" style="width:47%;">
+<section id="menentukan-nilai-a-dengan-metode-skema" class="level4">
+<h4 class="anchored" data-anchor-id="menentukan-nilai-a-dengan-metode-skema">Menentukan Nilai <span class="math inline">\(a\)</span> dengan Metode Skema</h4>
+<svg viewbox="0 0 120 115" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M20,0 L20,70 M20,35 L120,35 M96,35 L96,55 M20,70 L95,70 M70,70 L70,87 " stroke="#8f7700" stroke-linecap="round"></path> <text font-size="11" text-anchor="end" x="13" y="25" fill="#c4a000">1</text> <text font-size="11" text-anchor="end" x="35" y="10" fill="#729fcf">a</text> <text font-size="11" text-anchor="end" x="60" y="10" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="85" y="10" fill="#729fcf">-4</text> <text font-size="11" text-anchor="end" x="111" y="10" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="60" y="30" fill="#729fcf">4</text> <text font-size="11" text-anchor="end" x="85" y="30" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="111" y="30" fill="#729fcf">-2</text> <text font-size="8" text-anchor="end" x="38" y="50" fill="#729fcf">a=4</text> <text font-size="11" text-anchor="end" x="60" y="50" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="85" y="50" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="111" y="50" fill="#729fcf">0</text> <text font-size="11" text-anchor="end" x="13" y="65" fill="#c4a000">-1</text> <text font-size="11" text-anchor="end" x="60" y="67" fill="#729fcf">-4</text> <text font-size="11" text-anchor="end" x="85" y="67" fill="#729fcf">2</text> <text font-size="11" text-anchor="end" x="35" y="85" fill="#729fcf">4</text> <text font-size="11" text-anchor="end" x="60" y="85" fill="#729fcf">-2</text> <text font-size="11" text-anchor="end" x="85" y="85" fill="#729fcf">0</text> <text font-size="9" text-anchor="middle" x="45" y="100" fill="red">4x − 2</text> <text font-size="8" text-anchor="middle" x="45" y="111" fill="brown">(faktor lainnya)</text>
+</svg>
+</section>
+</div>
+</div>
+<p><span class="math inline">\(\therefore\)</span> Faktor lainnya adalah <span class="math inline">\(4x-2\)</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1889,7 +1973,13 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 </div>
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
+<p>Pada polinom <span class="math inline">\(x^3-7x+6=0\)</span> diketahui <span class="math inline">\(a=1\)</span>, <span class="math inline">\(b=0\)</span>, <span class="math inline">\(c=-7\)</span>, dan <span class="math inline">\(d=6\)</span>.</p>
 <p><span class="math inline">\(\begin{flalign*}
+{x_1}^2+{x_2}^2+{x_3}^2
+&amp;= \left({x_1}+{x_2}+{x_3}\right)^2 - 2\left({x_1}\,{x_2}+{x_1}\,{x_3}+{x_2}\,{x_3}\right) \\
+&amp;= \left(-\frac{b}{a}\right)^2 - 2\times\left(-\frac{d}{a}\right) \\
+&amp;= \left(-\frac{0}{1}\right)^2 - 2\times\left(-\frac{6}{1}\right) \\
+&amp;= 0+12=12
 \end{flalign*}\)</span></p>
 </div>
 </div>
@@ -1910,6 +2000,15 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
 <p><span class="math inline">\(\begin{flalign*}
+\circ\quad &amp;2025^2 - 2024^2 \\
+&amp;= (2025+2024)(2025-2024)\\
+&amp;= (4049)(1) = 4049
+\end{flalign*}\)</span></p>
+<p><span class="math inline">\(\begin{flalign*}
+\circ\quad &amp;\frac{(2024 + 2023)^2 + (2024-2023)^2}{2023^2 + 2024^2} \\
+&amp;= \frac{2024^2 + 2\times{2024}\times{2023} + 2023^2 + 2024^2 - 2\times{2024}\times{2023} + 2023^2}{2023^2 + 2024^2}  \\
+&amp;= \frac{2\left(2023^2 + 2024^2\right)}{2023^2 + 2024^2}  \\
+&amp;= 2
 \end{flalign*}\)</span></p>
 </div>
 </div>
@@ -1930,7 +2029,29 @@ P\left(\frac{3}{2}\right) &amp;= 3\,\left(\frac{3}{2}\right)^4 -5\,\left(\frac{3
 <div class="callout-body-container callout-body">
 <p>Jawab:</p>
 <p><span class="math inline">\(\begin{flalign*}
+\circ\quad &amp;\frac{x+2}{2x^2-x-1} \\
+&amp;= \frac{A}{2x+1}+\frac{B}{x-1} \\
+&amp;= \frac{Ax-A}{(2x+1)(x-1)}+\frac{2Bx+B}{(2x+1)(x-1)} \\
+&amp;= \frac{(A+2B)x-A+B}{(2x+1)(x-1)}
 \end{flalign*}\)</span></p>
+<p>Diperoleh sistem persamaan linear dua variabel</p>
+<p><span class="math inline">\(\begin{flalign*}
+A+2B &amp;= 1 \\
+-A+B &amp;= 2
+\end{flalign*}\)</span></p>
+<p>Menghasilkan <span class="math inline">\(A=-1\)</span> dan <span class="math inline">\(B=1\)</span>.</p>
+<p><span class="math inline">\(\begin{flalign*}
+\circ\quad &amp;\frac{x+2}{2x^2+x-1} \\
+&amp;= \frac{A}{2x-1}+\frac{B}{x+1} \\
+&amp;= \frac{Ax+A}{(2x-1)(x+1)}+\frac{2Bx-B}{(2x-1)(x+1)} \\
+&amp;= \frac{(A+2B)x+A-B}{(2x-1)(x+1)}
+\end{flalign*}\)</span></p>
+<p>Diperoleh sistem persamaan linear dua variabel</p>
+<p><span class="math inline">\(\begin{flalign*}
+A+2B &amp;= 1 \\
+A-B &amp;= 2
+\end{flalign*}\)</span></p>
+<p>Menghasilkan <span class="math inline">\(A=\frac{5}{3}\)</span> dan <span class="math inline">\(B=-\frac{1}{3}\)</span>.</p>
 </div>
 </div>
 
