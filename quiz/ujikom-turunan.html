@@ -351,14 +351,6 @@
               </div>
             </div>
 
-          <div id="ujianbaru" class="text-sm text-gray-600 mb-6">
-            <div class="text-center">
-              <button id="restartBtn"
-                class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"> Ujian Baru
-              </button>
-            </div>
-          </div>
-
           </div>
           
 
@@ -393,6 +385,14 @@
           
           </form>
 
+          <div id="ujianbaru" class="hidden text-sm text-gray-600 mb-6">
+            <div class="text-center">
+              <button id="restartBtn"
+                class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"> Ujian Baru
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -426,6 +426,8 @@
           myAlert.classList.toggle('d-none');
           // tampilkan lihatHasil
           lihatHasil.classList.toggle('hidden');
+          // tampilkan ujianBaru
+          ujianBaru.classList.toggle('hidden');
           // reset-formnya
           form.reset();
           console.log('Success!', response);
