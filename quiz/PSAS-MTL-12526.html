@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ujian Online Matematika SMA</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="./assets/css/uoa.css"> -->
+ <!-- <script src="./assets/js/user.js"></script> -->
+ <!-- <script src="./assets/js/namaMurid.js"></script> -->
+ <!-- <script src="./assets/js/psasmtl12526.js"></script> -->
+
+ <!-- 1. INTEGRASI MATHJAX UNTUK MERENDER LATEX -->
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ <script>
+  // Konfigurasi MathJax untuk memproses MathML, TeX, dan HTML
+  window.MathJax = {
+   tex: {
+    // Mengizinkan $...$ untuk inline math
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+   },
+   startup: {
+    // Menjalankan default pageReady, dan kita akan memanggil typesetPromise secara manual setelah render
+    pageReady: () => {
+     return MathJax.startup.defaultPageReady();
+    }
+   }
+  };
+ </script>
+ <!-- END MATHJAX -->
+  <style>
+      body {
+   font-family: 'Inter', sans-serif;
+   background-color: #f1f5f9;
+   /* Slate 100 */
+  }
+
+  .container-box {
+   background-color: #ffffff;
+   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .timer-danger {
+   background-color: #fef2f2;
+   /* Red 50 */
+   color: #ef4444;
+   /* Red 500 */
+   border-color: #fca5a5;
+   /* Red 300 */
+  }
+
+  /* Custom styles for alert modal */
+  #alertModal {
+   transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  </style>
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4">
+ <!-- Global Alert Modal (Pengganti alert()) -->
+ <div id="alertModal"
+  class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 invisible opacity-0">
+  <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full">
+   <h3 id="alertTitle" class="text-xl font-bold text-red-600 mb-3">Peringatan Ujian</h3>
+   <p id="alertMessage" class="text-gray-700 mb-6">Ujian diakhiri karena Anda keluar dari halaman ujian (Focus Loss).
+   </p>
+   <div class="flex justify-end">
+    <button onclick="closeAlertAndEndExam()"
+     class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-150 shadow-md">
+     Lanjutkan ke Hasil
+    </button>
+   </div>
+  </div>
+ </div>
+
+ <!-- Main Application Container -->
+ <div id="app" class="w-full max-w-6xl">
+  <!-- Content will be injected here -->
+ </div>
+
+ <script>
+  // --- DATA & KONFIGURASI APLIKASI ---
+// URL Google Apps Script untuk menyimpan data
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbysZWUczMSbY7HWzsqu40rb47cl82krA0_2hhhVB01-gCkKmL6cYKsXNm5EEI6we6ay/exec";
+
+const APP_CONFIG = {
+ totalSoal: 30, // Total soal yang diujikan
+ alokasiWaktuMenit: 90,
+ komposisiKognitif: {
+  "ipk01": 1,
+  "ipk02": 1,
+  "ipk03": 1,
+  "ipk04": 1,
+  "ipk05": 1,
+  "ipk06": 1,
+  "ipk07": 1,
+  "ipk08": 1,
+  "ipk09": 1,
+  "ipk10": 1,
+  "ipk11": 1,
+  "ipk12": 1,
+  "ipk13": 1,
+  "ipk14": 1,
+  "ipk15": 1,
+  "ipk16": 1,
+  "ipk17": 1,
+  "ipk18": 1,
+  "ipk19": 1,
+  "ipk20": 1,
+  "ipk21": 1,
+  "ipk22": 1,
+  "ipk23": 1,
+  "ipk24": 1,
+  "ipk25": 1,
+  "ipk26": 1,
+  "ipk27": 1,
+  "ipk28": 1,
+  "ipk29": 1,
+  "ipk30": 1
+ },
+ urutanSoal: {
+  "ipk01": [1],
+  "ipk02": [2],
+  "ipk03": [3],
+  "ipk04": [4],
+  "ipk05": [5],
+  "ipk06": [6],
+  "ipk07": [7],
+  "ipk08": [8],
+  "ipk09": [9],
+  "ipk10": [10],
+  "ipk11": [11],
+  "ipk12": [12],
+  "ipk13": [13],
+  "ipk14": [14],
+  "ipk15": [15],
+  "ipk16": [16],
+  "ipk17": [17],
+  "ipk18": [18],
+  "ipk19": [19],
+  "ipk20": [20],
+  "ipk21": [21],
+  "ipk22": [22],
+  "ipk23": [23],
+  "ipk24": [24],
+  "ipk25": [25],
+  "ipk26": [26],
+  "ipk27": [27],
+  "ipk28": [28],
+  "ipk29": [29],
+  "ipk30": [30]
+ }
+};
+
+
+// Bank Soal: Lebih dari 30 soal untuk memastikan pengacakan yang baik.
+const questionBank = [
+ // LINGKARAN
+ {
+  id: 10101,
+  materi: "Lingkaran",
+  kognitif: "ipk01",
+  jenis: "PG",
+  teks: "Diketahui $P(h,k)$ dan $r$ berturut-turut sebagai pusat dan jari-jari lingkaran $x^2 + y^2 + 6x - 4y - 3 = 0$. Maka pernyataan berikut yang benar adalah ....",
+  opsi: [
+   { key: 'A', text: '$h + k = 1$' },
+   { key: 'B', text: '$h + r = 7$' },
+   { key: 'C', text: '$k + r = 2$' },
+   { key: 'D', text: '$h + k - r = 1$' },
+   { key: 'E', text: '$h + k + r = 3$' }],
+  kunci: ['E']
+ },
+ {
+  id: 10201,
+  materi: "Lingkaran",
+  kognitif: "ipk02",
+  jenis: "PG",
+  teks: "Persamaan lingkaran dengan ujung-ujung diameter di titik $A(-5,6)$ dan $B(3,-2)$ adalah ....",
+  opsi: [
+   { key: 'A', text: '$x^2 + y^2 + 10x - 12y - 67 = 0$' },
+   { key: 'B', text: '$x^2 + y^2 - 6x + 4y - 115 = 0$' },
+   { key: 'C', text: '$x^2 + y^2 + 2x - 4y - 27 = 0$' },
+   { key: 'D', text: '$x^2 + y^2 - 2x + 4y - 27 = 0$' },
+   { key: 'E', text: '$x^2 + y^2 - 2x + 4y - 123 = 0$' }],
+  kunci: ['C']
+ },
+ {
+  id: 10301,
+  materi: "Lingkaran",
+  kognitif: "ipk03",
+  jenis: "PG",
+  teks: "Diketahui garis $g$ dengan persamaan $3x+4y=12$ dan lingkaran $L$ dengan persamaan $x^2 + y^2 = 16$. Antara garis $g$ dan lingkaran $L$ terdapat hubungan ....",
+  opsi: [
+   { key: 'A', text: 'tidak berpotongan' },
+   { key: 'B', text: 'saling bersinggungan' },
+   { key: 'C', text: 'berpotongan di 2 titik' },
+   { key: 'D', text: 'berpotongan di 3 titik' },
+   { key: 'E', text: 'berpotongan di 4 titik' }],
+  kunci: ['C']
+ },
+ {
+  id: 10401,
+  materi: "Lingkaran",
+  kognitif: "ipk04",
+  jenis: "PG",
+  teks: "Diketahui persamaan lingkaran $x^2 + y^2 = 16$ dan garis $y = x +k$. Agar garis bersinggungan dengan lingkaran, maka nilai $k = $ ....",
+  opsi: [
+   { key: 'A', text: '4' },
+   { key: 'B', text: '4$\\sqrt{2}$' },
+   { key: 'C', text: '4$\\sqrt{3}$' },
+   { key: 'D', text: '8' },
+   { key: 'E', text: '4$\\sqrt{5}$' }],
+  kunci: ['B']
+ },
+ {
+  id: 10501,
+  materi: "Lingkaran",
+  kognitif: "ipk05",
+  jenis: "PG",
+  teks: "Dari titik $(4,5)$, garis singgung terhadap lingkaran $x^2 + y^2 + 2x - 4y - 11 = 0$ yang dapat dibuat adalah sebanyak ....",
+  opsi: [
+   { key: 'A', text: '0' },
+   { key: 'B', text: '1' },
+   { key: 'C', text: '2' },
+   { key: 'D', text: '3' },
+   { key: 'E', text: '4' }],
+  kunci: ['C']
+ },
+ {
+  id: 10601,
+  materi: "Lingkaran",
+  kognitif: "ipk06",
+  jenis: "PG",
+  teks: "Persamaan lingkaran yang berpusat di $A(-3,4)$ dan menyinggung garis $4y = 3x + 5$ adalah ....",
+  opsi: [
+   { key: 'A', text: '$x^2 + y^2 + 6x - 8y + 9 = 0$' },
+   { key: 'B', text: '$x^2 + y^2 - 6x + 8y + 9 = 0$' },
+   { key: 'C', text: '$x^2 + y^2 - 6x + 8y + 16 = 0$' },
+   { key: 'D', text: '$x^2 + y^2 + 6x - 8y + 25 = 0$' },
+   { key: 'E', text: '$x^2 + y^2 - 6x + 8y + 25 = 0$' }],
+  kunci: ['A']
+ },
+ {
+  id: 10701,
+  materi: "Lingkaran",
+  kognitif: "ipk07",
+  jenis: "PG",
+  teks: "Pemerintah kota berencana menyediakan fasilitas wifi gratis di beberapa area publik. Sebuah perangkat wifi utama dipasang pada koordinat $(0,3)$ dalam satuan cm di peta kota berskala 1:100000 dengan jangkauan sinyal sejauh 7 km ke segala arah. Lokasi yang akan menerima sinyal wifi gratis tersebut berada pada titik lokasi ....",
+  opsi: [
+   { key: 'A', text: '$(8,7)$' },
+   { key: 'B', text: '$(7,8)$' },
+   { key: 'C', text: '$(5,-3)$' },
+   { key: 'D', text: '$(0,10)$' },
+   { key: 'E', text: '$(-7,-3)$' }],
+  kunci: ['D']
+ },
+ {
+  id: 10801,
+  materi: "Elips",
+  kognitif: "ipk08",
+  jenis: "PG",
+  teks: "Titik pusat elips $\\dfrac{(x-3)^2}{16} + \\dfrac{(y+2)^2}{25} = 1$ adalah ....",
+  opsi: [
+   { key: 'A', text: '$(-4,-5)$' },
+   { key: 'B', text: '$(-2,3)$' },
+   { key: 'C', text: '$(3,-2)$' },
+   { key: 'D', text: '$(3,2)$' },
+   { key: 'E', text: '$(4,5)$' }],
+  kunci: ['C']
+ },
+ {
+  id: 10901,
+  materi: "Elips",
+  kognitif: "ipk09",
+  jenis: "PG",
+  teks: "Diketahui elips dengan titik puncak $(-4,3)$ dan $(12,3)$. Jika salah satu titik fokusnya adalah $(8,3)$, maka persamaan elipsnya adalah ....",
+  opsi: [
+   { key: 'A', text: '$\\dfrac{(x-4)^2}{64} + \\dfrac{(y-3)^2}{48} = 1$' },
+   { key: 'B', text: '$\\dfrac{(x+4)^2}{64} + \\dfrac{(y+3)^2}{48} = 1$' },
+   { key: 'C', text: '$\\dfrac{(x-8)^2}{16} + \\dfrac{(y-3)^2}{9} = 1$' },
+   { key: 'D', text: '$\\dfrac{(x+8)^2}{16} + \\dfrac{(y+3)^2}{9} = 1$' },
+   { key: 'E', text: '$\\dfrac{(x-4)^2}{16} + \\dfrac{(y-3)^2}{9} = 1$' }],
+  kunci: ['A']
+ },
+ {
+  id: 11001,
+  materi: "Elips",
+  kognitif: "ipk10",
+  jenis: "PG",
+  teks: "Sebuah galeri pameran didesain dengan langit-langit berbentuk setengah elips untuk memanfaatkan sifat akustiknya yang unik (dikenal sebagai <i>whispering gallery</i>). Sifat ini memungkinkan suara yang berasal dari satu fokus untuk dipantulkan secara sempurna ke fokus lainnya, sehingga seseorang yang berdiri di titik B dapat mendengar bisikan dari titik A meskipun jaraknya jauh. Jika galeri itu memiliki panjang total 100 meter dan tinggi maksimum di pusatnya adalah 30 meter. Persamaan elips yang merepresentasikan bentuk langit-langit galeri tersebut dengan pusat elips berada di titik asal $(0,0)$ adalah ....",
+  opsi: [
+   { key: 'A', text: '$\\dfrac{x^2}{100} + \\dfrac{y^2}{30} = 1$' },
+   { key: 'B', text: '$\\dfrac{x^2}{2500} + \\dfrac{y^2}{225} = 1$' },
+   { key: 'C', text: '$\\dfrac{x^2}{2500} + \\dfrac{y^2}{900} = 1$' },
+   { key: 'D', text: '$\\dfrac{x^2}{10000} + \\dfrac{y^2}{900} = 1$' },
+   { key: 'E', text: '$\\dfrac{x^2}{10000} + \\dfrac{y^2}{3600} = 1$' }],
+  kunci: ['C']
+ },
+ {
+  id: 11101,
+  materi: "Fungsi Peluang",
+  kognitif: "ipk11",
+  jenis: "PG",
+  teks: "Diketahui fungsi peluang diskrit $f(x) = \\dfrac{x}{k}$ untuk $x = 1,2,3$. Agar $f(x)$ merupakan fungsi peluang maka nilai $k = $ ....",
+  opsi: [
+   { key: 'A', text: '2' },
+   { key: 'B', text: '3' },
+   { key: 'C', text: '4' },
+   { key: 'D', text: '6' },
+   { key: 'E', text: '12' }],
+  kunci: ['D']
+ },
+ {
+  id: 11201,
+  materi: "Fungsi Peluang",
+  kognitif: "ipk12",
+  jenis: "PG",
+  teks: "Diketahui variabel acak $X$ memiliki fungsi peluang $f(x) = \\dfrac{x+1}{20}$ untuk $x=1,2,3,4,5$. Nilai harapan $E(X) = x\\cdot{f(x)}$ adalah ....",
+  opsi: [
+   { key: 'A', text: '0,5' },
+   { key: 'B', text: '1,5' },
+   { key: 'C', text: '2,5' },
+   { key: 'D', text: '3,5' },
+   { key: 'E', text: '4,5' }],
+  kunci: ['D']
+ },
+ {
+  id: 11301,
+  materi: "Fungsi Peluang",
+  kognitif: "ipk13",
+  jenis: "PG",
+  teks: "Untuk $x = 1, 2, 3, 4$, fungsi berikut yang merupakan fungsi peluang adalah ....",
+  opsi: [
+   { key: 'A', text: '$f(x) = \\dfrac{x}{24}$' },
+   { key: 'B', text: '$f(x) = \\dfrac{x^2}{29}$' },
+   { key: 'C', text: '$f(x) = \\dfrac{(x-1)^2}{15}$' },
+   { key: 'D', text: '$f(x) = \\dfrac{(x-2)^2}{4}$' },
+   { key: 'E', text: '$f(x) = \\dfrac{x^2 + 2}{38}$' }],
+  kunci: ['E']
+ },
+ {
+  id: 11401,
+  materi: "Distribusi Binomial",
+  kognitif: "ipk14",
+  jenis: "PG",
+  teks: "Dalam suatu percobaan Binomial dengan $n = 3$ dan peluang sukses $p = 0,4$, maka peluang mendapatkan tepat 3 kali sukses adalah ....",
+  opsi: [
+   { key: 'A', text: '0,12' },
+   { key: 'B', text: '0,64' },
+   { key: 'C', text: '0,81' },
+   { key: 'D', text: '0,064' },
+   { key: 'E', text: '0,216' }],
+  kunci: ['D']
+ },
+ {
+  id: 11501,
+  materi: "Distribusi Binomial",
+  kognitif: "ipk15",
+  jenis: "PG",
+  teks: "Peluang Messi mencetak gol dalam tendangan penalti adalah 0,8. Dari 4 tendangan penalti, peluang ia mencetak lebih dari 2 gol adalah ....",
+  opsi: [
+   { key: 'A', text: '0,1536' },
+   { key: 'B', text: '0,4096' },
+   { key: 'C', text: '0,6144' },
+   { key: 'D', text: '0,8192' },
+   { key: 'E', text: '0,3825' }],
+  kunci: ['D']
+ },
+ {
+  id: 11601,
+  materi: "Distribusi Binomial",
+  kognitif: "ipk16",
+  jenis: "PG",
+  teks: "Sebuah survei menunjukkan bahwa 20% siswa membawa bekal ke sekolah. Jika 3 siswa dipilih secara acak, maka peluang terdapat 2 siswa yang membawa bekal adalah ....",
+  opsi: [
+   { key: 'A', text: '$0,096$' },
+   { key: 'B', text: '$0,12$' },
+   { key: 'C', text: '$0,32$' },
+   { key: 'D', text: '$0,6$' },
+   { key: 'E', text: '$0,96$' }],
+  kunci: ['A']
+ },
+ {
+  id: 11701,
+  materi: "Distribusi Normal",
+  kognitif: "ipk17",
+  jenis: "PG",
+  teks: "Peluang distribusi normal $P(805 < x < 916)$ dengan rata-rata $\\mu=850$ dan simpangan baku $\\sigma=50$ dapat dinyatakan menjadi peluang berdistribusi normal standar, yaitu ....",
+  opsi: [
+   { key: 'A', text: '$P(-1,32 < z < 0,9)$' },
+   { key: 'B', text: '$P(-1,32 < z < -0,9)$' },
+   { key: 'C', text: '$P(-0,9 < z < 1,32)$' },
+   { key: 'D', text: '$P(0 < z < 1,32)$' },
+   { key: 'E', text: '$P(0,9 < z < 1,32)$' }],
+  kunci: ['C']
+ },
+ {
+  id: 11801,
+  materi: "Distribusi Normal",
+  kognitif: "ipk18",
+  jenis: "PG",
+  teks: "Berat badan bayi yang baru lahir mengikuti distribusi normal dengan rata-rata $(\\mu)$ 3.000 gram dan simpangan baku $(\\sigma)$ 400 gram. Nilai $Z$-skor untuk bayi dengan berat 3.800 gram adalah ....",
+  opsi: [
+   { key: 'A', text: '$-2$' },
+   { key: 'B', text: '$-0,5$' },
+   { key: 'C', text: '0,25' },
+   { key: 'D', text: '0,5' },
+   { key: 'E', text: '2' }],
+  kunci: ['E']
+ },
+ {
+  id: 11901,
+  materi: "Distribusi Normal",
+  kognitif: "ipk19",
+  jenis: "PG",
+  teks: "Nilai ujian matematika berdistribusi normal dengan rata-rata 75 dan simpangan baku 10. Jika hanya 10% siswa dengan nilai tertinggi yang akan mendapatkan predikat A, maka nilai minimum yang harus diperoleh siswa untuk mendapatkan predikat A adalah .... <br/> <span style='font-size'Diketahui:c$\\small P(Z < -2,33)=0,01$, $\\small P(Z < -1,28)=0,10$, $\\small P(Z < 1,28)=0,90$, dan $\\small P(Z < 2,33)=0,09$.</span>",
+  opsi: [
+   { key: 'A', text: '$75 + 10 = 85$' },
+   { key: 'B', text: '$100 - 10 = 90$' },
+   { key: 'C', text: '$100 - 10 \\times 1,28 = 87,2$' },
+   { key: 'D', text: '$75 + 10 \\times 1,28 = 87,8$' },
+   { key: 'E', text: '$75 + 10 \\times 2,33 = 98,3$' }],
+  kunci: ['D']
+ },
+ {
+  id: 12001,
+  materi: "Limit",
+  kognitif: "ipk20",
+  jenis: "PG",
+  teks: "Diketahui $f(x) = \\begin{cases} x^2 - (p+1)x + p & \\text{untuk } x \\ge 1 \\\\ px - 2 & \\text{untuk } x < 1 \\end{cases}$. <br>Agar $\\lim\\limits_{x \\to 1} f(x)$ mempunyai nilai, maka nilai $p$ adalah ....",
+  opsi: [
+   { key: 'A', text: '3' },
+   { key: 'B', text: '2' },
+   { key: 'C', text: '1' },
+   { key: 'D', text: '-1' },
+   { key: 'E', text: '-2' }],
+  kunci: ['B']
+ },
+ // Soal Penerapan Tambahan
+ {
+  id: 12101,
+  materi: "Limit",
+  kognitif: "ipk21",
+  jenis: "PG",
+  teks: "Nilai $\\lim\\limits_{x \\to \\infty} \\dfrac{2x(4x-3)(3x-4)^2}{3(2x^2-3)^2} = $ ....",
+  opsi: [
+   { key: 'A', text: '2' },
+   { key: 'B', text: '3' },
+   { key: 'C', text: '4' },
+   { key: 'D', text: '6' },
+   { key: 'E', text: '12' }],
+  kunci: ['D']
+ },
+ {
+  id: 12201,
+  materi: "Limit",
+  kognitif: "ipk22",
+  jenis: "PG",
+  teks: "Nilai $\\lim\\limits_{x \\to 0} \\dfrac{24x^3(x+1)}{\\sin{3x} - \\sin{3x}\\cos{4x}} = $ ....",
+  opsi: [
+   { key: 'A', text: '$-2$' },
+   { key: 'B', text: '$-1$' },
+   { key: 'C', 'text': '0,5' },
+   { key: 'D', text: '1' },
+   { key: 'E', text: '2' }],
+  kunci: ['D']
+ },
+ {
+  id: 12301,
+  materi: "Turunan",
+  kognitif: "ipk23",
+  jenis: "PG",
+  teks: "Jika suatu partikel bergerak mengikuti fungsi posisi $s(t) = t^2 + 2t$ $(s$ dalam meter dan $t$ dalam detik$)$ maka kecepatan sesaat pada $t = 2$ detik adalah ....",
+  opsi: [
+   { key: 'A', text: '$\\lim\\limits_{h \\to 0} \\dfrac{s(2+h)-s(2)}{h}$' },
+   { key: 'B', text: '$\\lim\\limits_{h \\to 0} \\dfrac{s(t+h)-s(t)}{h}$' },
+   { key: 'C', text: '$\\lim\\limits_{h \\to 0} \\dfrac{s(t-h)+s(h)}{h}$' },
+   { key: 'D', text: '$\\lim\\limits_{h \\to 0} \\dfrac{s(t+h)-s(h)}{h}$' },
+   { key: 'E', text: '$\\lim\\limits_{h \\to 0} \\dfrac{s(2t+h)-s(2t)}{h}$' }],
+  kunci: ['A']
+ },
+ {
+  id: 12401,
+  materi: "Turunan",
+  kognitif: "ipk24",
+  jenis: "PG",
+  teks: "Diketahui $f(x) = (2x-1)(3x+1)$. Jika $f'(x)$ adalah turunan dari $f(x)$, maka nilai $f'(1) = $ ....",
+  opsi: [
+   { key: 'A', text: '3' },
+   { key: 'B', text: '6' },
+   { key: 'C', text: '11' },
+   { key: 'D', text: '12' },
+   { key: 'E', text: '13' }],
+  kunci: ['C']
+ },
+ {
+  id: 12501,
+  materi: "Turunan",
+  kognitif: "ipk25",
+  jenis: "PG",
+  teks: "Jika $f(x) = \\dfrac{x}{x-1}$, maka $f'(x) = ....$",
+  opsi: [
+   { key: 'A', text: '$\\dfrac{1}{x-1}$' },
+   { key: 'B', text: '$\\dfrac{1}{(x-1)^2}$' },
+   { key: 'C', text: '$\\dfrac{2}{(x-1)^2}$' },
+   { key: 'D', text: '$-\\dfrac{2}{(x-1)^2}$' },
+   { key: 'E', text: '$-\\dfrac{1}{(x-1)^2}$' }],
+  kunci: ['E']
+ },
+ {
+  id: 12601,
+  materi: "Turunan",
+  kognitif: "ipk26",
+  jenis: "PG",
+  teks: "Jika $f(x) = \\sin^2{3x} + 2\\sin{3x}\\cos{3x} + \\cos^2{3x}$, maka $f'(x) = ....$",
+  opsi: [
+   { key: 'A', text: '$6 \\sin{6x}$' },
+   { key: 'B', text: '$6 \\cos{6x}$' },
+   { key: 'C', text: '$12 \\cos{6x}$' },
+   { key: 'D', text: '$6 \\sin{3x} \\cos{3x}$' },
+   { key: 'E', text: '$18 \\sin{3x} \\cos{3x}$' }],
+  kunci: ['B']
+ },
+ {
+  id: 12701,
+  materi: "Aplikasi Turunan",
+  kognitif: "ipk27",
+  jenis: "PG",
+  teks: "Jika $y=x^3-2x+3$, maka gradien garis singgung di titik $x=-1$ adalah ....",
+  opsi: [
+   { key: 'A', text: '$-5$' },
+   { key: 'B', text: '$-3$' },
+   { key: 'C', text: '1' },
+   { key: 'D', text: '3' },
+   { key: 'E', text: '5' }],
+  kunci: ['C']
+ },
+ {
+  id: 12801,
+  materi: "Aplikasi Turunan",
+  kognitif: "ipk28",
+  jenis: "PG",
+  teks: "Grafik fungsi $y=x^3 - 3x^2 - 72x + 1$ monoton turun pada interval ....",
+  opsi: [
+   { key: 'A', text: '$-4 < x < 6$' },
+   { key: 'B', text: '$-6 < x < 4$' },
+   { key: 'C', text: '$4 < x < 6$' },
+   { key: 'D', text: '$x < -4$ atau $x > 6$' },
+   { key: 'E', text: '$x < -6$ atau $x > 4$' }],
+  kunci: ['A']
+ },
+ {
+  id: 12901,
+  materi: "Aplikasi Turunan",
+  kognitif: "ipk29",
+  jenis: "PG",
+  teks: "Titik stasioner fungsi $f(x) = x^3 - 6x^2 + 9x + 1$ terletak pada $x = $ ....",
+  opsi: [
+   { key: 'A', text: '0 dan 1' },
+   { key: 'B', text: '0 dan 3' },
+   { key: 'C', text: '1 dan 2' },
+   { key: 'D', text: '1 dan 3' },
+   { key: 'E', text: '2 dan 3' }],
+  kunci: ['D']
+ },
+ {
+  id: 13001,
+  materi: "Aplikasi Turunan",
+  kognitif: "ipk30",
+  jenis: "PG",
+  teks: "Pada interval $-3 \\le x \\le 3$, nilai maksimum dari fungsi $f(x) = x^3 - 3x^2 - 24x + 1$ adalah ....",
+  opsi: [
+   { key: 'A', text: '19' },
+   { key: 'B', text: '29' },
+   { key: 'C', text: '38' },
+   { key: 'D', text: '73' },
+   { key: 'E', text: '97' }],
+  kunci: ['B']
+ }
+];
+
+
+
+  // --- STATE MANAGEMENT ---
+  let appState = {
+   currentPage: 'login', // 'login', 'exam', 'result'
+   isAuthenticated: false,
+   user: null, // {nama, kelas, username}
+   examQuestions: [], // Soal yang sudah diacak untuk ujian
+   userAnswers: {}, // {questionId: ['A'], questionId: ['A', 'C']}
+   currentQuestionIndex: 0,
+   timer: APP_CONFIG.alokasiWaktuMenit * 60, // in seconds
+   timerInterval: null,
+   examFinishedStatus: null // 'time_up', 'manual_finish', 'focus_loss'
+  };
+
+
+  // --- UTILITY FUNCTIONS ---
+
+  /** Mengacak array menggunakan algoritma Fisher-Yates */
+  function shuffleArray(array) {
+   for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+   }
+   return array;
+  }
+
+  /** Memilih soal secara acak sesuai komposisi dan urutan */
+  function generateExamQuestions() {
+   let selectedQuestions = [];
+   const availableQuestions = JSON.parse(JSON.stringify(questionBank)); // Deep copy
+
+   // 1. Ambil soal per kategori kognitif
+   let tempPool = {};
+   for (const kognitif in APP_CONFIG.komposisiKognitif) {
+    const count = APP_CONFIG.komposisiKognitif[kognitif];
+    const pool = availableQuestions.filter(q => q.kognitif === kognitif);
+    // Pastikan ada cukup soal, jika tidak, ambil semua yang ada
+    const shuffledPool = shuffleArray(pool);
+    tempPool[kognitif] = shuffledPool.slice(0, count);
+   }
+
+   // 2. Gabungkan dan atur urutan soal sesuai APP_CONFIG.urutanSoal
+   let finalQuestions = new Array(APP_CONFIG.totalSoal).fill(null);
+   for (const kognitif in APP_CONFIG.urutanSoal) {
+    const indices = APP_CONFIG.urutanSoal[kognitif]; // [1, 2]
+    const questions = tempPool[kognitif];
+
+    // Pastikan jumlah soal yang diambil sesuai dengan slot
+    for (let i = 0; i < Math.min(indices.length, questions.length); i++) {
+     const questionNumber = indices[i];
+     finalQuestions[questionNumber - 1] = questions[i];
+    }
+   }
+
+   // 3. Acak opsi jawaban (FR007)
+   finalQuestions = finalQuestions.map(q => {
+    if (q && q.jenis === 'PG' || q.jenis === 'Multi-Select') {
+     q.opsi = shuffleArray(q.opsi);
+    }
+    return q;
+   });
+
+   // Filter soal yang mungkin null jika bank soal tidak lengkap
+   appState.examQuestions = finalQuestions.filter(q => q !== null);
+   appState.userAnswers = {};
+   appState.currentQuestionIndex = 0;
+   return appState.examQuestions;
+  }
+
+    /** Mengirim hasil ujian ke Google Sheets melalui Apps Script */
+  async function saveResultToSheets(user, score) {
+   if (!user || score === undefined) return;
+
+   const formData = new FormData();
+   formData.append('timestamp', new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }));
+   formData.append('nama', user.nama);
+   formData.append('kelas', user.kelas);
+   formData.append('materi', 'PSAS-MTL-12-12526');
+   formData.append('skor', score);
+   formData.append('status', appState.examFinishedStatus);
+   formData.append('soal', JSON.stringify(`1. ${appState.examQuestions[0].id} - ${appState.examQuestions[0].kunci} - 2. ${appState.examQuestions[1].id} - ${appState.examQuestions[1].kunci} - 3. ${appState.examQuestions[2].id} - ${appState.examQuestions[2].kunci} - 4. ${appState.examQuestions[3].id} - ${appState.examQuestions[3].kunci} - 5.. ${appState.examQuestions[4].id} - ${appState.examQuestions[4].kunci} - 6. ${appState.examQuestions[5].id} - ${appState.examQuestions[5].kunci} - 7. ${appState.examQuestions[6].id} - ${appState.examQuestions[6].kunci} - 8. ${appState.examQuestions[7].id} - ${appState.examQuestions[7].kunci} - 9. ${appState.examQuestions[8].id} - ${appState.examQuestions[8].kunci} - 0. ${appState.examQuestions[9].id} - ${appState.examQuestions[9].kunci} --- `));
+   formData.append('dijawab', JSON.stringify(appState.userAnswers));
+
+   try {
+    const response = await fetch(GOOGLE_SHEETS_URL, {
+     method: 'POST',
+     body: formData,
+    });
+
+    if (response.ok) {
+     console.log("Data berhasil disimpan ke Google Sheets.");
+    } else {
+     console.error("Gagal menyimpan data ke Google Sheets. Status:", response.status);
+    }
+   } catch (error) {
+    console.error("Terjadi kesalahan jaringan saat menyimpan data:", error);
+   }
+  }
+
+
+  // --- CORE LOGIC (Ubah Halaman) ---
+
+  /** Render halaman sesuai state saat ini */
+  function render() {
+   const appDiv = document.getElementById('app');
+   let html = '';
+
+   switch (appState.currentPage) {
+    case 'login':
+     html = renderLoginPage();
+     break;
+    case 'exam':
+     html = renderExamPage();
+     break;
+    case 'result':
+     html = renderResultPage();
+     break;
+    default:
+     html = renderLoginPage();
+   }
+
+   appDiv.innerHTML = html;
+
+   // Panggil fungsi inisialisasi dan rendering MathJax setelah HTML di-render
+   if (appState.currentPage === 'exam') {
+    initExamPage();
+    typesetMath();
+   }
+  }
+
+  /** Memastikan MathJax merender ekspresi LaTeX setelah DOM diperbarui */
+  function typesetMath() {
+   if (window.MathJax) {
+    // Gunakan MathJax.typesetPromise untuk rendering asinkron
+    MathJax.typesetPromise().catch((err) => console.log('MathJax typeset error: ', err));
+   }
+  }
+
+
+  // --- RENDER FUNCTIONS ---
+
+  function renderLoginPage() {
+   // Menonaktifkan right click di halaman ujian
+   document.addEventListener('contextmenu', preventRightClick);
+   return `
+<div class="max-w-md mx-auto mt-10 p-8 container-box rounded-xl">
+<img class="h-auto max-w-lg mx-auto" 
+src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d9/Logo_SMA_Negeri_1_Majalengka.png/250px-Logo_SMA_Negeri_1_Majalengka.png"
+width="64px" alt="image description">
+<h1 class="pt-6 text-xl font-bold text-center text-blue-700 mb-2">Uji Kompetensi Matematika</h1>
+<p class="text-center text-sm text-gray-500 mb-8">Masukkan identitas Ananda untuk memulai ujian.</p>
+<form id="loginForm" class="space-y-5">
+<div>
+<label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+<input type="text" id="nama" name="nama" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+</div>
+<div>
+<label for="kelas" class="block text-sm font-medium text-gray-700">Kelas</label>
+<select id="kelas" name="kelas" required
+class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500  focus:border-blue-500">
+<option value="">Pilih Kelas</option>
+<option value="XII.2">XII.2</option>
+<option value="XII.3">XII.3</option>
+<option value="XII.6">XII.6</option>
+<option value="XII.7">XII.7</option>
+<option value="XII.10">XII.10</option>
+<option value="XII.11">XII.11</option>
+</select>
+</div>
+<div>
+<label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+<input type="text" id="username" name="username" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+</div>
+<div>
+<label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+<input type="password" id="password" name="password" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+</div>
+<p id="loginError" class="text-sm text-red-600 font-semibold hidden"></p>
+<button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 justify-center py-3 px-4 border border-transparent shadow-md text-white bg-blue-600 hover:bg-blue-700 transition duration-150 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-4 py-2.5 text-center leading-5">
+MULAI UJIAN
+</button> &ensp;&ensp;&nbsp;
+<!-- <button type="button" class="w-4/12 justify-center py-3 px-4 border border-transparent shadow-md text-white bg-blue-600 hover:bg-blue-700 transition duration-150 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-4 py-2.5 text-center leading-5" onclick="fillDemo()">User Demo</button> -->
+</form>
+</div>
+`;
+  }
+
+  function renderExamPage() {
+   const total = appState.examQuestions.length;
+   const currentQ = appState.examQuestions[appState.currentQuestionIndex];
+   if (!currentQ) return `<div class="text-center p-10">Soal tidak ditemukan.</div>`;
+
+   const userSelectedAnswers = appState.userAnswers[currentQ.id] || (currentQ.jenis === 'PG' ? null : []);
+
+   // Render Opsi Jawaban
+   const renderOptions = (q) => {
+    return q.opsi.map(opt => {
+     let isChecked = false;
+     if (q.jenis === 'PG') {
+      isChecked = userSelectedAnswers === opt.key;
+     } else if (q.jenis === 'Multi-Select') {
+      isChecked = userSelectedAnswers.includes(opt.key);
+     }
+
+     const inputType = q.jenis === 'PG' ? 'radio' : 'checkbox';
+     const nameAttr = q.jenis === 'PG' ? 'answer' : `answer-${q.id}`;
+
+     // Menggunakan div untuk text, MathJax akan merender isinya
+     return `
+<label class="flex items-start p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50 transition duration-150 ${isChecked ? 'bg-blue-100 border-blue-500' : ''}">
+<input type="${inputType}" name="${nameAttr}" value="${opt.key}" 
+${isChecked ? 'checked' : ''}
+data-question-id="${q.id}"
+data-q-type="${q.jenis}"
+class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500"
+onchange="handleAnswerChange(this)">
+<div class="ml-3 text-sm font-medium text-gray-800">
+<!-- <span class="font-bold mr-2">${opt.key}.</span> -->
+<span>${opt.text}</span>
+</div>
+</label>
+`;
+    }).join('');
+   };
+
+   // Render Navigasi Soal
+   const renderNavigation = () => {
+    return appState.examQuestions.map((q, index) => {
+     const isCurrent = index === appState.currentQuestionIndex;
+     const isAnswered = !!appState.userAnswers[q.id] &&
+      (Array.isArray(appState.userAnswers[q.id]) ? appState.userAnswers[q.id].length > 0 : appState.userAnswers[q.id] !== null);
+
+     let bgClass = 'bg-gray-100 text-gray-500 hover:bg-gray-200';
+     if (isAnswered) {
+      bgClass = 'bg-green-500 text-white hover:bg-green-600';
+     }
+     if (isCurrent) {
+      bgClass = 'text-white bg-blue-600 hover:bg-blue-700 transition duration-150 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg ring-4 ring-blue-300';
+     }
+
+     return `
+<button onclick="goToQuestion(${index})"pt-3 class=" rounded-full text-xs transition duration-150 ${bgClass}">
+${index + 1}
+</button>
+`;
+    }).join('');
+   };
+
+   return `
+<div class="flex flex-col md:flex-row gap-6">
+<!-- Sidebar Navigasi dan Timer -->
+<div class="md:w-1/3 space-y-6">
+<div id="timerBox" class="p-4 rounded-xl border-2 container-box text-center transition duration-500">
+<p class="text-sm font-medium text-gray-500">Sisa Waktu</p>
+<div id="timerDisplay" class="text-4xl font-extrabold text-blue-600 mt-1">30:00</div>
+</div>
+
+<div class="p-4 container-box rounded-xl">
+<h3 class="text-lg font-bold text-gray-800 mb-4">Navigasi Soal (1 - ${total})</h3>
+<div class="grid grid-cols-5 gap-3">
+${renderNavigation()}
+</div>
+<!-- <button onclick="confirmFinishExam()" class="mt-6 w-full py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-150 shadow-md">
+SELESAI UJIAN
+</button> -->
+</div>
+</div>
+
+<!-- Area Konten Soal -->
+<div class="md:w-3/4 p-6 container-box rounded-xl space-y-6">
+<div class="border-b pb-4 mb-4">
+<h2 class="text-2xl font-bold text-gray-800">Soal No. ${appState.currentQuestionIndex + 1} dari ${total}</h2>
+<p class="text-sm text-gray-500 mt-1">Materi: ${currentQ.materi} 
+<!-- | Kognitif: ${currentQ.kognitif} -->
+</p>
+</div>
+
+<!-- Teks Soal - MathJax akan merender konten ini -->
+<div id="questionText" class="text-lg text-gray-800 leading-relaxed p-4 bg-gray-50 rounded-lg border">
+${currentQ.teks}
+</div>
+
+<!-- Opsi Jawaban - MathJax akan merender konten ini -->
+<div id="optionsContainer" class="space-y-3">
+${renderOptions(currentQ)}
+</div>
+
+<!-- Tombol Navigasi Soal -->
+<div class="flex justify-between pt-4 border-t mt-6">
+<button onclick="previousQuestion()" 
+class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-full hover:bg-gray-300 transition duration-150 ${appState.currentQuestionIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}">
+<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+</svg>
+</button>
+<button onclick="nextQuestion()" 
+class="px-6 py-3 border-transparent shadow-md text-white bg-blue-600 hover:bg-blue-700 transition duration-150 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-4 py-2.5 text-center leading-5 ${appState.currentQuestionIndex === total - 1 ? 'opacity-50 cursor-not-allowed' : ''}">
+<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+</svg>
+</button>
+<button onclick="confirmFinishExam()" class="w-1/3 py-3 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-full font-semibold px-4 py-2.5 text-center leading-5">
+SUBMIT
+</button>
+</div>
+</div>
+</div>
+`;
+  }
+
+  function renderResultPage() {
+   const score = calculateScore();
+   const { deskripsi, motivasi } = getFeedback(score);
+   const user = appState.user;
+
+   const statusText = {
+    'time_up': 'Waktu Habis',
+    'manual_finish': 'Selesai Manual',
+    'focus_loss': 'Diakhiri Karena Pelanggaran',
+    'abandoned': 'Diakhiri Karena Pelanggaran'
+   };
+   const statusClass = appState.examFinishedStatus === 'focus_loss' || appState.examFinishedStatus === 'abandoned' ? 'text-red-600' : 'text-green-600';
+
+   return `
+<div class="max-w-xl mx-auto mt-10 p-8 container-box rounded-xl text-center">
+<h1 class="text-4xl font-extrabold text-blue-700 mb-2">Laporan Hasil Ujian</h1>
+<p class="text-md ${statusClass} font-semibold mb-6">Status: ${statusText[appState.examFinishedStatus] || 'Selesai'}</p>
+
+<div class="space-y-4 mb-8 text-gray-700">
+<p class="text-lg"><strong>Nama:</strong> ${user.nama}</p>
+<p class="text-lg"><strong>Kelas:</strong> ${user.kelas}</p>
+</div>
+
+<div class="p-6 bg-blue-50 border-4 border-blue-200 rounded-xl mb-8">
+<p class="text-2xl font-bold text-gray-800">Skor Akhir</p>
+<p class="text-7xl font-extrabold text-blue-600 my-3">${score}</p>
+<p class="text-xl font-bold ${score >= 80 ? 'text-green-600' : score >= 60 ? 'text-yellow-600' : 'text-red-600'}">${deskripsi}</p>
+</div>
+
+<div class="p-4 bg-yellow-50 rounded-lg text-gray-800 italic border border-yellow-300">
+"${motivasi}"
+</div>
+
+<p class="text-sm text-gray-500 mt-4">Hasil ini telah dicatat secara otomatis.</p>
+
+
+<button onclick="resetApp()" class="mt-8 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition duration-150 shadow-md">
+Kembali ke Login
+</button>
+</div>
+`;
+  }
+
+
+  // --- FUNCTIONALITY HANDLERS ---
+
+  function handleLogin(event) {
+   event.preventDefault();
+   const form = event.target;
+   const nama = form.nama.value;
+   const kelas = form.kelas.value;
+   const username = form.username.value;
+   const password = form.password.value;
+   const errorElement = document.getElementById('loginError');
+
+   const foundUser = userData.find(u =>
+    u.nama === nama &&
+    u.kelas === kelas &&
+    u.username === username &&
+    u.password === password
+   );
+
+   if (foundUser) {
+    appState.isAuthenticated = true;
+    appState.user = { nama, kelas, username };
+    errorElement.classList.add('hidden');
+    generateExamQuestions();
+    appState.currentPage = 'exam';
+    render();
+   } else {
+    errorElement.textContent = 'Kredensial tidak valid. Silakan isi dengan benar.';
+    errorElement.classList.remove('hidden');
+   }
+  }
+
+  function initExamPage() {
+   document.getElementById('loginForm')?.removeEventListener('submit', handleLogin);
+   document.getElementById('loginForm')?.removeEventListener('submit', handleLogin);
+   document.getElementById('loginForm')?.addEventListener('submit', handleLogin);
+
+   if (appState.timerInterval) {
+    clearInterval(appState.timerInterval);
+   }
+   appState.timer = APP_CONFIG.alokasiWaktuMenit * 60;
+   updateTimerDisplay();
+   appState.timerInterval = setInterval(updateTimer, 1000);
+
+   // Atur event listener untuk pencegahan kecurangan (Focus Loss)
+   window.addEventListener('blur', handleFocusLoss);
+   // Menonaktifkan right click di halaman ujian
+   document.addEventListener('contextmenu', preventRightClick);
+   // Menangkap event F12 atau Ctrl/Cmd+Shift+I (meskipun tidak sempurna)
+   window.addEventListener('keydown', preventDevTools);
+  }
+
+  function updateTimer() {
+   if (appState.timer > 0) {
+    appState.timer--;
+    updateTimerDisplay();
+   } else {
+    clearInterval(appState.timerInterval);
+    appState.examFinishedStatus = 'time_up';
+    // Panggil endExam asinkron
+    endExam();
+   }
+  }
+
+  function updateTimerDisplay() {
+   const minutes = Math.floor(appState.timer / 60);
+   const seconds = appState.timer % 60;
+   const display = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+   const timerDisplay = document.getElementById('timerDisplay');
+   const timerBox = document.getElementById('timerBox');
+
+   if (timerDisplay) {
+    timerDisplay.textContent = display;
+
+    // Peringatan 5 menit terakhir
+    if (appState.timer <= 300) {
+     timerBox.classList.add('timer-danger');
+     timerDisplay.classList.remove('text-blue-600');
+    } else {
+     timerBox.classList.remove('timer-danger');
+     timerDisplay.classList.add('text-blue-600');
+    }
+   }
+
+   // Render ulang navigasi untuk update status terjawab
+   const navContainer = document.querySelector('.grid.grid-cols-5');
+   if (navContainer) {
+    navContainer.innerHTML = appState.examQuestions.map((q, index) => {
+     const isCurrent = index === appState.currentQuestionIndex;
+     const isAnswered = !!appState.userAnswers[q.id] &&
+      (Array.isArray(appState.userAnswers[q.id]) ? appState.userAnswers[q.id].length > 0 : appState.userAnswers[q.id] !== null);
+
+     let bgClass = 'bg-gray-100 text-gray-600 hover:bg-gray-200';
+     if (isAnswered) {
+      bgClass = 'bg-green-500 text-white hover:bg-green-600';
+     }
+     if (isCurrent) {
+      bgClass = 'bg-blue-600 text-white shadow-lg ring-4 ring-blue-300';
+     }
+
+     return `
+<button onclick="goToQuestion(${index})" class="p-3 rounded-lg text-sm font-semibold transition duration-150 ${bgClass}">
+${index + 1}
+</button>
+`;
+    }).join('');
+   }
+
+  }
+
+  function handleAnswerChange(input) {
+   const questionId = parseInt(input.getAttribute('data-question-id'));
+   const qType = input.getAttribute('data-q-type');
+   const value = input.value;
+
+   if (qType === 'PG') {
+    // Pilihan Ganda: hanya satu jawaban
+    appState.userAnswers[questionId] = value;
+   } else if (qType === 'Multi-Select') {
+    // Multi-Select: bisa lebih dari satu jawaban
+    let currentAnswers = appState.userAnswers[questionId] || [];
+    if (input.checked) {
+     if (!currentAnswers.includes(value)) {
+      currentAnswers.push(value);
+     }
+    } else {
+     currentAnswers = currentAnswers.filter(ans => ans !== value);
+    }
+    appState.userAnswers[questionId] = currentAnswers;
+   }
+
+   // Simpan null jika Multi-Select tidak memiliki jawaban (untuk status navigasi)
+   if (qType === 'Multi-Select' && appState.userAnswers[questionId].length === 0) {
+    appState.userAnswers[questionId] = null;
+   }
+
+   updateTimerDisplay(); // Update navigasi status terjawab
+  }
+
+  function goToQuestion(index) {
+   if (index >= 0 && index < appState.examQuestions.length) {
+    appState.currentQuestionIndex = index;
+    render();
+   }
+  }
+
+  function previousQuestion() {
+   if (appState.currentQuestionIndex > 0) {
+    appState.currentQuestionIndex--;
+    render();
+   }
+  }
+
+  function nextQuestion() {
+   if (appState.currentQuestionIndex < appState.examQuestions.length - 1) {
+    appState.currentQuestionIndex++;
+    render();
+   }
+  }
+
+  function confirmFinishExam() {
+   // Menggunakan modal kustom untuk konfirmasi
+   showCustomAlert({
+    title: "Konfirmasi Selesai Ujian",
+    message: "Apakah Anda yakin ingin mengakhiri ujian sekarang? Waktu yang tersisa akan hangus.",
+    confirmText: "Ya, Selesaikan Ujian",
+    cancelText: "Tidak, Lanjutkan",
+    onConfirm: async () => { // Mengubah menjadi async
+     appState.examFinishedStatus = 'manual_finish';
+     await endExam(); // Menunggu proses penyimpanan data
+    },
+    onCancel: closeAlert
+   });
+  }
+
+  /** Fungsi utama untuk mengakhiri ujian dan menyimpan data */
+  async function endExam() {
+   // Hapus semua event listener kecurangan
+   window.removeEventListener('blur', handleFocusLoss);
+  //  document.removeEventListener('contextmenu', preventRightClick);
+   window.removeEventListener('keydown', preventDevTools);
+
+   if (appState.timerInterval) {
+    clearInterval(appState.timerInterval);
+   }
+
+   // 1. Hitung Skor Akhir
+   const finalScore = calculateScore();
+
+   // 2. Simpan Data ke Google Sheets (proses asinkron)
+   await saveResultToSheets(appState.user, finalScore);
+
+   // 3. Transisi ke halaman hasil
+   appState.currentPage = 'result';
+   render();
+  }
+
+  function calculateScore() {
+   let correctCount = 0;
+   const totalQuestions = appState.examQuestions.length;
+   const scorePerQuestion = 100 / totalQuestions;
+
+   appState.examQuestions.forEach(q => {
+    const userAnswer = appState.userAnswers[q.id];
+    const correctAnswer = q.kunci;
+
+    let isCorrect = false;
+
+    if (q.jenis === 'PG') {
+     // PG: Bandingkan jawaban tunggal
+     isCorrect = userAnswer && (userAnswer === correctAnswer[0]);
+    } else if (q.jenis === 'Multi-Select') {
+     // Multi-Select: Bandingkan array jawaban (harus sama persis)
+     if (Array.isArray(userAnswer) && userAnswer.length === correctAnswer.length) {
+      isCorrect = userAnswer.every(ans => correctAnswer.includes(ans)) &&
+       correctAnswer.every(ans => userAnswer.includes(ans));
+     }
+    }
+
+    if (isCorrect) {
+     correctCount++;
+    }
+   });
+
+   return Math.round(correctCount * scorePerQuestion);
+  }
+
+  function getFeedback(score) {
+   let deskripsi = '';
+   let motivasi = '';
+
+   if (score >= 90) {
+    deskripsi = "Sangat Baik Sekali";
+    motivasi = "Hasil yang luar biasa! Pertahankan semangat belajar yang tinggi dan terus jelajahi tantangan matematika yang lebih kompleks.";
+   } else if (score >= 80) {
+    deskripsi = "Baik Sekali";
+    motivasi = "Performa yang sangat kuat! Anda memiliki pemahaman yang solid. Sedikit fokus lagi akan membawa Anda ke puncak prestasi!";
+   } else if (score >= 70) {
+    deskripsi = "Baik";
+    motivasi = "Hasil yang bagus! Anda sudah berada di jalur yang benar. Identifikasi area yang kurang kuat dan latih kembali konsep-konsep tersebut.";
+   } else if (score >= 60) {
+    deskripsi = "Cukup";
+    motivasi = "Perlu Peningkatan. Analisis kembali bagian mana yang kurang kuat dan latih kembali konsep-konsep tersebut. Setiap kesalahan adalah kesempatan untuk belajar lebih cerdas.";
+   } else {
+    deskripsi = "Perlu Peningkatan Drastis";
+    motivasi = "Ini adalah awal, bukan akhir. Gunakan hasil ini sebagai peta jalan untuk belajar lebih efektif. Ingat, kegagalan adalah kesempatan untuk memulai lagi dengan lebih cerdas.";
+   }
+
+   return { deskripsi, motivasi };
+  }
+
+  function resetApp() {
+   appState.currentPage = 'login';
+   appState.isAuthenticated = false;
+   appState.user = null;
+   appState.examQuestions = [];
+   appState.userAnswers = {};
+   appState.currentQuestionIndex = 0;
+   appState.timer = APP_CONFIG.alokasiWaktuMenit * 60;
+   appState.examFinishedStatus = null;
+   render();
+  }
+
+  // --- PENCEGAHAN KECURANGAN (Focus Loss) ---
+
+  function handleFocusLoss() {
+   if (appState.currentPage === 'exam' && appState.timerInterval) {
+    // Stop timer
+    clearInterval(appState.timerInterval);
+    appState.timerInterval = null;
+    appState.examFinishedStatus = 'focus_loss';
+
+    //  onConfirm: async () => { // Mengubah menjadi async
+      endExam(); // Menunggu proses penyimpanan data
+    //  }
+
+    // Tampilkan alert kustom
+    showCustomAlert({
+     title: "Ujian Diakhiri",
+     message: "Ujian diakhiri karena Anda keluar dari halaman ujian (Focus Loss/Pindah Tab). Ini melanggar aturan integritas ujian.",
+     confirmText: "Lanjutkan",
+     onConfirm: async () => { // Mengubah menjadi async
+      await endExam(); // Menunggu proses penyimpanan data
+     }
+    });
+   }
+  }
+
+  // Pencegahan klik kanan
+  function preventRightClick(e) {
+   e.preventDefault();
+  }
+
+  // Pencegahan DevTools (tidak sempurna, tapi mengurangi risiko)
+  function preventDevTools(e) {
+   if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.altKey && e.key === 'I')) {
+    e.preventDefault();
+    showCustomAlert({
+     title: "Peringatan Keamanan",
+     message: "Penggunaan alat pengembang (DevTools) dilarang selama ujian berlangsung.",
+     confirmText: "Tutup"
+    });
+   }
+  }
+
+  // --- Custom Alert Implementation (Pengganti alert()) ---
+
+  function showCustomAlert({ title, message, confirmText = 'OK', cancelText = null, onConfirm = closeAlert, onCancel = null }) {
+   const modal = document.getElementById('alertModal');
+   document.getElementById('alertTitle').textContent = title;
+   document.getElementById('alertMessage').textContent = message;
+
+   let confirmButton = modal.querySelector('button:last-child');
+   confirmButton.textContent = confirmText;
+   confirmButton.onclick = () => { onConfirm(); closeAlert(); }; // Note: onConfirm should handle its own endExam logic if needed
+
+   // Handle optional cancel button
+   let cancelButton = modal.querySelector('button[data-cancel]');
+   if (!cancelButton) {
+    // Create cancel button if not exists
+    cancelButton = document.createElement('button');
+    cancelButton.setAttribute('data-cancel', 'true');
+    cancelButton.className = 'px-4 py-2 mr-3 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150';
+    modal.querySelector('.flex.justify-end').prepend(cancelButton);
+   }
+
+   if (cancelText) {
+    cancelButton.textContent = cancelText;
+    cancelButton.onclick = () => { if (onCancel) onCancel(); closeAlert(); };
+    cancelButton.classList.remove('hidden');
+   } else {
+    cancelButton.classList.add('hidden');
+   }
+
+   modal.classList.remove('invisible', 'opacity-0');
+   modal.classList.add('visible', 'opacity-100');
+  }
+
+  function closeAlert() {
+   const modal = document.getElementById('alertModal');
+   modal.classList.remove('visible', 'opacity-100');
+   modal.classList.add('invisible', 'opacity-0');
+  }
+
+  // Khusus untuk tombol Lanjutkan ke Hasil dari Focus Loss alert
+  async function closeAlertAndEndExam() {
+   closeAlert();
+   await endExam();
+  }
+
+
+  // --- INITIALIZATION ---
+  document.addEventListener('DOMContentLoaded', () => {
+   document.getElementById('app').addEventListener('submit', function (e) {
+    if (e.target.id === 'loginForm') {
+     handleLogin(e);
+    }
+   });
+   render();
+  });
+ </script>
+
+<!-- <script>
+  
+function fillDemo(){
+  // helper untuk demo — isi user Ade
+  document.getElementById('nama').value = 'Adi';
+  document.getElementById('kelas').value = 'XII.2';
+  document.getElementById('username').value = '01';
+  document.getElementById('password').value = 'siap';
+}
+</script> -->
+
+<script>
+  const userData = [
+  {
+    nama: "ADI RAPI HARYATA",
+    kelas: "XII.2",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "AIGIS PANI PUTRI",
+    kelas: "XII.2",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "ALDEBARAN GYMNASTIAR RIDANI",
+    kelas: "XII.2",
+    username: "03",
+    password: "Si4p",
+  },
+  { nama: "ALDI JUMHADI", kelas: "XII.2", username: "04", password: "Si4p" },
+  {
+    nama: "ALYA DWI MIRANTI",
+    kelas: "XII.2",
+    username: "05",
+    password: "Si4p",
+  },
+  {
+    nama: "AZKA HABIBURRAHMAN SUWARNO",
+    kelas: "XII.2",
+    username: "06",
+    password: "Si4p",
+  },
+  {
+    nama: "CISEL MARSYA AUDINA",
+    kelas: "XII.2",
+    username: "07",
+    password: "Si4p",
+  },
+  {
+    nama: "DAVIA PUTRI FAISYA",
+    kelas: "XII.2",
+    username: "08",
+    password: "Si4p",
+  },
+  {
+    nama: "DEDE SRI NURJANAH",
+    kelas: "XII.2",
+    username: "09",
+    password: "Si4p",
+  },
+  {
+    nama: "DENIS SETYA ERVANSYAH",
+    kelas: "XII.2",
+    username: "10",
+    password: "Si4p",
+  },
+  {
+    nama: "FABIAN ARVIANDRA RAFIF",
+    kelas: "XII.2",
+    username: "11",
+    password: "Si4p",
+  },
+  {
+    nama: "FAHRI AKBAR MAJID AL-AFGANI",
+    kelas: "XII.2",
+    username: "12",
+    password: "Si4p",
+  },
+  {
+    nama: "FAIZ INDRAWAN YUSUF",
+    kelas: "XII.2",
+    username: "13",
+    password: "Si4p",
+  },
+  {
+    nama: "FAUGI RAMDAN INDRA LESMANA",
+    kelas: "XII.2",
+    username: "14",
+    password: "Si4p",
+  },
+  {
+    nama: "FAWWAZ ADHA KURNIAWAN",
+    kelas: "XII.2",
+    username: "15",
+    password: "Si4p",
+  },
+  {
+    nama: "IRA NURUL HIKMAH",
+    kelas: "XII.2",
+    username: "16",
+    password: "Si4p",
+  },
+  { nama: "JAVIER AL-HABSY", kelas: "XII.2", username: "17", password: "Si4p" },
+  {
+    nama: "KEYSHA ARDANA DEWIYANTI",
+    kelas: "XII.2",
+    username: "18",
+    password: "Si4p",
+  },
+  {
+    nama: "M. FATHAN MUBINA",
+    kelas: "XII.2",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD FAIZ ALGANI",
+    kelas: "XII.2",
+    username: "20",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD RIDHO RAYHAN",
+    kelas: "XII.2",
+    username: "21",
+    password: "Si4p",
+  },
+  { nama: "NADZIVA GHALBIA", kelas: "XII.2", username: "22", password: "Si4p" },
+  {
+    nama: "NASEY KLISTCO HARDIANTO",
+    kelas: "XII.2",
+    username: "23",
+    password: "Si4p",
+  },
+  { nama: "NAYLA ZAHRA", kelas: "XII.2", username: "24", password: "Si4p" },
+  { nama: "NIZAR IRWANSYAH", kelas: "XII.2", username: "25", password: "Si4p" },
+  {
+    nama: "QUEENA RAISSYA ISLAMI",
+    kelas: "XII.2",
+    username: "26",
+    password: "Si4p",
+  },
+  {
+    nama: "RAKHA FAUZAN KAMIL",
+    kelas: "XII.2",
+    username: "27",
+    password: "Si4p",
+  },
+  {
+    nama: "REGINA HAURANASHEHA ADYTYA",
+    kelas: "XII.2",
+    username: "28",
+    password: "Si4p",
+  },
+  {
+    nama: "REVA ZALFA MUMTAZAH",
+    kelas: "XII.2",
+    username: "29",
+    password: "Si4p",
+  },
+  {
+    nama: "RYUKEN ADEO LOUHENAPESSY",
+    kelas: "XII.2",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "SHEILA QORIFANY FAIRUZ",
+    kelas: "XII.2",
+    username: "31",
+    password: "Si4p",
+  },
+  { nama: "SHOFIA AFIFA", kelas: "XII.2", username: "32", password: "Si4p" },
+  {
+    nama: "TIDAR TOGAR PERDANA PURBA",
+    kelas: "XII.2",
+    username: "33",
+    password: "Si4p",
+  },
+  {
+    nama: "TRIANI HERINA DEWI",
+    kelas: "XII.2",
+    username: "34",
+    password: "Si4p",
+  },
+  {
+    nama: "ZADA ZANETA MAHARDIKA",
+    kelas: "XII.2",
+    username: "35",
+    password: "Si4p",
+  },
+  {
+    nama: "ADHAM SOHIBUL WAFA",
+    kelas: "XII.3",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "ADLY RIZKY RAMDAN",
+    kelas: "XII.3",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "ALDESTA FAZHRIELANI",
+    kelas: "XII.3",
+    username: "03",
+    password: "Si4p",
+  },
+  {
+    nama: "ALIYYA SULISTIA ROHMAH",
+    kelas: "XII.3",
+    username: "04",
+    password: "Si4p",
+  },
+  {
+    nama: "ARDIAN PURNAMA PUTRA",
+    kelas: "XII.3",
+    username: "05",
+    password: "Si4p",
+  },
+  {
+    nama: "AREEJA NISA AFFANDIE",
+    kelas: "XII.3",
+    username: "06",
+    password: "Si4p",
+  },
+  { nama: "AULIA MAULIDINA", kelas: "XII.3", username: "07", password: "Si4p" },
+  {
+    nama: "BASTIAN MADHANI BACHTIAR",
+    kelas: "XII.3",
+    username: "08",
+    password: "Si4p",
+  },
+  {
+    nama: "CANTIKA FREDELLA MEILANA PUTRI",
+    kelas: "XII.3",
+    username: "09",
+    password: "Si4p",
+  },
+  {
+    nama: "DIKY PUTRA NURSYAMSI",
+    kelas: "XII.3",
+    username: "10",
+    password: "Si4p",
+  },
+  { nama: "ESTY DEWI YANTI", kelas: "XII.3", username: "11", password: "Si4p" },
+  {
+    nama: "FADLAN RHAMADHAN CATUR DETA",
+    kelas: "XII.3",
+    username: "12",
+    password: "Si4p",
+  },
+  { nama: "FAISAL MAULANA", kelas: "XII.3", username: "13", password: "Si4p" },
+  { nama: "FARRIJ RAMADHAN", kelas: "XII.3", username: "14", password: "Si4p" },
+  { nama: "JULIA KUSMAWATI", kelas: "XII.3", username: "15", password: "Si4p" },
+  { nama: "KAMIL SURIAHADE", kelas: "XII.3", username: "16", password: "Si4p" },
+  {
+    nama: "MERCIFUL L. TOBING",
+    kelas: "XII.3",
+    username: "17",
+    password: "Si4p",
+  },
+  {
+    nama: "MOCH. RIDHO SATYA WIGUNA",
+    kelas: "XII.3",
+    username: "18",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMMAD ADLY ABDILLAH",
+    kelas: "XII.3",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMMAD FARHAN AL GHIFARI",
+    kelas: "XII.3",
+    username: "20",
+    password: "Si4p",
+  },
+  {
+    nama: "NAJMA AULIYA FATHIMA ZAHRA",
+    kelas: "XII.3",
+    username: "21",
+    password: "Si4p",
+  },
+  {
+    nama: "NISRINA SHOLHA SALSABILA",
+    kelas: "XII.3",
+    username: "22",
+    password: "Si4p",
+  },
+  {
+    nama: "NIV HADAYA MUFIDA KUSNARI",
+    kelas: "XII.3",
+    username: "23",
+    password: "Si4p",
+  },
+  {
+    nama: "OKTAVILLA DWI REVIANSYAH FADILLAH",
+    kelas: "XII.3",
+    username: "24",
+    password: "Si4p",
+  },
+  {
+    nama: "RAISYA DWI PUTRI PURWANA",
+    kelas: "XII.3",
+    username: "25",
+    password: "Si4p",
+  },
+  { nama: "ROMI ANDIKA", kelas: "XII.3", username: "26", password: "Si4p" },
+  {
+    nama: "SALSABILA AIRA ZAHRA",
+    kelas: "XII.3",
+    username: "27",
+    password: "Si4p",
+  },
+  {
+    nama: "SANJA FATHURRAHMAN",
+    kelas: "XII.3",
+    username: "28",
+    password: "Si4p",
+  },
+  {
+    nama: "SITI FAIRUZ NUR AZIZAH",
+    kelas: "XII.3",
+    username: "29",
+    password: "Si4p",
+  },
+  {
+    nama: "SITI ZAFIRAH ALFAH",
+    kelas: "XII.3",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "TRI ADIBAH NURFITRIANI",
+    kelas: "XII.3",
+    username: "31",
+    password: "Si4p",
+  },
+  {
+    nama: "UJANG KIKI (VIANDRA KAYSAN SABIQ)",
+    kelas: "XII.3",
+    username: "32",
+    password: "Si4p",
+  },
+  {
+    nama: "VELIKA LARIZA YUNUS",
+    kelas: "XII.3",
+    username: "33",
+    password: "Si4p",
+  },
+  { nama: "VIRNA YULIANI", kelas: "XII.3", username: "34", password: "Si4p" },
+  { nama: "WISNU BAGASKARA", kelas: "XII.3", username: "35", password: "Si4p" },
+  {
+    nama: "ZIDAN FATUROHMAN",
+    kelas: "XII.3",
+    username: "36",
+    password: "Si4p",
+  },
+  {
+    nama: "AMMARA NAFIA RAMADHANI",
+    kelas: "XII.6",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "ANNTIQA KEWINING PUTIH",
+    kelas: "XII.6",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "ARGYA AL FAIRUZ MICHAELA",
+    kelas: "XII.6",
+    username: "03",
+    password: "Si4p",
+  },
+  { nama: "DEDE SUPRIADI", kelas: "XII.6", username: "04", password: "Si4p" },
+  { nama: "DESI FITRIA", kelas: "XII.6", username: "05", password: "Si4p" },
+  {
+    nama: "DIAZ GHAZA AL GHOZALI",
+    kelas: "XII.6",
+    username: "06",
+    password: "Si4p",
+  },
+  {
+    nama: "DZAKWAN DAFFA ANASHSHOR",
+    kelas: "XII.6",
+    username: "07",
+    password: "Si4p",
+  },
+  {
+    nama: "FALLEVA ADZRA MAHENDRA",
+    kelas: "XII.6",
+    username: "08",
+    password: "Si4p",
+  },
+  {
+    nama: "IRFAN MUZAKKI RIZKILLAH",
+    kelas: "XII.6",
+    username: "09",
+    password: "Si4p",
+  },
+  {
+    nama: "MIRACLE GLORY PASARIBU",
+    kelas: "XII.6",
+    username: "10",
+    password: "Si4p",
+  },
+  {
+    nama: "MOCH FAIZJ ASY ARI",
+    kelas: "XII.6",
+    username: "11",
+    password: "Si4p",
+  },
+  { nama: "MUHAMMAD IKHSAN", kelas: "XII.6", username: "12", password: "Si4p" },
+  {
+    nama: "MUHAMMAD SALMAN HABIBULLOH",
+    kelas: "XII.6",
+    username: "13",
+    password: "Si4p",
+  },
+  { nama: "NABILA KIBTIAH", kelas: "XII.6", username: "14", password: "Si4p" },
+  {
+    nama: "NAJWA SITI FAJRIYAH",
+    kelas: "XII.6",
+    username: "15",
+    password: "Si4p",
+  },
+  {
+    nama: "NAUFAL YUDDHA PRAKASA HIDAYAT",
+    kelas: "XII.6",
+    username: "16",
+    password: "Si4p",
+  },
+  {
+    nama: "NAURA ZAHRA TUSYITA",
+    kelas: "XII.6",
+    username: "17",
+    password: "Si4p",
+  },
+  { nama: "NAYLA KHALISAH", kelas: "XII.6", username: "18", password: "Si4p" },
+  {
+    nama: "NAZWA AULIA HAMDANI",
+    kelas: "XII.6",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "NURNAINAH PERTIWI",
+    kelas: "XII.6",
+    username: "20",
+    password: "Si4p",
+  },
+  { nama: "RAYZIDAN REISA", kelas: "XII.6", username: "21", password: "Si4p" },
+  {
+    nama: "REHAN BINTANG NUGRAHA",
+    kelas: "XII.6",
+    username: "22",
+    password: "Si4p",
+  },
+  {
+    nama: "REHAN MUHAMMAD RAMADHAN",
+    kelas: "XII.6",
+    username: "23",
+    password: "Si4p",
+  },
+  {
+    nama: "REINHAD DAITO BERUTU",
+    kelas: "XII.6",
+    username: "24",
+    password: "Si4p",
+  },
+  { nama: "REVA AVIANI", kelas: "XII.6", username: "25", password: "Si4p" },
+  {
+    nama: "REVELOVE LITUHAYU TEDEZXA",
+    kelas: "XII.6",
+    username: "26",
+    password: "Si4p",
+  },
+  {
+    nama: "RIZKY NUGRAHA WIJAYA",
+    kelas: "XII.6",
+    username: "27",
+    password: "Si4p",
+  },
+  {
+    nama: "RIZQI FADHYL SURYANA",
+    kelas: "XII.6",
+    username: "28",
+    password: "Si4p",
+  },
+  {
+    nama: "SALMA SALVIA SANTOSA",
+    kelas: "XII.6",
+    username: "29",
+    password: "Si4p",
+  },
+  {
+    nama: "SINTA PURNAMASARI",
+    kelas: "XII.6",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "SRI YULI NURFAISAROH",
+    kelas: "XII.6",
+    username: "31",
+    password: "Si4p",
+  },
+  { nama: "SUCI ANNISA", kelas: "XII.6", username: "32", password: "Si4p" },
+  {
+    nama: "WINDI SILVIA SARI",
+    kelas: "XII.6",
+    username: "33",
+    password: "Si4p",
+  },
+  {
+    nama: "YISAN NUR'AINI",
+    kelas: "XII.6",
+    username: "34",
+    password: "Si4p",
+  },
+  {
+    nama: "ZHAREFA NAFISA AZ- ZAHRA",
+    kelas: "XII.6",
+    username: "35",
+    password: "Si4p",
+  },
+  {
+    nama: "ADAM MU'ADZ KHOIRUDDIN",
+    kelas: "XII.7",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "ALFREDO PIRLO SIHOMBING",
+    kelas: "XII.7",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "ANDHIKA NAUFAL FADLULRAHMAN",
+    kelas: "XII.7",
+    username: "03",
+    password: "Si4p",
+  },
+  {
+    nama: "ATHALLAH RABBANI AL FATH",
+    kelas: "XII.7",
+    username: "04",
+    password: "Si4p",
+  },
+  {
+    nama: "AVIGNAM JAGATSAMAGRAM",
+    kelas: "XII.7",
+    username: "05",
+    password: "Si4p",
+  },
+  {
+    nama: "BILLY ZAHRAN ZAIDAN",
+    kelas: "XII.7",
+    username: "06",
+    password: "Si4p",
+  },
+  { nama: "BIMA HANDIKA", kelas: "XII.7", username: "07", password: "Si4p" },
+  {
+    nama: "DAVID ALVIN ANGELLO",
+    kelas: "XII.7",
+    username: "08",
+    password: "Si4p",
+  },
+  {
+    nama: "DIDA WIDYA PURNAMA",
+    kelas: "XII.7",
+    username: "09",
+    password: "Si4p",
+  },
+  { nama: "FEBY AGUS DIANA", kelas: "XII.7", username: "10", password: "Si4p" },
+  { nama: "GILANG RAMADHAN", kelas: "XII.7", username: "11", password: "Si4p" },
+  {
+    nama: "GOODMAN SIHOMBING",
+    kelas: "XII.7",
+    username: "12",
+    password: "Si4p",
+  },
+  { nama: "HENGKI PRATAMA", kelas: "XII.7", username: "13", password: "Si4p" },
+  {
+    nama: "HIZKIA SARAEL HUTAGALUNG",
+    kelas: "XII.7",
+    username: "14",
+    password: "Si4p",
+  },
+  {
+    nama: "ICHLASUL AMAL LAUH MAHFUZ",
+    kelas: "XII.7",
+    username: "15",
+    password: "Si4p",
+  },
+  {
+    nama: "IHSAN MAULANA SUKMA",
+    kelas: "XII.7",
+    username: "16",
+    password: "Si4p",
+  },
+  {
+    nama: "LEANDER MARCELLIO",
+    kelas: "XII.7",
+    username: "17",
+    password: "Si4p",
+  },
+  {
+    nama: "M. EXCELLEN FREDERICK. A",
+    kelas: "XII.7",
+    username: "18",
+    password: "Si4p",
+  },
+  {
+    nama: "MOCH. ANDHIKA PUTRA B.",
+    kelas: "XII.7",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD ANDRA AZRUL AZHAN",
+    kelas: "XII.7",
+    username: "20",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD FATHYARDI",
+    kelas: "XII.7",
+    username: "21",
+    password: "Si4p",
+  },
+  { nama: "MUHAMAD SAMSURI", kelas: "XII.7", username: "22", password: "Si4p" },
+  {
+    nama: "MUHAMMAD ADZKA AL FARIZI",
+    kelas: "XII.7",
+    username: "23",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMMAD FATHAN AR-ROYYAN",
+    kelas: "XII.7",
+    username: "24",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMMAD RAMADHANA ALGHIFARI",
+    kelas: "XII.7",
+    username: "25",
+    password: "Si4p",
+  },
+  { nama: "MUHAMMAD RAYYAN", kelas: "XII.7", username: "26", password: "Si4p" },
+  {
+    nama: "MUHAMMAD ZACKY ATHAILLAH",
+    kelas: "XII.7",
+    username: "27",
+    password: "Si4p",
+  },
+  {
+    nama: "NEZAR NUR RAMDANI",
+    kelas: "XII.7",
+    username: "28",
+    password: "Si4p",
+  },
+  { nama: "OPIK TAUFIK", kelas: "XII.7", username: "29", password: "Si4p" },
+  {
+    nama: "RAFFI AKBAR WAHYU RAMDHANI",
+    kelas: "XII.7",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "REYFAN RESTU PUTRA",
+    kelas: "XII.7",
+    username: "31",
+    password: "Si4p",
+  },
+  { nama: "REZA ADITIA", kelas: "XII.7", username: "32", password: "Si4p" },
+  {
+    nama: "RIZQY ALISTIA PUTRA",
+    kelas: "XII.7",
+    username: "33",
+    password: "Si4p",
+  },
+  {
+    nama: "RULI ANDRA DINAKA",
+    kelas: "XII.7",
+    username: "34",
+    password: "Si4p",
+  },
+  {
+    nama: "SALMAN HANIF AL GHIFARI",
+    kelas: "XII.7",
+    username: "35",
+    password: "Si4p",
+  },
+  {
+    nama: "ZHAFRAN APRILIO ROHMAN",
+    kelas: "XII.7",
+    username: "36",
+    password: "Si4p",
+  },
+  {
+    nama: "AILSA JIHAN NURAULIA",
+    kelas: "XII.10",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "ALIFA AZMI FITRI",
+    kelas: "XII.10",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "AUFAA ZAHRAN SOPIAN",
+    kelas: "XII.10",
+    username: "03",
+    password: "Si4p",
+  },
+  { nama: "AZKA TAQIYYA", kelas: "XII.10", username: "04", password: "Si4p" },
+  {
+    nama: "AZKIYA NUR LABIBAH",
+    kelas: "XII.10",
+    username: "05",
+    password: "Si4p",
+  },
+  {
+    nama: "BUNGA SEPTIAR RAMADHANI",
+    kelas: "XII.10",
+    username: "06",
+    password: "Si4p",
+  },
+  {
+    nama: "DAFFA ZAINI RIFQIANSYAH",
+    kelas: "XII.10",
+    username: "07",
+    password: "Si4p",
+  },
+  {
+    nama: "DWI NABILAH LISMARA",
+    kelas: "XII.10",
+    username: "08",
+    password: "Si4p",
+  },
+  { nama: "FIRDA FAUZIAH", kelas: "XII.10", username: "09", password: "Si4p" },
+  {
+    nama: "GEZIA DWI AISYA",
+    kelas: "XII.10",
+    username: "10",
+    password: "Si4p",
+  },
+  {
+    nama: "GLADHIS SEPTIANI RAMADHAN",
+    kelas: "XII.10",
+    username: "11",
+    password: "Si4p",
+  },
+  { nama: "JAVIER KHALIK", kelas: "XII.10", username: "12", password: "Si4p" },
+  { nama: "KEILA MALIK", kelas: "XII.10", username: "13", password: "Si4p" },
+  { nama: "MARYAM AZZAHRA", kelas: "XII.10", username: "14", password: "Si4p" },
+  {
+    nama: "MUHAMMAD MULYADI",
+    kelas: "XII.10",
+    username: "15",
+    password: "Si4p",
+  },
+  {
+    nama: "NABILA PUTRI ALESHA",
+    kelas: "XII.10",
+    username: "16",
+    password: "Si4p",
+  },
+  {
+    nama: "NABILA WARDAH SOLEHAH",
+    kelas: "XII.10",
+    username: "17",
+    password: "Si4p",
+  },
+  {
+    nama: "NADA VIOLA ANNASTESY",
+    kelas: "XII.10",
+    username: "18",
+    password: "Si4p",
+  },
+  {
+    nama: "NENG TATI MUSOLIHAT",
+    kelas: "XII.10",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "PUTRI KANIA RAMADHANI",
+    kelas: "XII.10",
+    username: "20",
+    password: "Si4p",
+  },
+  {
+    nama: "RAFFA SOHIBUL WAFA PUTRA TAJANI",
+    kelas: "XII.10",
+    username: "21",
+    password: "Si4p",
+  },
+  {
+    nama: "RAHMI AINURIZA TSAMROTUL HAQ",
+    kelas: "XII.10",
+    username: "22",
+    password: "Si4p",
+  },
+  {
+    nama: "RAISHA NUR HIDAYAH",
+    kelas: "XII.10",
+    username: "23",
+    password: "Si4p",
+  },
+  {
+    nama: "RANIA SHILMA BASHABEH",
+    kelas: "XII.10",
+    username: "24",
+    password: "Si4p",
+  },
+  {
+    nama: "REVAND ALMUGHNI",
+    kelas: "XII.10",
+    username: "25",
+    password: "Si4p",
+  },
+  {
+    nama: "REYSA FITRIA ZAELANTI",
+    kelas: "XII.10",
+    username: "26",
+    password: "Si4p",
+  },
+  { nama: "RISA PAUJIAH", kelas: "XII.10", username: "27", password: "Si4p" },
+  {
+    nama: "SHERIL AURORA HIDAYAT",
+    kelas: "XII.10",
+    username: "28",
+    password: "Si4p",
+  },
+  {
+    nama: "SITI FATIMAH ULWA",
+    kelas: "XII.10",
+    username: "29",
+    password: "Si4p",
+  },
+  {
+    nama: "SYABILLA ANINDYA RAHMATULLAH",
+    kelas: "XII.10",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "SYIFA KHOLIFIANTI",
+    kelas: "XII.10",
+    username: "31",
+    password: "Si4p",
+  },
+  {
+    nama: "TALITA NADIA NUVI",
+    kelas: "XII.10",
+    username: "32",
+    password: "Si4p",
+  },
+  {
+    nama: "TAZKIYA NUR HABIBAH",
+    kelas: "XII.10",
+    username: "33",
+    password: "Si4p",
+  },
+  {
+    nama: "TIANDRA MEIKA WAHDIANA",
+    kelas: "XII.10",
+    username: "34",
+    password: "Si4p",
+  },
+  {
+    nama: "TRIYANTI NURAENI",
+    kelas: "XII.10",
+    username: "35",
+    password: "Si4p",
+  },
+  {
+    nama: "YULIA RACHMAWATI",
+    kelas: "XII.10",
+    username: "36",
+    password: "Si4p",
+  },
+  {
+    nama: "AFINA AZKA ANSHORI",
+    kelas: "XII.11",
+    username: "01",
+    password: "Si4p",
+  },
+  {
+    nama: "AISHA ALZENA KURNIAWAN",
+    kelas: "XII.11",
+    username: "02",
+    password: "Si4p",
+  },
+  {
+    nama: "AISYA NABILA ZARA",
+    kelas: "XII.11",
+    username: "03",
+    password: "Si4p",
+  },
+  {
+    nama: "ANJAR GIOVANO SITORUS",
+    kelas: "XII.11",
+    username: "04",
+    password: "Si4p",
+  },
+  {
+    nama: "AULIA NOVIANA NURZADA",
+    kelas: "XII.11",
+    username: "05",
+    password: "Si4p",
+  },
+  {
+    nama: "AZZAHRA ZASKIA PUTRI",
+    kelas: "XII.11",
+    username: "06",
+    password: "Si4p",
+  },
+  {
+    nama: "DARRYL BINTANG AYODHIA",
+    kelas: "XII.11",
+    username: "07",
+    password: "Si4p",
+  },
+  {
+    nama: "DEZHA YUNIA CAHYANI",
+    kelas: "XII.11",
+    username: "08",
+    password: "Si4p",
+  },
+  {
+    nama: "DHIYA HILMIYA ADZRA",
+    kelas: "XII.11",
+    username: "09",
+    password: "Si4p",
+  },
+  {
+    nama: "DINA SEPTA AULIA",
+    kelas: "XII.11",
+    username: "10",
+    password: "Si4p",
+  },
+  {
+    nama: "DZAKIY NAUFAL RAMADHAN",
+    kelas: "XII.11",
+    username: "11",
+    password: "Si4p",
+  },
+  {
+    nama: "FAIZ ABRAR ROSYIDIN",
+    kelas: "XII.11",
+    username: "12",
+    password: "Si4p",
+  },
+  {
+    nama: "FARDHA FADILAH DANOPA",
+    kelas: "XII.11",
+    username: "13",
+    password: "Si4p",
+  },
+  {
+    nama: "HARLEY DEANDRE FIRMANSYAH",
+    kelas: "XII.11",
+    username: "14",
+    password: "Si4p",
+  },
+  { nama: "INEU JULIASARI", kelas: "XII.11", username: "15", password: "Si4p" },
+  {
+    nama: "JASON OLIVER ETHAN LEE",
+    kelas: "XII.11",
+    username: "16",
+    password: "Si4p",
+  },
+  {
+    nama: "KANIA RAISSA ANINDYA",
+    kelas: "XII.11",
+    username: "17",
+    password: "Si4p",
+  },
+  {
+    nama: "KAYLA FRIESCYLLA",
+    kelas: "XII.11",
+    username: "18",
+    password: "Si4p",
+  },
+  {
+    nama: "KHANSA KHAIRUNNISA",
+    kelas: "XII.11",
+    username: "19",
+    password: "Si4p",
+  },
+  {
+    nama: "LIZA NURUL NURDIANA",
+    kelas: "XII.11",
+    username: "20",
+    password: "Si4p",
+  },
+  {
+    nama: "MAYAZA ZAIDA PUTU ARGA",
+    kelas: "XII.11",
+    username: "21",
+    password: "Si4p",
+  },
+  {
+    nama: "MN AL ZAHIDIN VICTORUDDIEN",
+    kelas: "XII.11",
+    username: "22",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD AZKA ASFARI",
+    kelas: "XII.11",
+    username: "23",
+    password: "Si4p",
+  },
+  {
+    nama: "MUHAMAD ZAHIRSYAH YUDHA RAMDANI",
+    kelas: "XII.11",
+    username: "24",
+    password: "Si4p",
+  },
+  {
+    nama: "NAZIATI SHAEBANI AFLAH",
+    kelas: "XII.11",
+    username: "25",
+    password: "Si4p",
+  },
+  {
+    nama: "NAZWA NABILA SOFYAN",
+    kelas: "XII.11",
+    username: "26",
+    password: "Si4p",
+  },
+  {
+    nama: "NOUVAL ALPARIZI",
+    kelas: "XII.11",
+    username: "27",
+    password: "Si4p",
+  },
+  {
+    nama: "PUSPA RIMBA ARIWANNI",
+    kelas: "XII.11",
+    username: "28",
+    password: "Si4p",
+  },
+  {
+    nama: "RAISYA NUR SABRINA",
+    kelas: "XII.11",
+    username: "29",
+    password: "Si4p",
+  },
+  {
+    nama: "RARA RIZKI AMELIA",
+    kelas: "XII.11",
+    username: "30",
+    password: "Si4p",
+  },
+  {
+    nama: "RAUDYA TUZZAHRA",
+    kelas: "XII.11",
+    username: "31",
+    password: "Si4p",
+  },
+  {
+    nama: "RUTH ANGELINA OCTAVIA SILITONGA",
+    kelas: "XII.11",
+    username: "32",
+    password: "Si4p",
+  },
+  {
+    nama: "SHAHNAZ AURELLI YAZIRRA",
+    kelas: "XII.11",
+    username: "33",
+    password: "Si4p",
+  },
+  { nama: "SHERLY JESSICA", kelas: "XII.11", username: "34", password: "Si4p" },
+  {
+    nama: "SOFI ARIFAH MIFTAHUL ROHMAH",
+    kelas: "XII.11",
+    username: "35",
+    password: "Si4p",
+  },
+  {
+    nama: "YOGA WAHYU HUTAMA",
+    kelas: "XII.11",
+    username: "36",
+    password: "Si4p",
+  },
+];
+
+</script>
+
+</body>
+
+</html>
