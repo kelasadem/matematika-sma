@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran Matematika Kelas XII - SMAN 1 Majalengka</title>
+    <!-- Tailwind CSS untuk Desain Antarmuka Premium -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Memastikan Rasio 16:9 Tetap Presisi pada Layar Besar */
+        @media (min-width: 1024px) {
+            .mockup-canvas {
+                aspect-ratio: 16 / 9;
+                max-height: 85vh;
+            }
+        }
+        /* Kustomisasi Scrollbar Panel Kiri */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #0d9488;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-center items-center p-2 sm:p-4">
+
+    <!-- Container Utama Media Pembelajaran (Rasio 16:9) -->
+    <div class="mockup-canvas w-full max-w-7xl bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 flex flex-col lg:flex-row">
+        
+        <!-- ================= PANEL KIRI: KONTEN LITERASI & EVALUASI ================= -->
+        <div class="w-full lg:w-1/2 flex flex-col h-full bg-slate-900 border-r border-slate-800">
+            
+            <!-- Header Profil Penyusun -->
+            <div class="p-4 bg-gradient-to-r from-slate-800 to-slate-900 border-b border-slate-700 flex justify-between items-center">
+                <div>
+                    <h1 class="text-base font-bold text-teal-400 tracking-wide uppercase">Jarak Dua Titik pada Kubus</h1>
+                    <p class="text-xs text-slate-400">Matematika Wajib Kelas XII</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs font-semibold text-slate-300">M. Eka Djuniar Arifien</p>
+                    <p class="text-[10px] text-teal-500">SMAN 1 Majalengka</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Fitur -->
+            <div class="flex bg-slate-950/50 p-2 gap-2 border-b border-slate-800 text-sm">
+                <button onclick="switchTab('tujuan')" id="btn-tujuan" class="flex-1 py-2 px-3 rounded-lg font-medium transition-all bg-teal-600 text-white shadow-lg">
+                    Tujuan
+                </button>
+                <button onclick="switchTab('materi')" id="btn-materi" class="flex-1 py-2 px-3 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800">
+                    Materi
+                </button>
+                <button onclick="switchTab('evaluasi')" id="btn-evaluasi" class="flex-1 py-2 px-3 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800">
+                    Evaluasi
+                </button>
+            </div>
+
+            <!-- Konten Dinamis (Scrollable) -->
+            <div class="flex-1 overflow-y-auto p-5 custom-scroll text-slate-300 space-y-4">
+                
+                <!-- TAB 1: TUJUAN PEMBELAJARAN -->
+                <div id="panel-tujuan" class="space-y-4">
+                    <div class="bg-teal-950/40 border border-teal-800/50 p-4 rounded-xl">
+                        <h2 class="text-lg font-semibold text-teal-400 mb-2 flex items-center gap-2">
+                            <span>🎯</span> Kompetensi Dasar & Tujuan
+                        </h2>
+                        <p class="text-sm leading-relaxed mb-3 text-slate-300">
+                            Setelah mempelajari media interaktif ini melalui pengamatan simulasi ruang 3D, Anda diharapkan mampu:
+                        </p>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-slate-300 pl-2">
+                            <li>Memahami konsep geometri penentuan jarak antar dua titik dalam ruang dimensi tiga.</li>
+                            <li>Menghitung jarak antara dua titik pada kubus menggunakan teorema Pythagoras secara tepat.</li>
+                            <li>Mengembangkan kemampuan berpikir spasial melalui visualisasi objek kubus secara dinamis.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/50 p-4 rounded-xl text-xs">
+                        <span class="font-bold text-amber-400">💡 Petunjuk Penggunaan:</span> Gunakan panel simulasi di sebelah kanan halaman untuk memutar, memperbesar (zoom), dan melihat visualisasi kubus secara nyata guna mempermudah pemahaman materi dan pengerjaan soal evaluasi.
+                    </div>
+                </div>
+
+                <!-- TAB 2: URAIAN MATERI -->
+                <div id="panel-materi" class="hidden space-y-4">
+                    <h2 class="text-lg font-semibold text-teal-400">📖 Konsep Jarak Titik ke Titik</h2>
+                    <p class="text-sm leading-relaxed">
+                        Jarak antara dua titik dalam ruang adalah <strong>panjang ruas garis terpendek</strong> yang menghubungkan kedua titik tersebut. Pada bangun ruang kubus dengan panjang rusuk <span class="text-teal-400 font-mono">a</span>, terdapat rumus cepat yang diturunkan dari teorema Pythagoras:
+                    </p>
+                    
+                    <!-- Tabel Rumus Cepat -->
+                    <div class="overflow-hidden rounded-xl border border-slate-800 bg-slate-950">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-800 text-slate-200">
+                                <tr>
+                                    <th class="p-3">Komponen Kubus</th>
+                                    <th class="p-3">Contoh Garis</th>
+                                    <th class="p-3 text-teal-400">Rumus Jarak</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr>
+                                    <td class="p-3 font-medium">Panjang Rusuk</td>
+                                    <td class="p-3">Garis AB, BC, CG</td>
+                                    <td class="p-3 font-mono text-teal-400 font-bold">a</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">Diagonal Bidang</td>
+                                    <td class="p-3">Garis AC, BD, CH</td>
+                                    <td class="p-3 font-mono text-teal-400 font-bold">a√2</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">Diagonal Ruang</td>
+                                    <td class="p-3">Garis AG, BH, CE</td>
+                                    <td class="p-3 font-mono text-teal-400 font-bold">a√3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider block mb-1">Contoh Kasus:</span>
+                        <p class="text-xs leading-relaxed">
+                            Jika sebuah kubus ABCD.EFGH memiliki rusuk 6 cm, maka:<br>
+                            • Jarak A ke C (Diagonal Bidang) = 6√2 cm.<br>
+                            • Jarak A ke G (Diagonal Ruang) = 6√3 cm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TAB 3: EVALUASI (QUIZ SYSTEM) -->
+                <div id="panel-evaluasi" class="hidden space-y-4">
+                    <!-- Quiz Container -->
+                    <div id="quiz-container">
+                        <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                            <span class="bg-slate-800 px-2 py-1 rounded border border-slate-700" id="quiz-progress">Soal 1 dari 10</span>
+                            <span class="font-mono text-teal-400 font-bold" id="quiz-score-display"></span>
+                        </div>
+                        
+                        <!-- Pertanyaan -->
+                        <p id="quiz-question" class="text-sm font-semibold text-slate-100 mb-4 leading-relaxed bg-slate-950 p-3 rounded-xl border border-slate-800"></p>
+                        
+                        <!-- Pilihan Jawaban -->
+                        <div id="quiz-options" class="space-y-2">
+                            <!-- Diisi via JS -->
+                        </div>
+
+                        <!-- Navigasi Quiz -->
+                        <div class="flex justify-between mt-5 pt-3 border-t border-slate-800">
+                            <button onclick="prevQuestion()" id="btn-prev" class="px-3 py-1.5 text-xs rounded bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-30 disabled:pointer-events-none">Kembali</button>
+                            <button onclick="nextQuestion()" id="btn-next" class="px-3 py-1.5 text-xs rounded bg-teal-600 text-white hover:bg-teal-500 font-semibold">Lanjut</button>
+                        </div>
+                    </div>
+
+                    <!-- Hasil Skor -->
+                    <div id="score-container" class="hidden text-center py-6 space-y-3">
+                        <div class="inline-block p-4 bg-teal-950/50 border border-teal-800 rounded-full text-3xl">🎉</div>
+                        <h3 class="text-xl font-bold text-teal-400">Evaluasi Selesai!</h3>
+                        <p class="text-sm">Nilai akhir capaian pembelajaran Anda:</p>
+                        <div class="text-4xl font-black text-white font-mono tracking-wider bg-slate-950 inline-block px-6 py-2 rounded-xl border border-slate-800" id="final-score">0</div>
+                        <div class="pt-4">
+                            <button onclick="resetQuiz()" class="text-xs bg-slate-800 hover:bg-slate-700 text-teal-400 font-semibold py-2 px-4 rounded-lg transition-all">Ulangi Evaluasi</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= PANEL KANAN: INTEGRASI SIMULASI KUBUS 3D/AR ================= -->
+        <div class="w-full lg:w-1/2 h-64 lg:h-full bg-black relative">
+            <div class="absolute top-3 left-3 z-10 bg-slate-900/90 backdrop-blur text-[10px] px-2.5 py-1 rounded-full border border-slate-700/60 font-semibold text-slate-300 shadow-md flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Virtual Lab 3D/AR Active
+            </div>
+            <!-- Embed Iframe Assemblr Edu -->
+            <iframe 
+                src="https://asblr.com/ro5YIa" 
+                class="w-full h-full border-none" 
+                allowfullscreen 
+                sandbox="allow-scripts allow-same-origin allow-popups">
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- Footer Copyright -->
+    <p class="text-center text-[10px] text-slate-500 mt-3">&copy; 2026 SMAN 1 Majalengka. Dibuat khusus untuk optimalisasi media interaktif digital.</p>
+
+    <!-- ================= LOGIKA INTERAKTIF (JAVASCRIPT) ================= -->
+    <script>
+        // Manajemen Ganti Tab Konten
+        function switchTab(tabName) {
+            const tabs = ['tujuan', 'materi', 'evaluasi'];
+            tabs.forEach(t => {
+                document.getElementById(`panel-${t}`).classList.add('hidden');
+                document.getElementById(`btn-${t}`).className = "flex-1 py-2 px-3 rounded-lg font-medium transition-all text-slate-400 hover:text-slate-200 hover:bg-slate-800";
+            });
+            document.getElementById(`panel-${tabName}`).classList.remove('hidden');
+            document.getElementById(`btn-${tabName}`).className = "flex-1 py-2 px-3 rounded-lg font-medium transition-all bg-teal-600 text-white shadow-lg";
+        }
+
+        // Data Bank Soal Evaluasi (10 Soal Pilihan Ganda, Opsi 5 Jawaban)
+        const quizData = [
+            { q: "Diketahui kubus ABCD.EFGH dengan rusuk 6 cm. Jarak antara titik A ke titik B adalah...", o: ["3 cm", "4 cm", "6 cm", "6√2 cm", "6√3 cm"], a: 2 },
+            { q: "Pada kubus ABCD.EFGH dengan rusuk 8 cm, panjang diagonal bidang AC adalah...", o: ["8 cm", "8√2 cm", "8√3 cm", "16 cm", "4√2 cm"], a: 1 },
+            { q: "Jarak titik terendah A ke titik terjauh G (diagonal ruang) pada kubus berusuk 10 cm adalah...", o: ["10 cm", "10√2 cm", "10√3 cm", "20 cm", "5√3 cm"], a: 2 },
+            { q: "Jika kubus ABCD.EFGH memiliki panjang rusuk 6 cm, berapakah jarak dari titik G ke garis diagonal BD?", o: ["3√2 cm", "3√3 cm", "3√6 cm", "6√2 cm", "6√3 cm"], a: 2 },
+            { q: "Diketahui kubus dengan rusuk 4 cm. Jika titik P merupakan pertengahan garis BC, maka jarak titik A ke titik P adalah...", o: ["2√2 cm", "2√3 cm", "2√5 cm", "4√2 cm", "5√2 cm"], a: 2 },
+            { q: "Pada kubus ABCD.EFGH dengan panjang rusuk 12 cm, berapakah jarak titik B ke garis diagonal ruang AG?", o: ["4√2 cm", "4√3 cm", "4√6 cm", "6√2 cm", "6√6 cm"], a: 2 },
+            { q: "Diketahui kubus ABCD.EFGH berusuk 6 cm. Jarak dari titik E ke bidang datar diagonal AFH sama dengan...", o: ["2√2 cm", "2√3 cm", "3√2 cm", "3√3 cm", "4√3 cm"], a: 1 },
+            { q: "Sebuah kubus ABCD.EFGH memiliki rusuk 9 cm. Jarak titik C ke bidang segitiga BDG adalah...", o: ["3√2 cm", "3√3 cm", "4√3 cm", "6√2 cm", "6√3 cm"], a: 1 },
+            { q: "Kubus berusuk 8 cm. Jika M adalah titik tengah dari garis diagonal atas EG, berapakah jarak titik E ke titik M?", o: ["2√2 cm", "4 cm", "4√2 cm", "4√3 cm", "8 cm"], a: 2 },
+            { q: "Kubus ABCD.EFGH memiliki rusuk 10 cm. Jarak terjauh di dalam kubus yang ditarik dari titik C ke E dinamakan...", o: ["Sisi Tegak", "Diagonal Sisi (10√2 cm)", "Diagonal Ruang (10√3 cm)", "Garis Ortogonal", "Garis Proyeksi"], a: 2 }
+        ];
+
+        let currentQ = 0;
+        let selectedAnswers = Array(quizData.length).fill(null);
+
+        // Render Soal Aktif
+        function loadQuestion() {
+            const currentData = quizData[currentQ];
+            document.getElementById("quiz-progress").innerText = `Soal ${currentQ + 1} dari ${quizData.length}`;
+            document.getElementById("quiz-question").innerText = currentData.q;
+            
+            const optionsContainer = document.getElementById("quiz-options");
+            optionsContainer.innerHTML = "";
+            
+            const prefix = ['A', 'B', 'C', 'D', 'E'];
+            currentData.o.forEach((option, index) => {
+                const isSelected = selectedAnswers[currentQ] === index;
+                const button = document.createElement("button");
+                button.className = `w-full text-left p-3 text-xs rounded-xl border transition-all flex items-center gap-3 ${
+                    isSelected 
+                    ? 'bg-teal-600/30 border-teal-500 text-teal-300 font-semibold' 
+                    : 'bg-slate-950 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`;
+                button.onclick = () => selectOption(index);
+                button.innerHTML = `<span class="flex items-center justify-center w-6 h-6 rounded-lg text-[10px] font-bold ${isSelected ? 'bg-teal-500 text-slate-950' : 'bg-slate-800 text-slate-400'}">${prefix[index]}</span> ${option}`;
+                optionsContainer.appendChild(button);
+            });
+
+            document.getElementById("btn-prev").disabled = currentQ === 0;
+            document.getElementById("btn-next").innerText = currentQ === quizData.length - 1 ? "Selesai & Hitung" : "Lanjut";
+        }
+
+        function selectOption(index) {
+            selectedAnswers[currentQ] = index;
+            loadQuestion();
+        }
+
+        function nextQuestion() {
+            if (selectedAnswers[currentQ] === null) {
+                alert("Silakan pilih salah satu opsi jawaban terlebih dahulu!");
+                return;
+            }
+            if (currentQ < quizData.length - 1) {
+                currentQ++;
+                loadQuestion();
+            } else {
+                calculateScore();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQ > 0) {
+                currentQ--;
+                loadQuestion();
+            }
+        }
+
+        // Kalkulasi Akhir Skor
+        function calculateScore() {
+            let correctCount = 0;
+            quizData.forEach((data, index) => {
+                if (selectedAnswers[index] === data.a) {
+                    correctCount++;
+                }
+            });
+            const score = (correctCount / quizData.length) * 100;
+            document.getElementById("quiz-container").classList.add("hidden");
+            document.getElementById("score-container").classList.remove("hidden");
+            document.getElementById("final-score").innerText = score;
+        }
+
+        function resetQuiz() {
+            currentQ = 0;
+            selectedAnswers = Array(quizData.length).fill(null);
+            document.getElementById("quiz-container").classList.remove("hidden");
+            document.getElementById("score-container").classList.add("hidden");
+            loadQuestion();
+        }
+
+        // Inisialisasi Pertama Kali Load Halaman
+        window.onload = function() {
+            loadQuestion();
+        };
+    </script>
+</body>
+</html>
